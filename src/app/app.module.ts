@@ -9,7 +9,6 @@ import { CreditsComponent } from './credits/credits.component';
 import { CardComponent } from './card/card.component';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
 import { JobItemComponent } from './job-item/job-item.component';
-import { IconMapPipe } from './pipes/icon-map.pipe';
 import { TimeGonePipe } from './pipes/time-gone.pipe';
 import { CommaNumberPipe } from './pipes/comma-number.pipe';
 
@@ -24,7 +23,6 @@ import { CommaNumberPipe } from './pipes/comma-number.pipe';
         JobsListComponent,
         JobItemComponent,
 
-        IconMapPipe,
         TimeGonePipe,
         CommaNumberPipe,
     ],

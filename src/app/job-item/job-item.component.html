@@ -1,5 +1,5 @@
 <button>
-    <span [class]='job.type | iconMap : iconMap'></span>
+    <span [class]='iconMap[job.type]'></span>
 </button>
 <p>{{job.title}}</p>
 <span class='date'>{{job.date | timeGone}}</span>
