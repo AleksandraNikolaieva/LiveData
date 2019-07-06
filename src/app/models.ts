@@ -1,4 +1,4 @@
-export interface AppData {
+export interface Porpose {
     title: string;
     text: string;
     buttonTitle: string;

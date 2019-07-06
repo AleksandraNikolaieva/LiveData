@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Porpose } from './models';
 
 @Component({
     selector: 'app-root',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    data = [
+    data: Array<Porpose> = [
         {
             title: 'Clean your CRM.',
             text: `We'll tell you which records are good,
