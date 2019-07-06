@@ -37,18 +37,19 @@
     }
 
     p {
-        min-width: 250px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        width: 200px;
+        flex-grow: 1;
     }
 
     .date {
         min-width: 90px;
+        flex-grow: 1;
     }
 
     .count {
-        min-width: 105px; 
+        min-width: 115px;
+        flex-grow: 1;
+        margin-left: 3px;
     }
 
     .icon-menu {
