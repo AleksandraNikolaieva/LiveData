@@ -16,7 +16,7 @@ export class JobsListComponent implements OnInit {
     ngOnInit() {
     }
 
-    trackByFunction(index: number, item: Job) {
+    trackByFn(index: number, item: Job) {
         if (!item) {
             return null;
         }

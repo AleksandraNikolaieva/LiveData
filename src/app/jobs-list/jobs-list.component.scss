@@ -8,9 +8,14 @@
         background-color: $background;
         border: none;
         outline: none;
-        padding: 8px;
+        line-height: 34px;
         padding-left: 25px;
         border-radius: 3px;
+        transition: 0.2s;
+
+        &:focus {
+            box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5)
+        }
     }
 
     div {
