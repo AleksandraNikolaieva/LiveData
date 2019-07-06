@@ -3,9 +3,9 @@
 
 header {
     height: $header-h;
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     @include flex(row, space-between, center);
-    padding: 0 20px;
+    padding: 0 30px;
     background-color: $purple;
     color: $white;
     font-family: $roboto;
