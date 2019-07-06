@@ -11,6 +11,7 @@ import { JobsListComponent } from './jobs-list/jobs-list.component';
 import { JobItemComponent } from './job-item/job-item.component';
 import { IconMapPipe } from './pipes/icon-map.pipe';
 import { TimeGonePipe } from './pipes/time-gone.pipe';
+import { CommaNumberPipe } from './pipes/comma-number.pipe';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { TimeGonePipe } from './pipes/time-gone.pipe';
 
         IconMapPipe,
         TimeGonePipe,
+        CommaNumberPipe,
     ],
     imports: [
         BrowserModule

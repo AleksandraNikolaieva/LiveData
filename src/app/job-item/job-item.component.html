@@ -3,7 +3,7 @@
 </button>
 <p>{{job.title}}</p>
 <span class='date'>{{job.date | timeGone}}</span>
-<span class='count'>{{job.count}} {{job.type}}</span>
+<span class='count'>{{job.count | commaNumber}} {{job.type}}</span>
 <button>
     <span class='icon-download'></span>
 </button>
