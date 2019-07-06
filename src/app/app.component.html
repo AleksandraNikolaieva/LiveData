@@ -1,19 +1,17 @@
 <app-header></app-header>
-<app-view-port>
-    <ng-container class='main'>
-        <div class='row'>
-            <div *ngFor='let item of data'>
-                <h3>{{item.title}}</h3>
-                <p>{{item.text}}</p>
-                <app-icon-button [title]='item.buttonTitle' [bgColor]='item.buttonColor'>
-                    <span [class]='item.buttonIcon'></span>
-                </app-icon-button>
-            </div>
+<main>
+    <div class='row'>
+        <div *ngFor='let item of data'>
+            <h3>{{item.title}}</h3>
+            <p>{{item.text}}</p>
+            <app-icon-button [title]='item.buttonTitle' [bgColor]='item.buttonColor'>
+                <span [class]='item.buttonIcon'></span>
+            </app-icon-button>
         </div>
-        <div class='row'>
-            <app-jobs-list></app-jobs-list>
-            <app-credits></app-credits>
-        </div>
-    </ng-container>
-</app-view-port>
+    </div>
+    <div class='row'>
+        <app-jobs-list></app-jobs-list>
+        <app-credits></app-credits>
+    </div>
+</main>
 

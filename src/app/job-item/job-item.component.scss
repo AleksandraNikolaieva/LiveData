@@ -7,7 +7,7 @@
     @include flex(row, space-between, center);
     border-bottom: 2px solid $borders;
     padding: 0 10px;
-    color: black;
+    color: $black;
 
     button {
         background-color: transparent;
@@ -23,7 +23,7 @@
         transition: 0.3s;
 
         &:hover {
-            color: black;
+            color: $black;
             font-weight: bold;
         }
     }

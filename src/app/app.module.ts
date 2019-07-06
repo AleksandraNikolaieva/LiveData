@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ViewPortComponent } from './view-port/view-port.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { CreditsComponent } from './credits/credits.component';
 import { CardComponent } from './card/card.component';
@@ -16,7 +15,6 @@ import { CommaNumberPipe } from './pipes/comma-number.pipe';
     declarations: [
         AppComponent,
         HeaderComponent,
-        ViewPortComponent,
         IconButtonComponent,
         CreditsComponent,
         CardComponent,

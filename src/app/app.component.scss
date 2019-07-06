@@ -1,6 +1,12 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
 
+main {
+    display: block;
+    width: calc(100% - 100px);
+    padding: 20px 50px;
+    min-height: calc(100vh - #{$header-h} - 40px);
+}
 .row {
     width: 100%;
     @include flex(row, space-between, flex-start);
@@ -23,12 +29,14 @@
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 17px;
+    margin: 5px 0;
 }
 
 p {
-    color: $text-color;
+    color: transparentize($text-color, 0.2);
     text-align: justify;
+    font-size: 15px;
 }
 
 app-credits {

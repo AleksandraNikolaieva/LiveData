@@ -1,21 +1,21 @@
 @import 'abstracts/variables.scss';
 
 input[type=button] {
-    background-color: $white;
+    background-color: #ffffff;
     width: 100%;
-    border: 1.5px solid darken($blue, 20%);
+    border: 1px solid darken($blue, 20%);
     outline: none;
     color: darken($blue, 20%);
     transition: 0.3s;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 20px 0;
     padding: 10px 0;
 
     &:hover {
         background-color: darken($blue, 20%);
-        color: $white;
+        color: #ffffff;
     }
 }
 
@@ -29,7 +29,7 @@ p {
 .balance {
     font-size: 60px;
     font-weight: bold;
-    color: black;
+    color: $black;
 }
 
 a {
