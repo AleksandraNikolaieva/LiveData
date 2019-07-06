@@ -1,0 +1,44 @@
+@import '../scss/abstracts/variables.scss';
+@import '../scss/abstracts/mixins.scss';
+
+.row {
+    width: 100%;
+    @include flex(row, space-between, flex-start);
+}
+
+.row:nth-of-type(1) {
+    align-items: stretch;
+    div {
+        width: 48%;
+        @include flex(column, space-between, flex-start)
+    }
+
+    p {
+        line-height: 20px;
+    }
+}
+
+.row:nth-of-type(2) {
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+p {
+    color: $text-color;
+    text-align: justify;
+}
+
+app-credits {
+    width: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 30px;
+}
+
+app-jobs-list {
+    flex-grow: 1;
+}

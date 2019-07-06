@@ -1,0 +1,43 @@
+@import '../../scss/abstracts/variables.scss';
+
+input[type=button] {
+    background-color: $white;
+    width: 100%;
+    border: 1.5px solid darken($blue, 20%);
+    outline: none;
+    color: darken($blue, 20%);
+    transition: 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 20px 0;
+    padding: 10px 0;
+
+    &:hover {
+        background-color: darken($blue, 20%);
+        color: $white;
+    }
+}
+
+p {
+    margin: 0;
+    color: #878c9f;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.balance {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: darken($blue, 20%);
+    font-size: 14px;
+
+    &:hover {
+        font-weight: bold;
+    }
+}

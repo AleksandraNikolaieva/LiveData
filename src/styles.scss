@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'scss/base/normalize/normalize';
+@import 'scss/base/icomoon.scss';
+@import 'scss/abstracts/variables.scss';
+@import 'scss/base/typography.scss';
+
+body {
+    background-color: $background;
+}
+
+a, button {
+    cursor: pointer;
+    outline: none;
+}
