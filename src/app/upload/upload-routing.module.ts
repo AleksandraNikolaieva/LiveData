@@ -15,4 +15,4 @@ const routes: Routes = [
     providers: [],
     exports: [RouterModule]
 })
-export class WorkshopsRoutingModule {}
+export class UploadRoutingModule {}
