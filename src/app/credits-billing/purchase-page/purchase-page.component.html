@@ -1,0 +1,42 @@
+
+    <div class="purchase-credits-window">
+        <div class="navigation-message">
+          <button class="back-button">
+            <i class="icon-arrow-left"></i>
+            Back
+          </button>
+          <div class="message">
+            <h3>Buy more credits.</h3>
+            <p>A credit is needed for each piece of data that we verify,update,or look up.</p>
+          </div>
+        </div>
+        <div class="credits-packages">
+          <div class="packages">
+            <div class="package" [class.selected]="optionSelected == package.value" *ngFor='let package of packages'>
+              <div class="package-value">
+                <label >
+                    <input type="radio"  [(ngModel)]='optionSelected' name="package-selected" value="{{package.value}}">
+                    <span class="checkmark"></span>
+                </label>
+                  <div class="credits-amount">
+                      <span>{{package.value | number:'.0'}} </span>
+                      <span>credits</span>
+                  </div>
+              </div>
+              <div class="package-pricing">
+                <span class="total-price">{{package.totalPrice}}</span>
+                <span class="price-per-credit">{{package.pricePerCredit}} / credit</span>
+              </div>
+              
+            </div>
+          </div>
+          <div class="need-more">
+            <span>Need more? </span>
+            <button>Contact us</button>
+          </div>
+          <div class="checkout-button">
+            <button> Checkout </button>
+          </div>
+        </div>
+      </div>
+

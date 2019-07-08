@@ -13,6 +13,10 @@ const routes: Routes = [
         component: MainPageComponent
     },
     {
+        path: "credits",
+        loadChildren: "./credits-billing/credits-billing.module#CreditsBillingModule"
+    },
+    {
         path: "upload",
         loadChildren: "./upload/upload.module#UploadModule"
     }
