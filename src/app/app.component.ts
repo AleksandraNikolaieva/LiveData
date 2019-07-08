@@ -14,7 +14,7 @@ export class AppComponent {
                 correct the ones that aren't, and separate your priority leads from who really
                 have no reason to be in your CRM.`,
             buttonTitle: 'Upload List',
-            buttonIcon: 'icon-upload1',
+            buttonIcon: 'icon-upload',
             buttonColor: '#81c2d6'
         },
         {
