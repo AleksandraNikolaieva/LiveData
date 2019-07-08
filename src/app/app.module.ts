@@ -12,6 +12,7 @@ import { TimeGonePipe } from "./pipes/time-gone.pipe";
 import { CommaNumberPipe } from "./pipes/comma-number.pipe";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { CreditsOffersComponent } from './purchase-page/credits-offers/credits-offers.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { AppRoutingModule } from "./app-routing.module";
 
         TimeGonePipe,
         CommaNumberPipe,
-        MainPageComponent
+        MainPageComponent,
+        CreditsOffersComponent
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],
