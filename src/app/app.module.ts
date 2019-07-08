@@ -11,7 +11,11 @@ import { TimeGonePipe } from "./pipes/time-gone.pipe";
 import { CommaNumberPipe } from "./pipes/comma-number.pipe";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { AppRoutingModule } from "./app-routing.module";
+<<<<<<< HEAD
 import { SharedModule } from "./shared/shared.module";
+=======
+import { CreditsOffersComponent } from './purchase-page/credits-offers/credits-offers.component';
+>>>>>>> 256940c658130fce91d1218528211098b1c8f52b
 
 @NgModule({
     declarations: [
@@ -24,7 +28,8 @@ import { SharedModule } from "./shared/shared.module";
 
         TimeGonePipe,
         CommaNumberPipe,
-        MainPageComponent
+        MainPageComponent,
+        CreditsOffersComponent
     ],
     imports: [BrowserModule, AppRoutingModule, SharedModule],
     providers: [],

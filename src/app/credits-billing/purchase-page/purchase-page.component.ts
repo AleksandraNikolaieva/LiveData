@@ -9,7 +9,6 @@ export class PurchasePageComponent implements OnInit {
 
   constructor() { }
 
-  optionSelected: any;
   
   packages = [
     {
