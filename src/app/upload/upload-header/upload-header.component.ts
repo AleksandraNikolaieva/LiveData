@@ -7,6 +7,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class UploadHeaderComponent implements OnInit {
     constructor() {}
-
+    title: string = "Credits Balance";
+    label: string = "credits";
+    balance: number = 1492;
     ngOnInit() {}
 }
