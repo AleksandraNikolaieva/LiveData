@@ -6,7 +6,7 @@ import { UploadHeaderComponent } from "./upload-header/upload-header.component";
 import { UploadDetailsComponent } from "./upload-details/upload-details.component";
 import { UploadFilePreviewComponent } from "./upload-file-preview/upload-file-preview.component";
 import { UploadRoutingModule } from "./upload-routing.module";
-import { IconButtonComponent } from "../icon-button/icon-button.component";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
     declarations: [
@@ -16,6 +16,6 @@ import { IconButtonComponent } from "../icon-button/icon-button.component";
         UploadDetailsComponent,
         UploadFilePreviewComponent
     ],
-    imports: [CommonModule, UploadRoutingModule]
+    imports: [CommonModule, UploadRoutingModule, SharedModule]
 })
 export class UploadModule {}

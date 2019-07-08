@@ -3,7 +3,6 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
-import { IconButtonComponent } from "./icon-button/icon-button.component";
 import { CreditsComponent } from "./credits/credits.component";
 import { CardComponent } from "./card/card.component";
 import { JobsListComponent } from "./jobs-list/jobs-list.component";
@@ -12,12 +11,12 @@ import { TimeGonePipe } from "./pipes/time-gone.pipe";
 import { CommaNumberPipe } from "./pipes/comma-number.pipe";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
-        IconButtonComponent,
         CreditsComponent,
         CardComponent,
         JobsListComponent,
@@ -27,7 +26,7 @@ import { AppRoutingModule } from "./app-routing.module";
         CommaNumberPipe,
         MainPageComponent
     ],
-    imports: [BrowserModule, AppRoutingModule],
+    imports: [BrowserModule, AppRoutingModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent]
 })
