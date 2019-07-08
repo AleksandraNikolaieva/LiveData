@@ -11,6 +11,7 @@ import { JobItemComponent } from './job-item/job-item.component';
 import { TimeGonePipe } from './pipes/time-gone.pipe';
 import { CommaNumberPipe } from './pipes/comma-number.pipe';
 import { CreditsBillingModule } from './credits-billing/credits-billing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,7 @@ import { CreditsBillingModule } from './credits-billing/credits-billing.module';
         CommaNumberPipe,
     ],
     imports: [
-        BrowserModule, CreditsBillingModule
+        BrowserModule,  AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]
