@@ -9,8 +9,10 @@ import { Package } from 'src/app/models';
     styleUrls: ['./purchase-page.component.scss']
 })
 export class PurchasePageComponent implements OnInit {
-
-    constructor(private router: Router, private selectedPackage: SelectedPackageService) { }
+    constructor(
+        private router: Router,
+        private selectedPackage: SelectedPackageService
+    ) {}
 
     option: any;
 
@@ -41,8 +43,5 @@ export class PurchasePageComponent implements OnInit {
         this.router.navigateByUrl('credits/payment');
     }
 
-    ngOnInit() {
-    }
-
-
+    ngOnInit() {}
 }
