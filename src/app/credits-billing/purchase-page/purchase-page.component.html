@@ -1,22 +1,20 @@
-    <div class="purchase-credits-window">
-        <div class="navigation-message">
-          <app-back-button></app-back-button>
-          <div class="message">
+<div class="purchase-credits-window">
+    <div class="navigation-message">
+        <app-back-button></app-back-button>
+        <div class="message">
             <h3>Buy more credits.</h3>
             <p>{{option}}</p>
             <p>A credit is needed for each piece of data that we verify,update,or look up.</p>
-          </div>
         </div>
-        <div class="offers-window">
-            <app-credits-offers  [packages]='packages'></app-credits-offers>
-            <div class="need-more">
-                <span>Need more? </span>
-                <button>Contact us</button>
-              </div>
-              <div class="checkout-button">
-                <button (click)='goCheckout()'> Checkout </button>
-              </div>
-            </div>
+    </div>
+    <div class="offers-window">
+        <app-credits-offers [packages]='packages'></app-credits-offers>
+        <div class="need-more">
+            <span>Need more? </span>
+            <button>Contact us</button>
         </div>
-        
-          
+        <div class="checkout-button">
+            <button (click)='goCheckout()'> Checkout </button>
+        </div>
+    </div>
+</div>
