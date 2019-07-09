@@ -4,6 +4,7 @@ export interface Porpose {
     buttonTitle: string;
     buttonIcon: string;
     buttonClass: string;
+    link: string;
 }
 
 export interface Job {
