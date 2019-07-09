@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { SelectedPackageService } from "../services/selected-package.service";
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SelectedPackageService } from '../services/selected-package.service';
 
 @Component({
-    selector: "app-billing-details-page",
-    templateUrl: "./billing-details-page.component.html",
-    styleUrls: ["./billing-details-page.component.scss"]
+    selector: 'app-billing-details-page',
+    templateUrl: './billing-details-page.component.html',
+    styleUrls: ['./billing-details-page.component.scss']
 })
 export class BillingDetailsPageComponent implements OnInit {
     billingForm: FormGroup;
@@ -17,9 +17,9 @@ export class BillingDetailsPageComponent implements OnInit {
 
     ngOnInit() {
         this.billingForm = this.formBuilder.group({
-            name: ["", Validators.required],
+            name: ['', Validators.required],
             cardNumber: [
-                "",
+                '',
                 [
                     Validators.required,
                     Validators.maxLength(12),
@@ -27,7 +27,7 @@ export class BillingDetailsPageComponent implements OnInit {
                 ]
             ],
             expMonth: [
-                "",
+                '',
                 [
                     Validators.required,
                     Validators.maxLength(2),
@@ -35,7 +35,7 @@ export class BillingDetailsPageComponent implements OnInit {
                 ]
             ],
             expYear: [
-                "",
+                '',
                 [
                     Validators.required,
                     Validators.maxLength(4),
@@ -43,7 +43,7 @@ export class BillingDetailsPageComponent implements OnInit {
                 ]
             ],
             cvv: [
-                "",
+                '',
                 [
                     Validators.required,
                     Validators.maxLength(3),
