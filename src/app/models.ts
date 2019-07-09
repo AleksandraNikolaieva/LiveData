@@ -3,7 +3,7 @@ export interface Porpose {
     text: string;
     buttonTitle: string;
     buttonIcon: string;
-    buttonColor: string;
+    buttonClass: string;
 }
 
 export interface Job {
