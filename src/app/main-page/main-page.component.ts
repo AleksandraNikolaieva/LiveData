@@ -7,7 +7,7 @@ import { Porpose } from '../models';
     styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-    popupActive = true;
+    popupActive = false;
     data: Array<Porpose> = [
         {
             title: 'Clean your CRM.',
