@@ -1,8 +1,11 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
-
+:host {
+    display: block;
+    width: 60%;
+    margin-right: 50px;
+}
 .container {
-    width: 55%;
     padding: 32px 48px;
     background-color: $white;
     border: 2px solid $borders;
@@ -26,6 +29,7 @@
     padding-left: 8px;
     font-size: 12px;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 .file .change {
     cursor: pointer;
