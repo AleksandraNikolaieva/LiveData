@@ -61,7 +61,7 @@ export const jobs: Job[] = [
 
 export const contacts: Array<ListItem> = [
     {
-        name: 'Geoff Seely',
+        name: 'Geoff Seeley',
         position: 'Global Marketing Director at Airbnb',
         linkedIn: 'geoff-seeley-aa9b319'
     },
@@ -82,27 +82,22 @@ export const contacts: Array<ListItem> = [
     },
     {
         name: 'Rebecca Gautrey',
-        position: 'Global Marketing Director at Airbnb',
-        linkedIn: 'geoff-seeley-aa9b319'
+        position: 'Marketing Director at Del Monte Fresh Produce N.A., Inc',
+        linkedIn: 'rebeccagautrey'
     },
     {
         name: 'Rebecca Ritterbush',
-        position: 'Global Marketing Director at Airbnb',
+        position: 'Marketing Director at Woodhouse Auto Family',
+        linkedIn: 'rebecca-ritterbush-0b147a26'
+    },
+    {
+        name: 'PennyMaria Jackson',
+        position: 'Marketing Director at Appollo Theater',
         linkedIn: 'geoff-seeley-aa9b319'
     },
     {
-        name: 'Geoff Seely',
-        position: 'Global Marketing Director at Airbnb',
-        linkedIn: 'geoff-seeley-aa9b319'
-    },
-    {
-        name: 'Geoff Seely',
-        position: 'Global Marketing Director at Airbnb',
-        linkedIn: 'geoff-seeley-aa9b319'
-    },
-    {
-        name: 'Geoff Seely',
-        position: 'Global Marketing Director at Airbnb',
+        name: 'Erik Archer Smith',
+        position: 'Marketing Director, ABM at Treasure Data',
         linkedIn: 'geoff-seeley-aa9b319'
     }
 ];
