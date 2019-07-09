@@ -8,24 +8,21 @@
     max-width: 330px;
 }
 .caption {
-    line-height: 130%;
-    color: $black;
-    opacity: 0.8;
-    font-size: 14px;
+    @include text(14px, normal, 130%);
+    @include textColor($black, 0.2);
     margin: 14px 0;
 }
 .link {
-    margin-top: 50px;
+    @include text(14px, 600);
+    @include textColor($white);
     display: block;
     width: 250px;
+    margin-top: 50px;
     padding: 16px 22px;
-    color: $white;
-    background-color: $blue;
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
+    background-color: $blue;
     letter-spacing: 1px;
     transition: background-color 0.3s, opacity 0.3s;
     &:hover {
@@ -47,12 +44,10 @@
     background-color: $white;
     border: 2px solid $borders;
     border-radius: 24px;
-    font-family: $roboto;
 }
 .form-title {
-    font-size: 12px;
-    opacity: 0.4;
-    font-weight: 600;
+    @include text(12px, 600);
+    @include textColor($black, 0.6);
 }
 .form-row {
     @include flex(row, flex-start, center);
@@ -73,8 +68,8 @@
     width: 220px;
 }
 .input-title {
-    font-size: 16px;
-    font-weight: 600;
+    @include text(16px, 600);
+    @include textColor($black);
     opacity: 0.7;
     span {
         opacity: 0.3;
@@ -82,12 +77,12 @@
 }
 
 .form-column-2 select {
+    @include text(16px, 600);
+    @include textColor($black, 0.3);
     background-color: $background;
     width: 100%;
-    color: $black;
     padding: 12px;
     border: none;
-    font-size: 16px;
     -webkit-appearance: button;
     appearance: button;
     outline: none;
@@ -98,7 +93,6 @@
     & + .triangle {
         display: block;
         position: absolute;
-        font-size: 12px;
         top: 60%;
         right: 12px;
         border: 5px solid transparent;
@@ -115,24 +109,21 @@
 }
 table {
     margin-top: 100px;
-    font-family: $roboto;
     border-collapse: collapse;
 }
 td {
+    @include text(14px, 600);
+    @include textColor($black, 0.6);
     border: 1px solid darken($background, 5);
     min-width: 100px;
-    font-size: 14px;
-    font-weight: 600;
     padding: 12px;
     padding-right: 32px;
-    opacity: 0.4;
 }
 .title-td {
-    opacity: 0.8;
+    @include textColor($black, 0.2);
 }
 .active-td {
-    font-size: 12px;
-    opacity: 1;
+    @include text(12px, 600);
+    @include textColor($blue);
     border: none;
-    color: $blue;
 }

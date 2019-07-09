@@ -1,7 +1,4 @@
 <div class="header">
-    <a class="back" routerLink="/main">
-        <span class="icon-arrow-left icon"></span>
-        <span>Back</span>
-    </a>
-    <app-buy-credits [link]="''" [balance]="balance"></app-buy-credits>
+    <app-back-button></app-back-button>
+    <app-buy-credits [link]="'/credits'" [balance]="balance"></app-buy-credits>
 </div>

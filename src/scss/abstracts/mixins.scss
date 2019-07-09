@@ -15,12 +15,12 @@
     color: rgba(51, 51, 51, 0.7);
 }
 
-@mixin text($font-size, $font-weight, $line-height) {
+@mixin text($font-size, $font-weight, $line-height: 100%) {
     font-size: $font-size;
     font-weight: $font-weight;
     line-height: $line-height;
 }
 
-@mixin textColor($color, $opacity) {
+@mixin textColor($color, $opacity: 0) {
     color: transparentize($color, $opacity);
 }
