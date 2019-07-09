@@ -5,9 +5,11 @@
 
 body {
     background-color: $background;
+    overflow-x: hidden;
 }
 
-a, button {
+a,
+button {
     cursor: pointer;
     outline: none;
 }
