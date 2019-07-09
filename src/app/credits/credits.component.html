@@ -5,7 +5,7 @@
         <p class='balance'>{{balance}}</p>
     </ng-container>
     <ng-container class='footer'>
-        <input type='button' value='Purchase Credits'>
+        <input type='button' (click)='buyCredits()' value='Purchase Credits'>
         <br>
         <a routerLink=''>{{buttonText}}</a>
     </ng-container>

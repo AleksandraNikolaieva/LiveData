@@ -1,20 +1,22 @@
 <div class="credits-packages">
     <div class="packages">
-      <div class="package" [class.selected]="optionSelected == package.value" *ngFor='let package of packages'>
-        <div class="package-value">
-          <label >
-              <input type="radio"  [(ngModel)]='optionSelected' name="package-selected" value="{{package.value}}">
-              <span class="checkmark"></span>
-          </label>
-            <div class="credits-amount">
-                <span>{{package.value | number:'.0'}} </span>
-                <span>credits</span>
+        <div class="package" [class.selected]="optionSelected == package.value"
+            *ngFor='let package of packages;let idx = index'>
+            <div class="package-value">
+                <label>
+                    <input type="radio" [(ngModel)]='optionSelected' (ngModelChange)="modelChanged()"
+                        [checked]="idx == 0" name="package-selected" value="{{package.value}}">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="credits-amount">
+                    <span>{{package.value | number:'.0'}} </span>
+                    <span>credits</span>
+                </div>
             </div>
+            <div class="package-pricing">
+                <span class="total-price">{{package.totalPrice}}</span>
+                <span class="price-per-credit">{{package.pricePerCredit}} / credit</span>
+            </div>
+
         </div>
-        <div class="package-pricing">
-          <span class="total-price">{{package.totalPrice}}</span>
-          <span class="price-per-credit">{{package.pricePerCredit}} / credit</span>
-        </div>
-        
-      </div>
     </div>

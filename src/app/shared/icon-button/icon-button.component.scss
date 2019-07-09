@@ -40,3 +40,14 @@ button {
         background-color: darken($white, 1%);
     }
 }
+
+.light-blue{
+    background-color: $white;
+    transition: 0.2s;
+    border: 1px solid $blue;
+    color: $blue;
+ &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}

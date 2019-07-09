@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Job } from '../models';
 
 @Component({
@@ -8,6 +8,7 @@ import { Job } from '../models';
 })
 export class JobItemComponent implements OnInit {
     @Input() job: Job;
+    @Output() openPopup: EventEmitter<any> = new EventEmitter();
     iconMap = {
         contacts : 'icon-menu',
         prospects: 'icon-search'
@@ -20,6 +21,10 @@ export class JobItemComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+    }
+
+    openedPopup() {
+        this.openPopup.emit();
     }
 
 }

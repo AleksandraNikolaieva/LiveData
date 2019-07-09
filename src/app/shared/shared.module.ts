@@ -8,6 +8,7 @@ import { BackButtonComponent } from './back-button/back-button.component';
 import { BuyCreditsComponent } from './buy-credits/buy-credits.component';
 import { CardComponent } from './card/card.component';
 import { RouterModule } from '@angular/router';
+import { ReportPopupComponent } from './report-popup/report-popup.component';
 
 @NgModule({
     declarations: [
@@ -16,9 +17,14 @@ import { RouterModule } from '@angular/router';
         TimeGonePipe,
         CardComponent,
         BuyCreditsComponent,
-        BackButtonComponent
+        BackButtonComponent,
+        ReportPopupComponent
     ],
-    imports: [CommonModule, ReactiveFormsModule, RouterModule],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        RouterModule
+    ],
     exports: [
         IconButtonComponent,
         ReactiveFormsModule,
@@ -26,7 +32,8 @@ import { RouterModule } from '@angular/router';
         TimeGonePipe,
         BackButtonComponent,
         CardComponent,
-        BuyCreditsComponent
+        BuyCreditsComponent,
+        ReportPopupComponent
     ]
 })
 export class SharedModule {}

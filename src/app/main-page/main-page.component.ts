@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Purpose } from '../models';
+import { Porpose } from '../models';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-main-page',
@@ -7,7 +8,9 @@ import { Purpose } from '../models';
     styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-    data: Array<Purpose> = [
+    constructor(private router: Router) {}
+    popupActive = false;
+    data: Array<Porpose> = [
         {
             title: 'Clean your CRM.',
             text: `We'll tell you which records are good,
@@ -15,7 +18,8 @@ export class MainPageComponent {
               have no reason to be in your CRM.`,
             buttonTitle: 'Upload List',
             buttonIcon: 'icon-upload',
-            buttonClass: 'common'
+            buttonClass: 'common',
+            link: '/upload'
         },
         {
             title: 'Grow your B2B.',
@@ -23,7 +27,14 @@ export class MainPageComponent {
               speak and have an intelligent conversation with an informed audience.`,
             buttonTitle: 'Find Prospects',
             buttonIcon: 'icon-search',
-            buttonClass: 'crimson'
+            buttonClass: 'crimson',
+            link: '/find-prospects'
         }
     ];
+    onClick(link: string) {
+        this.router.navigate([link]);
+    }
+    togglePopup() {
+        this.popupActive = !this.popupActive;
+    }
 }

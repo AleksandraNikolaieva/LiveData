@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadListComponent implements OnInit {
     constructor() {}
-    isUploaded: boolean = false;
+    isUploaded = false;
     uploadClick(value: boolean): void {
         this.isUploaded = value;
     }

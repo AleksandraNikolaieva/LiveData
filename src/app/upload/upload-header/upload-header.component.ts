@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadHeaderComponent implements OnInit {
     constructor() {}
-    balance: number = 1492;
+    balance = 1492;
     ngOnInit() {}
 }
