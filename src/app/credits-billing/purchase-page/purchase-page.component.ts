@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchasePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   
   packages = [
@@ -33,6 +34,10 @@ export class PurchasePageComponent implements OnInit {
     }
   ];
 
+  goCheckout() {
+    this.router.navigateByUrl('credits/payment');
+  }
+  
   ngOnInit() {
   }
 

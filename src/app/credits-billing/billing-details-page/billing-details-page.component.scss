@@ -1,0 +1,39 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+:host{
+    @include flex(row,center,flex-start);
+}
+
+.billing-window{
+    width: 50vw;
+}
+
+.header{
+@include flex(column,center,flex-start);
+    
+span{
+        font-size: 17px;
+        font-weight: bold;
+    }
+}
+
+form{
+    @include flex(column,center,flex-start);
+
+    .form-group{
+        @include flex(column,center,flex-start);
+    }
+}
+
+.card-details{
+    @include flex(row,center,flex-start);
+
+    &>*{
+        width: 10vw;
+
+        input{
+            width: inherit;
+        }
+    }
+}
