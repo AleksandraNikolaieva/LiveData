@@ -9,6 +9,6 @@
         </div>
     </div>
     <div class='main'>
-        <app-job-item *ngFor='let job of jobs; trackBy: trackByFn' [job]='job'></app-job-item>
+        <app-job-item *ngFor='let job of jobs; trackBy: trackByFn' [job]='job' (openPopup)='openedPopup()'></app-job-item>
     </div>
 </app-card>

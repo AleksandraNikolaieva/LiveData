@@ -1,3 +1,4 @@
+<app-report-popup *ngIf='popupActive' (closePopup)='togglePopup()'></app-report-popup>
 <div class="row">
     <div *ngFor="let item of data">
         <h3>{{ item.title }}</h3>
@@ -11,6 +12,6 @@
     </div>
 </div>
 <div class="row">
-    <app-jobs-list></app-jobs-list>
+    <app-jobs-list (openPopup)='togglePopup()'></app-jobs-list>
     <app-credits></app-credits>
 </div>

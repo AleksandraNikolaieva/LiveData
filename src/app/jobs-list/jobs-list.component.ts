@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Job } from '../models';
 import { jobs } from '../mockData';
 
@@ -8,6 +8,7 @@ import { jobs } from '../mockData';
     styleUrls: ['./jobs-list.component.scss']
 })
 export class JobsListComponent implements OnInit {
+    @Output() openPopup: EventEmitter<any> = new EventEmitter();
     title = 'Recent jobs';
     jobs: Array<Job> = jobs;
 
@@ -22,4 +23,10 @@ export class JobsListComponent implements OnInit {
         }
         return item.id;
     }
+
+    openedPopup() {
+        this.openPopup.emit();
+    }
+
+    
 }

@@ -4,6 +4,6 @@
 <p>{{job.title}}</p>
 <span class='date'>{{job.date | timeGone}}</span>
 <span class='count'>{{job.count | commaNumber}} {{job.type}}</span>
-<button>
+<button (click)='openedPopup()'>
     <span class='icon-download'></span>
 </button>

@@ -1,0 +1,43 @@
+<div class="backdrop" (click)='closedPopup()'></div>
+<div class="report-window">
+  <div class="header">
+    <span>{{report.date | date}}</span>
+    <span class="title">{{report.title}}</span>
+    <button>Edit name</button>
+  </div>
+  <div class="main-content">
+    <div class="main-numbers">
+      <div>
+        <span>{{report.contactsFound | number:'.0'}}</span>
+        <span>Contacts found</span>
+      </div>
+      <div>
+          <span>{{report.contactsUpdated | number:'.0'}}</span>
+          <span>Updated</span>
+        </div>
+    </div>
+    <div class="additional-info">
+      <div>
+          <span>{{report.emailsUpdated | number:'.0'}}</span>
+          <span>emails updated.</span>
+      </div>
+      <div>
+          <span>{{report.companiesUpdated | number:'.0'}}</span>
+          <span>companies updated.</span>
+      </div>
+      <div>
+          <span>{{report.linkedInInfo | number:'.0'}}</span>
+          <span>LinkedIn Info added.</span>
+      </div>
+      <div>
+          <span>{{report.creditsUsed | number:'.0'}}</span>
+          <span>credits used.</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <app-icon-button [title]='"Download cleaned list."' [class]='"white"'>
+      <i class="icon-file-text2"></i>
+    </app-icon-button>
+  </div>
+</div>
