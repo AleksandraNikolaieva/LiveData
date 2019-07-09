@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { SelectedPackageService } from '../services/selected-package.service';
 import { Package } from 'src/app/models';
 
+
 @Component({
     selector: 'app-credits-offers',
     templateUrl: './credits-offers.component.html',
@@ -12,7 +13,9 @@ export class CreditsOffersComponent implements OnInit {
     optionSelected: string;
     @Input() packages: Array<Package>;
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.optionSelected = this.packages[0].value.toString();
+    }
 
     modelChanged() {
         this.selectedPackage.package = this.packages.find(
