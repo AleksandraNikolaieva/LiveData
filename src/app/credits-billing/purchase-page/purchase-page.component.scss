@@ -9,7 +9,6 @@ button{
     border: none;
     background: none;
     padding: 0;
-
 }
 .offers-window{
     padding: 30px 20px;
@@ -28,20 +27,6 @@ button{
 
 .navigation-message{
     width: 20vw;
-}
-.back-button{
-    font-weight: bold;
-    padding: 0;
-    color: $blue;
-    margin-bottom: 22px;
-
-    i{
-        font-weight: bold;
-    }
-
-    &:hover {
-        color: darken($blue, 20);
-    }
 }
 
 .message{

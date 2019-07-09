@@ -5,12 +5,13 @@ import { PurchasePageComponent } from './purchase-page/purchase-page.component';
 import { BillingDetailsPageComponent } from './billing-details-page/billing-details-page.component';
 import { CreditsBillingRoutingModule } from './credits-billing-routing.module';
 import { CreditsOffersComponent } from './credits-offers/credits-offers.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [PurchasePageComponent, BillingDetailsPageComponent, CreditsOffersComponent],
   imports: [
-    CommonModule, FormsModule, CreditsBillingRoutingModule
+    CommonModule, FormsModule, CreditsBillingRoutingModule, SharedModule
   ]
 })
 export class CreditsBillingModule { }
