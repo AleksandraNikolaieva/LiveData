@@ -27,6 +27,4 @@ export class JobsListComponent implements OnInit {
     openedPopup() {
         this.openPopup.emit();
     }
-
-    
 }

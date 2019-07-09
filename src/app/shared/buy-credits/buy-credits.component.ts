@@ -9,7 +9,7 @@ export class BuyCreditsComponent implements OnInit {
     @Input() balance: number;
     @Input() link: string;
     constructor() {}
-    title: string = 'Credits Balance';
-    label: string = 'credits';
+    title = 'Credits Balance';
+    label = 'credits';
     ngOnInit() {}
 }

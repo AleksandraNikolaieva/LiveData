@@ -20,7 +20,11 @@ import { ReportPopupComponent } from './report-popup/report-popup.component';
         BackButtonComponent,
         ReportPopupComponent
     ],
-    imports: [CommonModule, ReactiveFormsModule, RouterModule],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        RouterModule
+    ],
     exports: [
         IconButtonComponent,
         ReactiveFormsModule,

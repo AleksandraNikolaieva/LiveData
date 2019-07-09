@@ -8,8 +8,8 @@ import { Contact } from 'src/app/models';
 })
 export class UploadFilePreviewComponent implements OnInit {
     constructor() {}
-    filename: string = 'list.csv';
-    contactsCount: number = 3018;
+    filename = 'list.csv';
+    contactsCount = 3018;
     contacts: Array<Contact> = [
         { name: 'Joshua Kim', mail: 'joshua-kim@example.com' },
         { name: 'Jerry Garza', mail: 'jerry-garza@example.com' },

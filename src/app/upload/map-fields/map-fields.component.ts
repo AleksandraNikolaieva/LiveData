@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapFieldsComponent implements OnInit {
     constructor() {}
-    title: string = 'Map your fields';
+    title = 'Map your fields';
     selector = {
         fullname: '',
         lastname: '',

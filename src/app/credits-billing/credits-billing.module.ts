@@ -9,9 +9,17 @@ import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [PurchasePageComponent, BillingDetailsPageComponent, CreditsOffersComponent],
-  imports: [
-    CommonModule, FormsModule, ReactiveFormsModule, CreditsBillingRoutingModule, SharedModule
-  ]
+    declarations: [
+        PurchasePageComponent,
+        BillingDetailsPageComponent,
+        CreditsOffersComponent
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        CreditsBillingRoutingModule,
+        SharedModule
+    ]
 })
 export class CreditsBillingModule { }

@@ -23,6 +23,6 @@ export class UploadDetailsComponent implements OnInit {
             label: 'Include LinkedIn information'
         }
     ];
-    estimatedCost: number = 1492;
+    estimatedCost = 1492;
     ngOnInit() {}
 }

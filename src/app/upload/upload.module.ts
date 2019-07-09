@@ -19,6 +19,11 @@ import { FormsModule } from '@angular/forms';
         UploadFilePreviewComponent,
         MapFieldsComponent
     ],
-    imports: [CommonModule, UploadRoutingModule, SharedModule, FormsModule]
+    imports: [
+        CommonModule,
+        UploadRoutingModule,
+        SharedModule,
+        FormsModule
+    ]
 })
 export class UploadModule {}
