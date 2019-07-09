@@ -1,4 +1,4 @@
-import { Job } from './models';
+import { Job, ListItem } from './models';
 
 export const jobs: Job[] = [
     {
@@ -58,4 +58,53 @@ export const jobs: Job[] = [
         type: 'contacts'
     }
 ];
+
+export const contacts: Array<ListItem> = [
+    {
+        name: 'Geoff Seely',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Nelly Ortiz',
+        position: 'Marketing Director at Roc Naion',
+        linkedIn: 'wilnellyortiz'
+    },
+    {
+        name: 'Tony Guerrero',
+        position: 'Marketing Director at RTIC Coolers',
+        linkedIn: 'tony-querrero-644585a7'
+    },
+    {
+        name: 'Karla Evans',
+        position: 'Si Director, integrated Marketing & Media at Ultra Beauty',
+        linkedIn: 'karla-evans-davis-46b9494'
+    },
+    {
+        name: 'Rebecca Gautrey',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Rebecca Ritterbush',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Geoff Seely',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Geoff Seely',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Geoff Seely',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    }
+];
+
 

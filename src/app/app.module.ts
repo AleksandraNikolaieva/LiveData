@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
+import { ProspectsComponent } from './prospects/prospects.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -19,14 +21,17 @@ import { AuthModule } from './auth/auth.module';
         JobsListComponent,
         JobItemComponent,
 
-        MainPageComponent
+        MainPageComponent,
+
+        ProspectsComponent
     ],
     imports: [
         BrowserModule,
         RouterModule,
         AppRoutingModule,
         SharedModule,
-        AuthModule
+        AuthModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

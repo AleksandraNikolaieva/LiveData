@@ -1,4 +1,4 @@
-export interface Porpose {
+export interface Purpose {
     title: string;
     text: string;
     buttonTitle: string;
@@ -40,4 +40,10 @@ export interface Package {
     value: number;
     totalPrice: string;
     pricePerCredit: string;
+}
+
+export interface ListItem {
+    name: string;
+    position: string;
+    linkedIn: string;
 }
