@@ -87,20 +87,11 @@ form{
     
     button:nth-child(odd){
         @include label(14px);
-        margin-left: 30%;
     }
 
     button:nth-child(even){
         @extend %common-button;
-        width: 100%;
+        width: 20vw;
         margin-left: 20px;
-    // background: $blue;
-    // margin-left: 20px;
-    // padding: 15px 0;
-    // width: 100%;
-    // font-size: 14px;
-    // font-weight: bold;
-    // color:$white;
-    // border-radius: 3px;
     }
 }
