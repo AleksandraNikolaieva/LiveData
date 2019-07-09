@@ -10,7 +10,7 @@ export class CreditsOffersComponent implements OnInit {
 
   constructor(private selectedPackage: SelectedPackageService) { }
    optionSelected: number;
-  @Input() packages: Array<any>;
+  @Input() packages: Array<Package>;
 
 
   ngOnInit() {

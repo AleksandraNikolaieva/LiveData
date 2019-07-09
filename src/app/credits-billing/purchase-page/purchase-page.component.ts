@@ -13,7 +13,7 @@ export class PurchasePageComponent implements OnInit {
 
   option: any;
   
-  packages = [
+  packages: Array<Package> = [
     {
       value: 100,
       totalPrice: '$10',
