@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { SelectedPackageService } from '../services/selected-package.service';
 
 @Component({
   selector: 'app-credits-offers',
@@ -7,11 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CreditsOffersComponent implements OnInit {
 
-  constructor() { }
-  optionSelected: any;
-  @Input() packages: any;
+  constructor(private selectedPackage: SelectedPackageService) { }
+   optionSelected: number;
+  @Input() packages: Array<any>;
+
 
   ngOnInit() {
   }
 
+  modelChanged() {
+    this.selectedPackage.package = this.packages.find(el => el.value == this.optionSelected);
+  }
 }

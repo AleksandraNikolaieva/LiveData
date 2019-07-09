@@ -2,7 +2,6 @@
 @import 'abstracts/mixins.scss';
 :host{
     @include flex(row,center,flex-start);
-    margin-top: 40px;
 }
 button{
     outline: none;
