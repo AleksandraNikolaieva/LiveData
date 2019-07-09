@@ -18,8 +18,8 @@
         }
 
         .price-per-credit{
-            font-size: 12px;
-            color:rgba(51, 51, 51, 0.8);
+            @include text(12px,normal,normal);
+            @include textColor($black,0.2);
         }
     }
 }
@@ -36,8 +36,7 @@
         position: absolute;
         opacity: 0;
         cursor: pointer;
-        width: 18px;
-        height: 18px;
+        @include size(18px,18px);
         left: 1;
         left: 1.2px;
 
@@ -51,8 +50,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 18px;
-        width: 18px;
+        @include size(18px,18px);
         border: 1.3px solid $blue;
         border-radius: 50%;
       }
@@ -60,13 +58,12 @@
 
 .credits-amount{
     &>span:nth-child(1){
-        font-size: 20px;
-        font-weight: bold;
+        @include text(20px,bold,normal);
         margin-left: 31px;
     }
 
     &>span:nth-child(2){
-            color:rgba(51, 51, 51,51);
+            color: rgba(51, 51, 51,51);
             font-size: 13px;
         
     }
