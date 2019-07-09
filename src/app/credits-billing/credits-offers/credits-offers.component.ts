@@ -8,16 +8,15 @@ import { Package } from 'src/app/models';
     styleUrls: ['./credits-offers.component.scss']
 })
 export class CreditsOffersComponent implements OnInit {
-
-    constructor(private selectedPackage: SelectedPackageService) { }
-    optionSelected: number;
+    constructor(private selectedPackage: SelectedPackageService) {}
+    optionSelected: string;
     @Input() packages: Array<Package>;
 
-
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
     modelChanged() {
-        this.selectedPackage.package = this.packages.find(el => el.value == this.optionSelected);
+        this.selectedPackage.package = this.packages.find(
+            el => el.value === parseInt(this.optionSelected, 10)
+        );
     }
 }

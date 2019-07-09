@@ -7,7 +7,6 @@ import { CreditsBillingRoutingModule } from './credits-billing-routing.module';
 import { CreditsOffersComponent } from './credits-offers/credits-offers.component';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
     declarations: [
         PurchasePageComponent,
@@ -22,4 +21,4 @@ import { SharedModule } from '../shared/shared.module';
         SharedModule
     ]
 })
-export class CreditsBillingModule { }
+export class CreditsBillingModule {}
