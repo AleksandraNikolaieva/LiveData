@@ -1,4 +1,4 @@
-export interface Porpose {
+export interface Purpose {
     title: string;
     text: string;
     buttonTitle: string;
@@ -17,4 +17,10 @@ export interface Job {
 export interface Contact {
     name: string;
     mail: string;
+}
+
+export interface ListItem {
+    name: string;
+    position: string;
+    linkedIn: string;
 }

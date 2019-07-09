@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Porpose } from '../models';
+import { Purpose } from '../models';
 
 @Component({
     selector: 'app-main-page',
@@ -7,7 +7,7 @@ import { Porpose } from '../models';
     styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-    data: Array<Porpose> = [
+    data: Array<Purpose> = [
         {
             title: 'Clean your CRM.',
             text: `We'll tell you which records are good,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LogInSignUpComponent } from './auth/log-in-sign-up/log-in-sign-up.component';
+import { ProspectsComponent } from './prospects/prospects.component';
 
 const routes: Routes = [
     {
@@ -22,6 +23,10 @@ const routes: Routes = [
         path: 'signup',
         component: LogInSignUpComponent,
         data: {isLogin: false}
+    },
+    {
+        path: 'find-prospects',
+        component: ProspectsComponent
     },
     {
         path: 'credits',

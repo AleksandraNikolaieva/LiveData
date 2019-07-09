@@ -1,0 +1,104 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/extends';
+
+:host {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    min-width: 290px;
+
+    > label {
+        font-weight: bold;
+    }
+
+    > div:first-child {
+        @include flex(row, space-between, flex-start);
+        margin-bottom: 50px;
+    }
+    
+    app-card {
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+
+        .main {
+            @include flex(row, space-between, center);
+            color: transparentize($text-color, 0.2);
+    
+            input:nth-of-type(1) {
+                flex-grow: 1;
+                border: none;
+                color: transparentize($text-color, 0.2);
+            }
+        
+            input[type=button] {
+                @extend %common-button;
+                padding: 10px 25px;
+            }
+    
+            button {
+                background-color: white;
+                border: none;
+                font-size: 20px;
+                margin-right: 10px;
+                padding: 0;
+    
+                span {
+                    padding: 3px;
+                    color: transparentize($text-color, 0.2);
+                }
+            }
+        }
+    }
+
+    .credits {
+        @include flex(row, flex-end, flex-end);
+        padding-left: 25%;
+        margin: 35px 0;
+        color: transparentize($text-color, 0.2);
+
+        label {
+            font-size: 14px;
+        }
+
+        > div {
+            @include flex(column, center, flex-start);
+            height: 100%;
+            flex-grow: 1;
+
+            input, > div {
+                margin-top: 5px;
+            }  
+        }
+
+        > div:nth-of-type(1) input {
+            padding: 10px;
+            line-height: 24px;
+            width: 100px;
+            border: 2px solid $borders;
+            border-radius: 5px;
+            color: transparentize($text-color, 0.2);
+        }
+
+        output {
+            font-size: 24px;
+            line-height: 48px;
+            font-weight: bold;
+            margin-right: 5px;
+            color: $black;
+        }
+
+        input[type=button] {
+            @extend %common-button;
+            flex-grow: 2;
+        }
+    }
+
+    .list {
+        width: 100%;
+        border-left: 2px solid $borders;
+        border-right: 2px solid $borders;
+    }
+}
+
