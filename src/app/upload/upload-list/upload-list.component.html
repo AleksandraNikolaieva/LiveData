@@ -1,4 +1,13 @@
 <app-upload-header></app-upload-header>
 <div class="container">
-    <app-upload-file></app-upload-file>
+    <ng-container *ngIf="!isUploaded; else preview">
+        <app-upload-file (uploadClick)="uploadClick($event)"></app-upload-file>
+    </ng-container>
 </div>
+
+<ng-template #preview>
+    <div class="preview">
+        <app-upload-file-preview></app-upload-file-preview>
+        <app-upload-details></app-upload-details>
+    </div>
+</ng-template>
