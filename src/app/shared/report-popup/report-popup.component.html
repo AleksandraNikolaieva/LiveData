@@ -1,7 +1,7 @@
 <div class="backdrop" (click)='closedPopup()'></div>
 <div class="report-window">
   <div class="header">
-    <span>{{report.date | date}}</span>
+    <span>{{report.date | date:'d, LLLL 	yyyy'}}</span>
     <span class="title">{{report.title}}</span>
     <button>Edit name</button>
   </div>
