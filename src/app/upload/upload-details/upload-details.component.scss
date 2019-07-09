@@ -1,0 +1,99 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+.container {
+    font-family: $roboto;
+}
+.services {
+    margin-top: 80px;
+}
+.title {
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cost {
+    margin-top: 80px;
+}
+.cost-value {
+    margin-top: 12px;
+    span {
+        font-size: 24px;
+        color: #333333;
+        font-weight: bold;
+    }
+    span:last-child {
+        font-size: 12px;
+        color: #333333;
+        opacity: 0.9;
+        font-weight: normal;
+    }
+}
+.link {
+    margin-top: 50px;
+    display: block;
+    width: 250px;
+    padding: 16px 22px;
+    color: $white;
+    background-color: $blue;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: darken($blue, 20);
+    }
+}
+.option {
+    margin-top: 18px;
+    label {
+        cursor: pointer;
+        position: relative;
+        margin: auto 0;
+        font-size: 14px;
+        flex-grow: 1;
+        font-weight: bold;
+
+        input[type='checkbox'] {
+            opacity: 0;
+            margin-right: 15px;
+            width: auto;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            border: 2px solid $borders;
+            border-radius: 5px;
+            position: absolute;
+            top: -4px;
+            left: 0px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                width: 6px;
+                height: 12px;
+                border: solid $blue;
+                border-width: 0px 3px 3px 0px;
+                transform: rotate(45deg);
+                display: none;
+            }
+        }
+
+        input:checked ~ span {
+            background-color: darken($white, 1%);
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+}

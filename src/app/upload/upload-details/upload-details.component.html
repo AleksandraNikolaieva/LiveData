@@ -1,3 +1,27 @@
-<p>
-    upload-details works!
-</p>
+<div class="container">
+    <div class="services">
+        <div class="title">Services</div>
+        <div class="option" *ngFor="let option of options">
+            <label>
+                <input
+                    name="options"
+                    [value]="option.value"
+                    type="checkbox"
+                    checked
+                />
+                {{ option.label }}
+                <span></span>
+            </label>
+        </div>
+    </div>
+    <div class="cost">
+        <div class="title">
+            Estimated cost
+        </div>
+        <div class="cost-value">
+            <span>{{ estimatedCost | commaNumber }} </span>
+            <span>credits</span>
+        </div>
+    </div>
+    <a class="link" routerLink="/upload/clean">Clean List</a>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="main">
+        <div class="description">
+            <h3 class="title">{{ title }}</h3>
+            <p class="caption" *ngFor="let p of description">{{ p }}</p>
+        </div>
+        <a
+            routerLink=""
+            class="link"
+            [ngClass]="{ disabled: !selector.fullname }"
+        >
+            Clean list
+        </a>
+    </div>
+    <div class="form">
+        <div class="form-row form-row--titles">
+            <div class="form-title form-column-1">Our columns</div>
+            <div class="form-title form-column-2">Your columns</div>
+        </div>
+        <div
+            class="form-row"
+            [ngClass]="{ disabledrow: control.disabled && selector.fullname }"
+            *ngFor="let control of controls"
+        >
+            <div class="form-column-1 input-title">
+                {{ control.title }}
+                <span class="icon-arrow-right"></span>
+            </div>
+            <div class="form-column-2">
+                <select
+                    [(ngModel)]="selector[control.field]"
+                    (ngModelChange)="onChange(control.field)"
+                >
+                    <option value="{{ option }}" *ngFor="let option of columns">
+                        {{ option }}
+                    </option>
+                </select>
+                <span class="triangle"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table>
+    <tbody>
+        <tr *ngIf="selector.fullname">
+            <td class="active-td" *ngFor="let col of activeColumns">
+                {{ col }}
+            </td>
+        </tr>
+        <tr>
+            <td class="title-td" *ngFor="let col of columns">{{ col }}</td>
+        </tr>
+        <tr *ngFor="let item of list">
+            <td *ngFor="let col of columns">{{ item[col] }}</td>
+        </tr>
+    </tbody>
+</table>
