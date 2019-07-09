@@ -1,0 +1,10 @@
+<div class="credits">
+    <div class="balance">
+        <span class="title">{{ title }}</span>
+        <span class="value">
+            {{ balance | commaNumber }}
+            <span class="label"> {{ label }}</span>
+        </span>
+    </div>
+    <a [routerLink]="link" class="link">Buy Credits</a>
+</div>

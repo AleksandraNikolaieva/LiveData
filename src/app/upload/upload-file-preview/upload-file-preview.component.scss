@@ -1,0 +1,20 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+.container {
+}
+
+.header {
+    @include flex(row, space-between, flex-end);
+}
+
+.file-img {
+    @include size(56px, 56px);
+    img {
+        @include size(100%, 100%);
+    }
+}
+.file-title {
+    font-size: 12px;
+    font-weight: 600;
+}

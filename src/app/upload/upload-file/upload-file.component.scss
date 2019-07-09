@@ -1,5 +1,5 @@
-@import "abstracts/variables.scss";
-@import "abstracts/mixins.scss";
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
 .container {
     color: $black;
 }
@@ -32,4 +32,7 @@
     font-size: 14px;
     font-weight: bold;
     font-family: $roboto;
+}
+.preview {
+    @include flex(row, flex-start, flex-start);
 }

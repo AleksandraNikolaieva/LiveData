@@ -1,16 +1,7 @@
 <div class="header">
-    <div class="back">
+    <a class="back" routerLink="/main">
         <span class="icon-arrow-left icon"></span>
         <span>Back</span>
-    </div>
-    <div class="credits">
-        <div class="balance">
-            <span class="title">{{ title }}</span>
-            <span class="value">
-                {{ balance }}
-                <span class="label"> {{ label }}</span>
-            </span>
-        </div>
-        <a routerLink="" class="link">Buy more</a>
-    </div>
+    </a>
+    <app-buy-credits [link]="''" [balance]="balance"></app-buy-credits>
 </div>

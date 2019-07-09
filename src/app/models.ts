@@ -13,3 +13,8 @@ export interface Job {
     count: number;
     type: 'contacts' | 'prospects';
 }
+
+export interface Contact {
+    name: string;
+    mail: string;
+}
