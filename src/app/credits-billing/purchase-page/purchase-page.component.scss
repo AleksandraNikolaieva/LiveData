@@ -45,6 +45,10 @@ button {
     }
     button {
         color: $blue;
+
+        &:hover{
+            color:darken($blue,15%);
+        }
     }
 }
 
