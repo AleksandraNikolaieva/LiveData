@@ -1,5 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+@import 'abstracts/extends';
 
 form {
     @include size(40%);
@@ -101,19 +102,10 @@ form {
         }
 
         input[type=submit] {
-            padding: 15px 0;
-            background-color: $blue;
-            color: $white;
+            @extend %common-button;
             margin: 18px 0;
-            font-weight: bold;
-            border: none;
             flex-grow: 1;
             min-width: 50%;
-            transition: 0.2s;
-
-            &:hover {
-                background-color: lighten($blue, 10%);
-            }
         }
     }
 
@@ -121,20 +113,13 @@ form {
         @include flex(column, space-between, center);
         width: 100%;
 
-        button {
-            @include size(100%);
-            background-color: $white;
-            padding: 12px 22px;
-            margin: 20px 0;
-            border: none;
-            border-radius: 5px;
+        app-icon-button {
+            width: 100%;
             box-shadow: 0px 2px 2px 0px lighten($text-color, 50%);
             transition: 0.2s;
-            @include flex(row, center, center);
 
             &:hover {
                 box-shadow: 0px 0px 0px 0px lighten($text-color, 50%);
-                background-color: darken($white, 1%);
             }
 
             svg {
