@@ -8,7 +8,13 @@
         <button>
             <span class='icon-search'></span>
         </button>
-        <input id='search' placeholder='e.g demand generation'>
+        <input 
+            id='search'
+            [formControl]='searchControl'
+            placeholder='e.g demand generation'
+            #toSearch
+            autocomplete='off'
+        >
         <button>
             <span class='icon-more-horizontal'></span>
         </button>
@@ -18,17 +24,25 @@
 <div class='credits'>
     <div>
         <label for='size'>List size</label>
-        <input id='size' [value]='listSize'>
+        <input type='number' id='size' [(ngModel)]='listSize'>
     </div>
     <div>
         <label for='coast'>Coast</label>
         <div>
-            <output id='coast'>{{coast}}</output>
+            <output id='coast'>{{listSize}}</output>
             <span>credits</span>
         </div>
     </div>
     <input type='button' value='Purchase List'>
 </div>
 <div class='list'>
-
+    <div>
+        <p>Over <b>{{ total | commaNumber }}</b> contacts found</p>
+        <span>LinkedIn</span>
+    </div>
+    <div *ngFor='let item of list'>
+        <span>{{item.name}}</span>
+        <span>{{item.position}}</span>
+        <span>{{item.linkedIn}}</span>
+    </div>
 </div>

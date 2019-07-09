@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Porpose } from '../models';
+import { Purpose } from '../models';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class MainPageComponent {
     constructor(private router: Router) {}
     popupActive = false;
-    data: Array<Porpose> = [
+    data: Array<Purpose> = [
         {
             title: 'Clean your CRM.',
             text: `We'll tell you which records are good,

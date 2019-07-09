@@ -20,12 +20,6 @@ export interface Contact {
     mail: string;
 }
 
-export interface ListItem {
-    name: string;
-    position: string;
-    linkedIn: string;
-}
-
 export interface Option {
     value: string;
     label: string;
@@ -46,4 +40,10 @@ export interface Package {
     value: number;
     totalPrice: string;
     pricePerCredit: string;
+}
+
+export interface ListItem {
+    name: string;
+    position: string;
+    linkedIn: string;
 }

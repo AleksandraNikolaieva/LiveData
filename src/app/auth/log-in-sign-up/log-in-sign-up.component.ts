@@ -10,8 +10,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class LogInSignUpComponent implements OnInit {
     title = 'Sign up';
     form: FormGroup;
-    submitButtonValue = 'Create account';
-    googleButtonValue = 'Log in width Google';
+    submitButtonValue = 'Create Account';
+    googleButtonValue = 'Log in with Google';
     isActionLogin = false;
 
     constructor(private route: ActivatedRoute, private fb: FormBuilder) { }
@@ -31,7 +31,7 @@ export class LogInSignUpComponent implements OnInit {
 
     formInit() {
         this.form = this.fb.group({
-            email: [null, [Validators.required]],
+            email: [null, [Validators.required, Validators.email]],
             password: [null, [Validators.required]]
         });
     }

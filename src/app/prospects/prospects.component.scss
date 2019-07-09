@@ -6,7 +6,7 @@
     display: block;
     margin: 0 auto;
     width: 80%;
-    min-width: 290px;
+    min-width: 543px;
 
     > label {
         font-weight: bold;
@@ -60,6 +60,7 @@
 
         label {
             font-size: 14px;
+            letter-spacing: 1px;
         }
 
         > div {
@@ -81,12 +82,27 @@
             color: transparentize($text-color, 0.2);
         }
 
+        > div:nth-of-type(2) {
+            margin-right: 10px;
+
+            div {
+                @include flex(row, space-between, center);
+            }
+        }
+
         output {
+            display: inline-block;
+            height: 48px;
+            margin-right: 5px;
             font-size: 24px;
             line-height: 48px;
             font-weight: bold;
-            margin-right: 5px;
+            text-align: center;
             color: $black;
+            flex-grow: 1;
+            min-width: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         input[type=button] {
@@ -99,6 +115,33 @@
         width: 100%;
         border-left: 2px solid $borders;
         border-right: 2px solid $borders;
+        border-top: 2px solid $borders;
+
+        div {
+            @include flex(row, space-between, center);
+            border-bottom: 2px solid $borders;
+            background-color: $white;
+            padding: 10px;
+            font-size: 14px;
+            color: $text-color;
+
+            span {
+                text-align: left;
+                min-width: 180px;
+            }
+
+            span:nth-of-type(2) {
+                flex-grow: 1;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            span:first-child, p {
+                font-size: 17px;
+            }
+        }
     }
 }
 
