@@ -27,10 +27,7 @@
                 <span class="icon-arrow-right"></span>
             </div>
             <div class="form-column-2">
-                <select
-                    [(ngModel)]="selector[control.field]"
-                    (ngModelChange)="onChange(control.field)"
-                >
+                <select [(ngModel)]="selector[control.field]">
                     <option value="{{ option }}" *ngFor="let option of columns">
                         {{ option }}
                     </option>
