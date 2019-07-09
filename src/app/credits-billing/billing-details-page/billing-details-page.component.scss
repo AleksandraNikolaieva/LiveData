@@ -1,8 +1,15 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
+@import 'abstracts/extends.scss';
 
 :host{
     @include flex(row,center,flex-start);
+}
+
+button{
+    outline: none;
+    border: none;
+    background: none;
 }
 
 .billing-window{
@@ -28,16 +35,19 @@ form{
         margin: 10px 0;
         
         label{
-            font-size: 12px;
-            color:rgba(51, 51, 51, 0.7);
+            @include label(12px);
             margin-bottom: 5px;
         }
 
         input{
-            width: inherit;
+            width: calc(100% - 20px);
             border-radius: 4px;
-            padding: 10px;
+            padding: 12px 9px;
             border: 1.5px solid  rgba(51, 51, 51, 0.2);
+
+            &::placeholder{
+                color:rgba(51, 51, 51, 0.7);
+            }
         }
     }
 }
@@ -45,15 +55,52 @@ form{
 .card-details{
     @include flex(row,center,flex-start);
 
-    .form-group>input{
-        width: calc(100% - 20px);
-    }
-
     &>*:nth-child(2){
         margin:10px 10px;
+    }
+}
 
-        input{
-            // width: calc(100% - 20px);
+.total{
+    margin: 25px 0;
+    border-style: solid;
+    border-width: 1.5px 0;
+    border-color: rgba(51, 51, 51, 0.2);
+    padding: 15px 0;
+    @include flex(row,space-between,flex-start);
+
+    &>div{
+        @include flex(column,space-between,flex-start);
+
+        &>span:nth-child(odd){
+            @include label(12px);
+            margin-bottom: 5px;
         }
+
+        &>span:nth-child(even){
+            font-weight: bold;
+        }
+    }
+}
+
+.footer{
+    @include flex(row,flex-end,center);
+    
+    button:nth-child(odd){
+        @include label(14px);
+        margin-left: 30%;
+    }
+
+    button:nth-child(even){
+        @extend %common-button;
+        width: 100%;
+        margin-left: 20px;
+    // background: $blue;
+    // margin-left: 20px;
+    // padding: 15px 0;
+    // width: 100%;
+    // font-size: 14px;
+    // font-weight: bold;
+    // color:$white;
+    // border-radius: 3px;
     }
 }

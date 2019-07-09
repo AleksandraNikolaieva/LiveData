@@ -6,36 +6,40 @@
   <form [formGroup]="billingForm">
   <div class="form-group">
    <label for="name">Name on card</label>
-   <input type="text" formControlName='name' class="form-control"> 
+   <input type="text" formControlName='name' class="form-control" placeholder="Name on card"> 
   </div>
   <div class="form-group">
       <label for="cardNumber">Card number</label>
-      <input type="text" formControlName='cardNumber' class="form-control"> 
+      <input type="text" formControlName='cardNumber' class="form-control" placeholder="Card number"> 
   </div>
   <div class="card-details">
       <div class="form-group">
           <label for="expMonth">Expiration month</label>
-          <input type="text" formControlName='expMonth' class="form-control"> 
+          <input type="text" formControlName='expMonth' class="form-control" placeholder="MM"> 
       </div>
       <div class="form-group">
           <label for="expYear">Expiration year</label>
-          <input type="text" formControlName='expYear' class="form-control"> 
+          <input type="text" formControlName='expYear' class="form-control" placeholder="YYYY"> 
       </div>
       <div class="form-group">
           <label for="cvv">CVV / CVC</label>
-          <input type="text" formControlName='cvv' class="form-control"> 
+          <input type="text" formControlName='cvv' class="form-control" placeholder="MM"> 
       </div>
   </div>
-  <!-- <div class="form-group">
-   <label for="name">Name on card</label>
-   <input type="text" formControlName='name' class="form-control"> 
-  </div> -->
-  <!-- .form-group
-   label(for="password") Password
-   input(type="password" formControlName="password" class="form-control") 
-  .form-group
-   button('(click)'="onSubmit()" '[disabled]'='loginForm.invalid') Log in
-  button.toReg('(click)'="signUp($event)") Sign up   -->
+ </form>
+ <div class="total">
+        <div class="purchasing">
+            <span>Purchasing</span>
+            <span>{{selectedPackage.package.value | commaNumber}} credits</span>
+        </div>
+        <div class="total-cost">
+            <span>Total cost</span>
+            <span>{{selectedPackage.package.totalPrice}}</span>
+        </div>
+    </div>
+  <div class="footer">
+      <button>Cancel</button>
+      <button>Buy</button>
+  </div>  
 
-</form>
 </div>

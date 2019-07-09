@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SelectedPackageService } from '../services/selected-package.service';
 
 @Component({
   selector: 'app-purchase-page',
@@ -8,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class PurchasePageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private selectedPackage: SelectedPackageService) { }
 
+  option: any;
   
   packages = [
     {
