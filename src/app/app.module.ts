@@ -9,7 +9,6 @@ import { JobItemComponent } from "./job-item/job-item.component";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
-import { CreditsOffersComponent } from "./purchase-page/credits-offers/credits-offers.component";
 import { RouterModule } from "@angular/router";
 import { AuthModule } from "./auth/auth.module";
 
@@ -22,8 +21,7 @@ import { AuthModule } from "./auth/auth.module";
         JobsListComponent,
         JobItemComponent,
 
-        MainPageComponent,
-        CreditsOffersComponent
+        MainPageComponent
     ],
     imports: [
         BrowserModule,

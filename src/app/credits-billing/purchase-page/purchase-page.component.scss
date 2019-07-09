@@ -1,8 +1,7 @@
 @import 'abstracts/variables.scss';
-
+@import 'abstracts/mixins.scss';
 :host{
-    display: flex;
-    justify-content: center;
+    @include flex(row,center,flex-start);
     margin-top: 40px;
 }
 button{
@@ -35,8 +34,13 @@ button{
     padding: 0;
     color: $blue;
     margin-bottom: 22px;
+
     i{
         font-weight: bold;
+    }
+
+    &:hover {
+        color: darken($blue, 20);
     }
 }
 
@@ -49,8 +53,7 @@ button{
 
 
 .need-more{
-    display: flex;
-    justify-content: center;
+    @include flex(row,center,center);
     margin: 43px 0;
     font-size: 14px;
 
@@ -64,15 +67,19 @@ button{
 }
 
 .checkout-button>button{
+    @include flex(row,center,center);
     background: $blue;
     padding: 15px 0;
     font-size: 14px;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
     width: 100%;
     color:$white;
     border-radius: 3px;
+
+    &:hover {
+        box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.8)
+    }
+
 }
 
 
