@@ -1,72 +1,64 @@
-@import 'abstracts/variables.scss';
-@import 'abstracts/mixins.scss';
-:host{
-    @include flex(row,center,flex-start);
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+:host {
+    @include flex(row, center, flex-start);
 }
-button{
+button {
     outline: none;
     border: none;
     background: none;
     padding: 0;
 }
-.offers-window{
+.offers-window {
     padding: 30px 20px;
     background: $white;
     margin-left: 30px;
     width: 30vw;
 }
 
-.purchase-credits-window{
+.purchase-credits-window {
     display: flex;
 
-    &>*{
+    & > * {
         height: fit-content;
     }
 }
 
-.navigation-message{
+.navigation-message {
     width: 20vw;
 }
 
-.message{
-    p{
-        color:rgba(51, 51, 51, 0.8);
+.message {
+    p {
+        color: rgba(51, 51, 51, 0.8);
     }
 }
 
-
-
-.need-more{
-    @include flex(row,center,center);
+.need-more {
+    @include flex(row, center, center);
     margin: 43px 0;
     font-size: 14px;
 
     span {
         font-weight: bold;
         margin-right: 5px;
-    } 
-    button{
-    color: $blue;
-}
+    }
+    button {
+        color: $blue;
+    }
 }
 
-.checkout-button>button{
-    @include flex(row,center,center);
+.checkout-button > button {
+    @include flex(row, center, center);
     background: $blue;
     padding: 15px 0;
     font-size: 14px;
     font-weight: bold;
     width: 100%;
-    color:$white;
+    color: $white;
     border-radius: 3px;
 
     &:hover {
-        box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.8)
+        box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.8);
     }
-
 }
-
-
-
-
-

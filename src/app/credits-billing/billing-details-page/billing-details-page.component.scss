@@ -1,94 +1,94 @@
-@import 'abstracts/variables.scss';
-@import 'abstracts/mixins.scss';
-@import 'abstracts/extends.scss';
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+@import "abstracts/extends.scss";
 
-:host{
-    @include flex(row,center,flex-start);
+:host {
+    @include flex(row, center, flex-start);
 }
 
-button{
+button {
     outline: none;
     border: none;
     background: none;
 }
 
-.billing-window{
+.billing-window {
     @include size(33vw);
 }
 
-.header{
-@include flex(column,center,flex-start);
-    
-span{
-    @include text(25px,bold,normal);
-    margin-bottom: 20px;
+.header {
+    @include flex(column, center, flex-start);
+
+    span {
+        @include text(25px, bold, normal);
+        margin-bottom: 20px;
     }
 }
 
-form{
-    @include flex(column,center,flex-start);
+form {
+    @include flex(column, center, flex-start);
 
-    .form-group{
-        @include flex(column,center,flex-start);
+    .form-group {
+        @include flex(column, center, flex-start);
         @include size(100%);
         margin: 10px 0;
-        
-        label{
+
+        label {
             @include label(12px);
             margin-bottom: 5px;
         }
 
-        input{
+        input {
             width: calc(100% - 20px);
             border-radius: 4px;
             padding: 12px 9px;
-            border: 1.5px solid  rgba(51, 51, 51, 0.2);
+            border: 1.5px solid rgba(51, 51, 51, 0.2);
 
-            &::placeholder{
-                @include textColor($black,0.3);
+            &::placeholder {
+                @include textColor($black, 0.3);
             }
         }
     }
 }
 
-.card-details{
-    @include flex(row,center,flex-start);
+.card-details {
+    @include flex(row, center, flex-start);
 
-    &>*:nth-child(2){
-        margin:10px 10px;
+    & > *:nth-child(2) {
+        margin: 10px 10px;
     }
 }
 
-.total{
+.total {
     margin: 25px 0;
     border-style: solid;
     border-width: 1.5px 0;
     border-color: rgba(51, 51, 51, 0.2);
     padding: 15px 0;
-    @include flex(row,space-between,flex-start);
+    @include flex(row, space-between, flex-start);
 
-    &>div{
-        @include flex(column,space-between,flex-start);
+    & > div {
+        @include flex(column, space-between, flex-start);
 
-        &>span:nth-child(odd){
+        & > span:nth-child(odd) {
             @include label(12px);
             margin-bottom: 5px;
         }
 
-        &>span:nth-child(even){
+        & > span:nth-child(even) {
             font-weight: bold;
         }
     }
 }
 
-.footer{
-    @include flex(row,flex-end,center);
-    
-    button:nth-child(odd){
+.footer {
+    @include flex(row, flex-end, center);
+
+    button:nth-child(odd) {
         @include label(14px);
     }
 
-    button:nth-child(even){
+    button:nth-child(even) {
         @extend %common-button;
         @include size(20vw);
         margin-left: 20px;
