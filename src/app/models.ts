@@ -18,3 +18,8 @@ export interface Contact {
     name: string;
     mail: string;
 }
+
+export interface Option {
+    value: string;
+    label: string;
+}

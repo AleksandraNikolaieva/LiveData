@@ -5,11 +5,7 @@
     <div class="form">
         <div class="form-title">{{ formTitle }}</div>
         <span>or</span>
-        <app-icon-button
-            [title]="buttonTitle"
-            [bgColor]="'#4ea8dd'"
-            (click)="onClick()"
-        >
+        <app-icon-button [title]="buttonTitle" (click)="onClick()">
             <span class="icon-upload"></span>
         </app-icon-button>
     </div>

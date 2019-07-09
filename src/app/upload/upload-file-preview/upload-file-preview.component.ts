@@ -8,7 +8,7 @@ import { Contact } from 'src/app/models';
 })
 export class UploadFilePreviewComponent implements OnInit {
     constructor() {}
-    filename: string = 'file.csv';
+    filename: string = 'list.csv';
     contactsCount: number = 3018;
     contacts: Array<Contact> = [
         { name: 'Joshua Kim', mail: 'joshua-kim@example.com' },
@@ -18,7 +18,6 @@ export class UploadFilePreviewComponent implements OnInit {
         { name: 'Amy Powell', mail: 'amypowell@example.com' },
         { name: 'Anthony Sanders', mail: 'anthony85@example.com' },
         { name: 'Bryan Hunter', mail: 'bryan.hunter@example.com' },
-        { name: 'Amber Colerman', mail: 'amber93@example.com' },
         { name: 'Amber Colerman', mail: 'amber93@example.com' }
     ];
     ngOnInit() {}
