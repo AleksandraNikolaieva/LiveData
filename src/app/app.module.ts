@@ -12,6 +12,8 @@ import { MainPageComponent } from "./main-page/main-page.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import { CreditsOffersComponent } from "./purchase-page/credits-offers/credits-offers.component";
+import { RouterModule } from '@angular/router';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,13 @@ import { CreditsOffersComponent } from "./purchase-page/credits-offers/credits-o
         MainPageComponent,
         CreditsOffersComponent
     ],
-    imports: [BrowserModule, AppRoutingModule, SharedModule],
+    imports: [
+        BrowserModule,
+        RouterModule,
+        AppRoutingModule,
+        SharedModule,
+        AuthModule
+    ],
     providers: [],
     bootstrap: [AppComponent]
 })

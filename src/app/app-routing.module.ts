@@ -1,24 +1,35 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { MainPageComponent } from "./main-page/main-page.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { MainPageComponent } from './main-page/main-page.component';
+import { LogInSignUpComponent } from './auth/log-in-sign-up/log-in-sign-up.component';
 
 const routes: Routes = [
     {
-        path: "",
-        redirectTo: "main",
-        pathMatch: "full"
+        path: '',
+        redirectTo: 'main',
+        pathMatch: 'full'
     },
     {
-        path: "main",
+        path: 'main',
         component: MainPageComponent
     },
     {
-        path: "credits",
-        loadChildren: "./credits-billing/credits-billing.module#CreditsBillingModule"
+        path: 'login',
+        component: LogInSignUpComponent,
+        data: {isLogin: true}
     },
     {
-        path: "upload",
-        loadChildren: "./upload/upload.module#UploadModule"
+        path: 'signup',
+        component: LogInSignUpComponent,
+        data: {isLogin: false}
+    },
+    {
+        path: 'credits',
+        loadChildren: './credits-billing/credits-billing.module#CreditsBillingModule'
+    },
+    {
+        path: 'upload',
+        loadChildren: './upload/upload.module#UploadModule'
     }
 ];
 
