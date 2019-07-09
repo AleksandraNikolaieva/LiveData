@@ -1,15 +1,11 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
-.container {
-    font-family: $roboto;
-}
 .services {
     margin-top: 80px;
 }
 .title {
-    font-size: 12px;
-    opacity: 0.5;
-    font-weight: 600;
+    @include text(12px, 600);
+    @include textColor($black, 0.5);
     letter-spacing: 1px;
 }
 
@@ -19,29 +15,25 @@
 .cost-value {
     margin-top: 12px;
     span {
-        font-size: 24px;
-        color: #333333;
-        font-weight: bold;
+        @include text(24px, bold);
+        @include textColor($black, 0);
     }
     span:last-child {
-        font-size: 12px;
-        color: #333333;
-        opacity: 0.9;
-        font-weight: normal;
+        @include text(12px, normal);
+        @include textColor($black, 0.1);
     }
 }
 .link {
-    margin-top: 50px;
+    @include text(14px, 600);
+    @include textColor($white, 0);
     display: block;
     width: 250px;
+    margin-top: 50px;
     padding: 16px 22px;
-    color: $white;
-    background-color: $blue;
     border-radius: 6px;
+    background-color: $blue;
     text-align: center;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
     letter-spacing: 1px;
     transition: background-color 0.3s;
     &:hover {
@@ -51,12 +43,12 @@
 .option {
     margin-top: 18px;
     label {
+        @include text(14px, bold);
+        @include textColor($black, 0);
         cursor: pointer;
         position: relative;
         margin: auto 0;
-        font-size: 14px;
         flex-grow: 1;
-        font-weight: bold;
 
         input[type='checkbox'] {
             opacity: 0;
