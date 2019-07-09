@@ -3,14 +3,5 @@
         <span class="icon-arrow-left icon"></span>
         <span>Back</span>
     </a>
-    <div class="credits">
-        <div class="balance">
-            <span class="title">{{ title }}</span>
-            <span class="value">
-                {{ balance }}
-                <span class="label"> {{ label }}</span>
-            </span>
-        </div>
-        <a routerLink="" class="link">Buy more</a>
-    </div>
+    <app-buy-credits [link]="''" [balance]="balance"></app-buy-credits>
 </div>

@@ -5,21 +5,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommaNumberPipe } from './pipes/comma-number.pipe';
 import { TimeGonePipe } from './pipes/time-gone.pipe';
 import { CardComponent } from './card/card.component';
+import { BuyCreditsComponent } from './buy-credits/buy-credits.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
         IconButtonComponent,
         CommaNumberPipe,
         TimeGonePipe,
-        CardComponent
+        CardComponent,
+        BuyCreditsComponent
     ],
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [CommonModule, ReactiveFormsModule, RouterModule],
     exports: [
         IconButtonComponent,
         ReactiveFormsModule,
         CommaNumberPipe,
         TimeGonePipe,
-        CardComponent
+        CardComponent,
+        BuyCreditsComponent
     ]
 })
 export class SharedModule {}
