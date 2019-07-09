@@ -25,10 +25,9 @@
     }
 }
 .file-title {
-    @include text(12px, 600);
+    @include text(12px, 700);
     @include textColor($black);
     padding-left: 8px;
-    letter-spacing: 1px;
 }
 .file .change {
     @include text(12px, normal);
@@ -45,11 +44,9 @@
     text-align: right;
 }
 .contacts-title {
-    @include text(12px, 600);
+    @include text(12px, 700);
     @include textColor($black, 0.5);
-    font-size: 12px;
-    opacity: 0.5;
-    font-weight: 600;
+    margin-bottom: 8px;
 }
 .contacts-count {
     @include text(36px, bold);
@@ -71,12 +68,12 @@
 }
 
 .name {
-    @include text(14px, normal);
-    @include textColor($black);
+    @include text(14px, 600);
+    @include textColor($black, 0.2);
 }
 .mail {
-    @include text(12px, normal);
-    @include textColor($black);
+    @include text(12px, 600);
+    @include textColor($black, 0.2);
 }
 
 .backdrop {
