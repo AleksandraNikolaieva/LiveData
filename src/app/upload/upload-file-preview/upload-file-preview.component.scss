@@ -2,19 +2,86 @@
 @import 'abstracts/mixins.scss';
 
 .container {
+    width: 55%;
+    padding: 32px 48px;
+    background-color: $white;
+    border: 2px solid $borders;
+    border-radius: 24px;
+    font-family: $roboto;
 }
 
 .header {
     @include flex(row, space-between, flex-end);
+    margin-bottom: 32px;
 }
 
 .file-img {
     @include size(56px, 56px);
+    margin-bottom: 8px;
     img {
         @include size(100%, 100%);
     }
 }
 .file-title {
+    padding-left: 8px;
     font-size: 12px;
     font-weight: 600;
+}
+.file .change {
+    cursor: pointer;
+    padding-left: 8px;
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+    color: $blue;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.contacts {
+    text-align: right;
+}
+.contacts-title {
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: 600;
+}
+.contacts-count {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.contacts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.contacts-list__item {
+    @include flex(row, space-between, center);
+    padding: 12px;
+    border: 1px solid darken($background, 5);
+    margin-top: -1px;
+}
+
+.name {
+    font-size: 14px;
+}
+.mail {
+    font-size: 12px;
+}
+
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
 }

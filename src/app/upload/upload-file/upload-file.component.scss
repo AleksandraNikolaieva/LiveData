@@ -20,7 +20,7 @@
     border: 2px dashed lighten($black, 60);
     height: 350px;
 
-    span {
+    > span {
         margin-bottom: 24px;
         font-size: 14px;
         font-family: $roboto;

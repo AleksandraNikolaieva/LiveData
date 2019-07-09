@@ -2,10 +2,7 @@
     <div *ngFor="let item of data">
         <h3>{{ item.title }}</h3>
         <p>{{ item.text }}</p>
-        <app-icon-button
-            [title]='item.buttonTitle'
-            [class]='item.buttonClass'
-        >
+        <app-icon-button [title]="item.buttonTitle" [class]="item.buttonClass">
             <span [class]="item.buttonIcon"></span>
         </app-icon-button>
     </div>
