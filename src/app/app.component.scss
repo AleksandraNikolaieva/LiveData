@@ -1,8 +1,8 @@
-@import "abstracts/variables.scss";
+@import 'abstracts/variables.scss';
 
 main {
     display: block;
     width: calc(100% - 100px);
     padding: 50px 50px 0px 50px;
-    min-height: calc(100vh - #{$header-h} - 40px);
+    min-height: calc(100vh - #{$header-h} - 50px);
 }

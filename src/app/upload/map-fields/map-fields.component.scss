@@ -1,11 +1,12 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
 .container {
-    @include flex(row, space-between, center);
+    @include flex(row, flex-start, center);
     flex-wrap: nowrap;
 }
 .description {
     max-width: 330px;
+    margin-right: 80px;
 }
 .caption {
     @include text(14px, 600, 130%);
@@ -30,6 +31,7 @@
     }
 
     &.disabled {
+        pointer-events: none;
         cursor: default;
         opacity: 0.3;
         &:hover {
@@ -86,7 +88,7 @@
     -webkit-appearance: button;
     appearance: button;
     outline: none;
-    &:focus + .triangle {
+    &:hover:focus + .triangle {
         top: 40%;
         transform: rotate(0);
     }
@@ -106,6 +108,7 @@
 
 .disabledrow {
     opacity: 0.4;
+    pointer-events: none;
 }
 table {
     margin-top: 100px;
