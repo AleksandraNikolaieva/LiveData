@@ -45,6 +45,8 @@ export class MapFieldsComponent implements OnInit {
             fieldWeDontNeed: '1234556'
         }
     ];
-
+    trackByFn(index) {
+        return index;
+    }
     ngOnInit() {}
 }
