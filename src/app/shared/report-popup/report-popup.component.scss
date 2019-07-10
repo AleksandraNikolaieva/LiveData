@@ -37,7 +37,7 @@ button {
 .header {
     @include flex(column, flex-start, flex-start);
 
-    & > span:nth-child(1) {
+    span:nth-child(1) {
         @include label(13px);
         margin-bottom: 15px;
     }
@@ -60,17 +60,17 @@ button {
         @include flex(row, flex-start, center);
         margin-bottom: 40px;
 
-        & > div:nth-child(1) {
+         div:nth-child(1) {
             margin-right: 60px;
         }
 
-        & > div {
+         div {
             @include flex(column, flex-start, flex-start);
 
-            & > span:nth-child(1) {
+         span:nth-child(1) {
                 @include text(25px, bold, normal);
             }
-            & > span:nth-child(2) {
+         span:nth-child(2) {
                 padding-top: 5px;
                 @include label(13px);
             }

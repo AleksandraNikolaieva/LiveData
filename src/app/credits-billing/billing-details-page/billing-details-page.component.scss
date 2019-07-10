@@ -67,15 +67,15 @@ form {
     padding: 15px 0;
     @include flex(row, space-between, flex-start);
 
-    & > div {
+    div {
         @include flex(column, space-between, flex-start);
 
-        & > span:nth-child(odd) {
+        span:nth-child(odd) {
             @include label(12px);
             margin-bottom: 5px;
         }
 
-        & > span:nth-child(even) {
+        span:nth-child(even) {
             font-weight: bold;
         }
     }
