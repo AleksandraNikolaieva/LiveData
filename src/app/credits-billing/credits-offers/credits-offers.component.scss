@@ -17,8 +17,8 @@
         }
 
         .price-per-credit {
-            @include text(12px, normal, normal);
-            color:  transparentize($black, 0.4);
+            @include text(12px, 600, normal);
+            color:  transparentize($black, 0.5);
         }
     }
 }
@@ -46,7 +46,7 @@
 
     label > .checkmark {
         position: absolute;
-        top: 0;
+        top: 6px;
         left: 0;
         @include size(18px, 18px);
         border: 1.3px solid $blue;
@@ -56,7 +56,7 @@
 
 .credits-amount {
     span:nth-child(1) {
-        @include text(20px, bold, normal);
+        @include text(23px, bold, normal);
         margin-left: 31px;
     }
 
