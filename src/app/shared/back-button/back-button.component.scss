@@ -4,10 +4,6 @@
 button {
     @include text(16px, bold);
     color: $blue;
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0;
     font-weight: bold;
     padding: 0;
     margin-bottom: 22px;
