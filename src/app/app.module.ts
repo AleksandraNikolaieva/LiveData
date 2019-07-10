@@ -28,9 +28,9 @@ import { FormsModule } from '@angular/forms';
     imports: [
         BrowserModule,
         RouterModule,
+        AuthModule,
         AppRoutingModule,
         SharedModule,
-        AuthModule,
         FormsModule
     ],
     providers: [],

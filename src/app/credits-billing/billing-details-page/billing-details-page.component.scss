@@ -1,6 +1,6 @@
-@import "abstracts/variables.scss";
-@import "abstracts/mixins.scss";
-@import "abstracts/extends.scss";
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+@import 'abstracts/extends.scss';
 
 :host {
     @include flex(row, center, flex-start);

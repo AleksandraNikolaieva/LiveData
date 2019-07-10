@@ -13,12 +13,13 @@ import { ReportPopupComponent } from './report-popup/report-popup.component';
 @NgModule({
     declarations: [
         IconButtonComponent,
-        CommaNumberPipe,
-        TimeGonePipe,
-        CardComponent,
         BuyCreditsComponent,
         BackButtonComponent,
-        ReportPopupComponent
+        ReportPopupComponent,
+        CardComponent,
+
+        CommaNumberPipe,
+        TimeGonePipe,
     ],
     imports: [
         CommonModule,
@@ -26,14 +27,16 @@ import { ReportPopupComponent } from './report-popup/report-popup.component';
         RouterModule
     ],
     exports: [
-        IconButtonComponent,
         ReactiveFormsModule,
-        CommaNumberPipe,
-        TimeGonePipe,
+
+        IconButtonComponent,
         BackButtonComponent,
         CardComponent,
         BuyCreditsComponent,
-        ReportPopupComponent
+        ReportPopupComponent,
+
+        CommaNumberPipe,
+        TimeGonePipe
     ]
 })
 export class SharedModule {}
