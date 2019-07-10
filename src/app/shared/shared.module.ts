@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommaNumberPipe } from './pipes/comma-number.pipe';
 import { TimeGonePipe } from './pipes/time-gone.pipe';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { BuyCreditsComponent } from './buy-credits/buy-credits.component';
@@ -18,14 +17,9 @@ import { ReportPopupComponent } from './report-popup/report-popup.component';
         ReportPopupComponent,
         CardComponent,
 
-        CommaNumberPipe,
-        TimeGonePipe,
+        TimeGonePipe
     ],
-    imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        RouterModule
-    ],
+    imports: [CommonModule, ReactiveFormsModule, RouterModule],
     exports: [
         ReactiveFormsModule,
 
@@ -35,7 +29,6 @@ import { ReportPopupComponent } from './report-popup/report-popup.component';
         BuyCreditsComponent,
         ReportPopupComponent,
 
-        CommaNumberPipe,
         TimeGonePipe
     ]
 })

@@ -1,48 +1,50 @@
 <div>
     <app-back-button></app-back-button>
-    <app-buy-credits [balance]='balance'></app-buy-credits>
+    <app-buy-credits [balance]="balance"></app-buy-credits>
 </div>
-<label for='search'>{{label}}</label>
+<label for="search">{{ label }}</label>
 <app-card>
-    <div class='main'>
+    <div class="main">
         <button>
-            <span class='icon-search'></span>
+            <span class="icon-search"></span>
         </button>
-        <input 
-            id='search'
-            [formControl]='searchControl'
-            placeholder='e.g demand generation'
+        <input
+            id="search"
+            [formControl]="searchControl"
+            placeholder="e.g demand generation"
             #toSearch
-            autocomplete='off'
-        >
+            autocomplete="off"
+        />
         <button>
-            <span class='icon-more-horizontal'></span>
+            <span class="icon-more-horizontal"></span>
         </button>
-        <input type='button' value='Search' [disabled]='isDisabled'>
+        <input type="button" value="Search" [disabled]="isDisabled" />
     </div>
 </app-card>
-<div class='credits'>
+<div class="credits">
     <div>
-        <label for='size'>List size</label>
-        <input type='number' id='size' [(ngModel)]='listSize'>
+        <label for="size">List size</label>
+        <input type="number" id="size" [(ngModel)]="listSize" />
     </div>
     <div>
-        <label for='coast'>Coast</label>
+        <label for="coast">Coast</label>
         <div>
-            <output id='coast'>{{listSize}}</output>
+            <output id="coast">{{ listSize }}</output>
             <span>credits</span>
         </div>
     </div>
-    <input type='button' value='Purchase List'>
+    <input type="button" value="Purchase List" />
 </div>
-<div class='list'>
+<div class="list">
     <div>
-        <p>Over <b>{{ total | commaNumber }}</b> contacts found!</p>
+        <p>
+            Over <b>{{ total | number }}</b> contacts found!
+        </p>
         <span>LinkedIn</span>
     </div>
-    <div *ngFor='let item of list'>
-        <span>{{item.name}}</span>
-        <span>{{item.position}}</span>
-        <span>{{item.linkedIn}}</span>
+    <div *ngFor="let item of list">
+        <span>{{ item.name }}</span>
+        <span>{{ item.position }}</span>
+        <span>{{ item.linkedIn }}</span>
     </div>
 </div>
