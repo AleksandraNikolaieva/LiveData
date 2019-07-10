@@ -14,13 +14,24 @@ export class ProspectsComponent implements OnInit {
     listSize = 100;
     isDisabled = false;
     total = 1000;
-    list = contacts;
+    list: Array<any>;
     searchControl: FormControl;
-    listSizeControl: FormControl;
 
     constructor() { }
 
     ngOnInit() {
         this.searchControl = new FormControl(null);
+    }
+
+    search() {
+        this.isDisabled = true;
+        this.list = contacts;
+    }
+
+    trackByFn(index: number, item: any) {
+        if (!item) {
+            return null;
+        }
+        return item.id;
     }
 }

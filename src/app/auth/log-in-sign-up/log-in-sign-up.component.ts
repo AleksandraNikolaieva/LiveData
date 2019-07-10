@@ -21,8 +21,8 @@ export class LogInSignUpComponent implements OnInit {
         this.route.data.subscribe(data => {
             if (data.isLogin) {
                 this.title = 'Log in';
-                this.submitButtonValue = this.title;
-                this.googleButtonValue = 'Sign in width Google';
+                this.submitButtonValue = 'Log In';
+                this.googleButtonValue = 'Sign in with Google';
                 this.isActionLogin = true;
                 this.form.addControl('remember', this.fb.control(false));
             }
