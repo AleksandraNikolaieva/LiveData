@@ -39,7 +39,6 @@
     
             button {
                 background-color: white;
-                border: none;
                 font-size: 20px;
                 margin-right: 10px;
                 padding: 0;
@@ -112,6 +111,10 @@
         border-right: 2px solid $borders;
         border-top: 2px solid $borders;
         margin: 10px 0;
+
+        div:first-child span {
+            color: transparentize($text-color, 0.2);
+        }
 
         div {
             @include flex(row, space-between, center);
