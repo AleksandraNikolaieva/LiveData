@@ -3,12 +3,7 @@
 :host {
     @include flex(row, center, flex-start);
 }
-button {
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0;
-}
+
 .offers-window {
     padding: 30px 20px;
     background: $white;

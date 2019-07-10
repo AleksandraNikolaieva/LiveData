@@ -6,11 +6,7 @@
     @include flex(row, center, flex-start);
 }
 
-button {
-    outline: none;
-    border: none;
-    background: none;
-}
+
 
 .billing-window {
     @include size(33vw);
@@ -34,7 +30,9 @@ form {
         margin: 10px 0;
 
         label {
-            @include label(12px);
+            @include text(11px,bold,normal);
+            color: transparentize($black,0.5);
+            letter-spacing: 0.5px;
             margin-bottom: 5px;
         }
 
