@@ -8,7 +8,11 @@ body {
     overflow-x: hidden;
 }
 
-a,
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 button {
     cursor: pointer;
     outline: none;
