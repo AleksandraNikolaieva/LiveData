@@ -8,7 +8,7 @@
     padding: 30px 20px;
     background: $white;
     margin-left: 30px;
-    width: 30vw;
+    @include size(30vw);
 }
 
 .purchase-credits-window {
@@ -20,7 +20,7 @@
 }
 
 .navigation-message {
-    width: 20vw;
+    @include size(20vw);
 }
 
 .message {
