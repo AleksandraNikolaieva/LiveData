@@ -26,12 +26,12 @@
 }
 .file-title {
     @include text(12px, 700);
-    @include textColor($black);
+    color: $black;
     padding-left: 8px;
 }
 .file .change {
     @include text(12px, normal);
-    @include textColor($blue);
+    color: $blue;
     cursor: pointer;
     padding-left: 8px;
     border: none;
@@ -45,12 +45,12 @@
 }
 .contacts-title {
     @include text(12px, 700);
-    @include textColor($black, 0.5);
+    color: transparentize($black, 0.5);
     margin-bottom: 8px;
 }
 .contacts-count {
     @include text(36px, bold);
-    @include textColor($black);
+    color: $black;
 }
 
 .contacts-list {
@@ -69,11 +69,11 @@
 
 .name {
     @include text(14px, 600);
-    @include textColor($black, 0.2);
+    color: transparentize($black, 0.2);
 }
 .mail {
     @include text(12px, 600);
-    @include textColor($black, 0.2);
+    color: transparentize($black, 0.2);
 }
 
 .backdrop {

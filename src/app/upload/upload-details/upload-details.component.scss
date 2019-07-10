@@ -5,7 +5,7 @@
 }
 .title {
     @include text(12px, 700);
-    @include textColor($black, 0.5);
+    color: transparentize($black, 0.5);
     letter-spacing: 1px;
 }
 
@@ -16,16 +16,16 @@
     margin-top: 12px;
     span {
         @include text(24px, bold);
-        @include textColor($black, 0);
+        color: $black;
     }
     span:last-child {
         @include text(14px, 600);
-        @include textColor($black, 0.2);
+        color: transparentize($black, 0.2);
     }
 }
 .link {
     @include text(14px, 600);
-    @include textColor($white, 0);
+    color: $white;
     display: block;
     width: 250px;
     margin-top: 50px;
@@ -44,7 +44,7 @@
     margin-top: 18px;
     label {
         @include text(14px, bold);
-        @include textColor($black, 0.2);
+        color: transparentize($black, 0.2);
         cursor: pointer;
         position: relative;
         margin: auto 0;

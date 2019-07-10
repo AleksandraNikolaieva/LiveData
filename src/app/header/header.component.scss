@@ -14,11 +14,15 @@ header {
     div {
         height: 40px;
         @include flex(row, space-between, center);
-
-        img {
-            height: 30px;
-            width: auto;
-            margin-right: 15px;
+        a{
+            text-decoration: none;
+            color: inherit;
+            img {
+                height: 30px;
+                width: auto;
+                margin-right: 15px;
+            }
         }
+            
     }
 }

@@ -3,11 +3,7 @@
 
 button {
     @include text(16px, bold);
-    @include textColor($blue);
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0;
+    color: $blue;
     font-weight: bold;
     padding: 0;
     margin-bottom: 22px;

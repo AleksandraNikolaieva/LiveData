@@ -20,5 +20,8 @@ export class UploadFilePreviewComponent implements OnInit {
         { name: 'Bryan Hunter', mail: 'bryan.hunter@example.com' },
         { name: 'Amber Colerman', mail: 'amber93@example.com' }
     ];
+    trackByFn(index) {
+        return index;
+    }
     ngOnInit() {}
 }

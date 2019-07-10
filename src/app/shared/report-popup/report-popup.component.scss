@@ -1,5 +1,5 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 :host {
     position: fixed;
@@ -16,18 +16,14 @@
     top: 0;
 }
 
-button {
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0;
-}
 
 .report-window {
     background: $white;
     padding: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     @include size(30vw);
     position: absolute;
+    border-radius: 5px;
     top: 20vh;
     left: 35vw;
 }
@@ -35,7 +31,7 @@ button {
 .header {
     @include flex(column, flex-start, flex-start);
 
-    & > span:nth-child(1) {
+    span:nth-child(1) {
         @include label(13px);
         margin-bottom: 15px;
     }
@@ -58,20 +54,19 @@ button {
         @include flex(row, flex-start, center);
         margin-bottom: 40px;
 
-        & > div:nth-child(1) {
+         div:nth-child(1) {
             margin-right: 60px;
         }
 
-        & > div {
+         div {
             @include flex(column, flex-start, flex-start);
 
-            & > span:nth-child(1) {
-                @include text(20px, bold, normal);
+         span:nth-child(1) {
+                @include text(25px, bold, normal);
             }
-            & > span:nth-child(2) {
+         span:nth-child(2) {
                 padding-top: 5px;
                 @include label(13px);
-
             }
         }
     }
@@ -86,7 +81,7 @@ button {
             span:nth-child(1) {
                 padding-right: 5px;
                 @include text(15px, bold, normal);
-                @include textColor($black, 0.3);
+                color: transparentize($black, 0.3);
             }
 
             span:nth-child(2) {

@@ -22,4 +22,11 @@ export class CreditsOffersComponent implements OnInit {
             el => el.value === parseInt(this.optionSelected, 10)
         );
     }
+
+    trackByFn(index: number, item: Package) {
+        if (!item) {
+            return null;
+        }
+        return item.value;
+    }
 }
