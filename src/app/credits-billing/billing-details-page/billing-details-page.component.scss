@@ -84,6 +84,7 @@ form {
 
     button:nth-child(odd) {
         @include label(14px);
+        color:transparentize($black,0.6);
     }
 
     button:nth-child(even) {
