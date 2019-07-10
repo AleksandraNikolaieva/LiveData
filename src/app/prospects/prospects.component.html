@@ -1,12 +1,12 @@
 <div>
     <app-back-button></app-back-button>
-    <app-buy-credits [balance]="balance"></app-buy-credits>
+    <app-buy-credits link='/credits' [balance]='balance'></app-buy-credits>
 </div>
-<label for="search">{{ label }}</label>
+<label for='search'>{{ label }}</label>
 <app-card>
-    <div class="main">
+    <div class='main'>
         <button>
-            <span class="icon-search"></span>
+            <span class='icon-search'></span>
         </button>
         <input 
             id='search'
@@ -15,24 +15,24 @@
             autocomplete='off'
         >
         <button>
-            <span class="icon-more-horizontal"></span>
+            <span class='icon-more-horizontal'></span>
         </button>
         <input type='button' value='Search' [disabled]='isDisabled' (click)='search()'>
     </div>
 </app-card>
-<div class="credits">
+<div class='credits'>
     <div>
-        <label for="size">List size</label>
-        <input type="number" id="size" [(ngModel)]="listSize" />
+        <label for='size'>List size</label>
+        <input type='number' id='size' [(ngModel)]='listSize' />
     </div>
     <div>
         <label for='cost'>Cost</label>
         <div>
-            <output id="cost">{{ listSize }}</output>
+            <output id='cost'>{{ listSize }}</output>
             <span>credits</span>
         </div>
     </div>
-    <input type="button" value="Purchase List" />
+    <input type='button' value='Purchase List' />
 </div>
 <div class='list' *ngIf='list'>
     <div>
