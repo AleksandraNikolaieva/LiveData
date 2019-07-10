@@ -6,11 +6,7 @@
     @include flex(row, center, flex-start);
 }
 
-button {
-    outline: none;
-    border: none;
-    background: none;
-}
+
 
 .billing-window {
     @include size(33vw);
