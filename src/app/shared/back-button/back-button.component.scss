@@ -3,7 +3,7 @@
 
 button {
     @include text(16px, bold);
-    @include textColor($blue);
+    color: $blue;
     outline: none;
     border: none;
     background: none;

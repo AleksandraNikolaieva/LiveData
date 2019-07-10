@@ -21,7 +21,3 @@
     font-weight: $font-weight;
     line-height: $line-height;
 }
-
-@mixin textColor($color, $opacity: 0) {
-    color: transparentize($color, $opacity);
-}

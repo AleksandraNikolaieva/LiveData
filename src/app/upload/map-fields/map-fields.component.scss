@@ -9,12 +9,12 @@
 }
 .caption {
     @include text(14px, 600, 130%);
-    @include textColor($black, 0.3);
+    color: transparentize($black, 0.3);
     margin: 14px 0;
 }
 .link {
     @include text(14px, 600);
-    @include textColor($white);
+    color: $white;
     display: block;
     width: 250px;
     margin-top: 50px;
@@ -47,7 +47,7 @@
 }
 .form-title {
     @include text(12px, 600);
-    @include textColor($black, 0.6);
+    color: transparentize($black, 0.6);
 }
 .form-row {
     @include flex(row, flex-start, center);
@@ -69,7 +69,7 @@
 }
 .input-title {
     @include text(16px, 600);
-    @include textColor($black);
+    color: $black;
     opacity: 0.7;
     span {
         opacity: 0.3;
@@ -78,7 +78,7 @@
 
 .form-column-2 select {
     @include text(16px, 600);
-    @include textColor($black, 0.3);
+    color: transparentize($black, 0.3);
     background-color: $background;
     width: 100%;
     padding: 12px;
@@ -113,17 +113,17 @@ table {
 }
 td {
     @include text(14px, 600);
-    @include textColor($black, 0.6);
+    color: transparentize($black, 0.6);
     border: 1px solid darken($background, 5);
     min-width: 100px;
     padding: 12px;
     padding-right: 32px;
 }
 .title-td {
-    @include textColor($black, 0.2);
+    color: transparentize($black, 0.2);
 }
 .active-td {
     @include text(12px, 600);
-    @include textColor($blue);
+    color: $blue;
     border: none;
 }

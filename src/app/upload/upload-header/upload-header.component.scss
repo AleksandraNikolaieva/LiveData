@@ -8,7 +8,7 @@
 .back {
     @include flex(row, flex-start, center);
     @include text(16px, 600);
-    @include textColor($blue);
+    color: $blue;
     cursor: pointer;
     transition: color 0.3s;
     text-decoration: none;
