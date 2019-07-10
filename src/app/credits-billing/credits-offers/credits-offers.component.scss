@@ -18,7 +18,7 @@
 
         .price-per-credit {
             @include text(12px, normal, normal);
-            color: transparentize($black, 0.2);
+            color:  transparentize($black, 0.4);
         }
     }
 }
@@ -30,7 +30,7 @@
     & > label {
         cursor: pointer;
 
-        & > input[type='radio'] {
+        & > input[type=radio] {
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -61,7 +61,7 @@
     }
 
     & > span:nth-child(2) {
-        color: $black;
-        @include text(13px, normal, normal);
+        color: transparentize($black, 0.3);
+        @include text(13px, bold, normal);
     }
 }
