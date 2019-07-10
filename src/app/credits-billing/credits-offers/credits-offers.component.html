@@ -1,7 +1,7 @@
 <div class="credits-packages">
         <div class="packages">
             <div class="package" [class.selected]="optionSelected == package.value"
-                *ngFor='let package of packages;let idx = index'>
+                *ngFor='let package of packages;index as idx;trackBy: trackByFn'>
                 <div class="package-value">
                     <label>
                         <input type="radio" [(ngModel)]='optionSelected' (ngModelChange)="modelChanged()"
