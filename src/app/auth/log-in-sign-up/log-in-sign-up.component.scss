@@ -52,11 +52,15 @@ form {
         color: $blue;
         font-size: 11px;
         font-weight: 600;
+        letter-spacing: 1px;
 
         input[type=button] {
             background-color: transparent;
             color: $blue;
             margin: 0;
+            font-weight: 600;
+            padding: 0;
+            letter-spacing: 1px;
         }
     }
 
@@ -140,6 +144,7 @@ form {
             background-color: #fff;
             background-image: none;
             color: #757575;
+            font-weight: 600;
             overflow: hidden;
             position: relative;
             text-align: center;
