@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../service/auth.service';
 
 @Component({
     selector: 'app-log-in-sign-up',
@@ -14,7 +15,11 @@ export class LogInSignUpComponent implements OnInit {
     googleButtonValue = 'Log in with Google';
     isActionLogin = false;
 
-    constructor(private route: ActivatedRoute, private fb: FormBuilder) { }
+    constructor(
+        private route: ActivatedRoute,
+        private fb: FormBuilder,
+        private authService: AuthService,
+        private router: Router) { }
 
     ngOnInit() {
         this.formInit();
@@ -45,7 +50,8 @@ export class LogInSignUpComponent implements OnInit {
     }
 
     logIn() {
-
+        this.authService.logIn();
+        this.router.navigateByUrl('/main');
     }
 
     signUp() {

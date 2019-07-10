@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LogInSignUpComponent } from './auth/log-in-sign-up/log-in-sign-up.component';
 import { ProspectsComponent } from './prospects/prospects.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
     {
@@ -12,7 +13,8 @@ const routes: Routes = [
     },
     {
         path: 'main',
-        component: MainPageComponent
+        component: MainPageComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'login',
@@ -26,15 +28,18 @@ const routes: Routes = [
     },
     {
         path: 'find-prospects',
-        component: ProspectsComponent
+        component: ProspectsComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'credits',
-        loadChildren: './credits-billing/credits-billing.module#CreditsBillingModule'
+        loadChildren: './credits-billing/credits-billing.module#CreditsBillingModule',
+        canActivate: [AuthGuard]
     },
     {
         path: 'upload',
-        loadChildren: './upload/upload.module#UploadModule'
+        loadChildren: './upload/upload.module#UploadModule',
+        canActivate: [AuthGuard]
     }
 ];
 
