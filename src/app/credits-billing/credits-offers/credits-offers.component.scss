@@ -1,0 +1,67 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+.packages > .package {
+    @include flex(row, space-between, center);
+    padding: 10px;
+
+    &.selected {
+        background-color: $light-blue;
+    }
+
+    .package-pricing {
+        @include flex(column, center, flex-end);
+
+        .total-price {
+            font-weight: bold;
+        }
+
+        .price-per-credit {
+            @include text(12px, 600, normal);
+            color:  transparentize($black, 0.5);
+        }
+    }
+}
+
+.package-value {
+    @include flex(row, center, center);
+    position: relative;
+
+    label {
+        cursor: pointer;
+
+        input[type=radio] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            @include size(18px, 18px);
+            left: 1;
+            left: 1.2px;
+
+            &:checked ~ .checkmark {
+                background-color: $blue;
+            }
+        }
+    }
+
+    label > .checkmark {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        @include size(18px, 18px);
+        border: 1.3px solid $blue;
+        border-radius: 50%;
+    }
+}
+
+.credits-amount {
+    span:nth-child(1) {
+        @include text(23px, bold, normal);
+        margin-left: 31px;
+    }
+
+    span:nth-child(2) {
+        color: transparentize($black, 0.3);
+        @include text(13px, bold, normal);
+    }
+}

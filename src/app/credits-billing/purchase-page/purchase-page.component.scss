@@ -1,0 +1,63 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+:host {
+    @include flex(row, center, flex-start);
+}
+
+.offers-window {
+    padding: 30px 20px;
+    background: $white;
+    margin-left: 30px;
+    @include size(30vw);
+}
+
+.purchase-credits-window {
+    display: flex;
+
+    & > * {
+        height: fit-content;
+    }
+}
+
+.navigation-message {
+    @include size(20vw);
+}
+
+.message {
+    p {
+        color: rgba(51, 51, 51, 0.8);
+    }
+}
+
+.need-more {
+    @include flex(row, center, center);
+    margin: 43px 0;
+    font-size: 14px;
+
+    span {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    button {
+        color: $blue;
+
+        &:hover{
+            color:darken($blue,15%);
+        }
+    }
+}
+
+.checkout-button > button {
+    @include flex(row, center, center);
+    background: $blue;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    color: $white;
+    border-radius: 3px;
+
+    &:hover {
+        box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.8);
+    }
+}

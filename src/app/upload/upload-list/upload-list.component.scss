@@ -1,0 +1,15 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+:host {
+    display: block;
+    padding-top: 24px;
+}
+.container {
+    margin-top: 34px;
+}
+
+.preview {
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: nowrap;
+}

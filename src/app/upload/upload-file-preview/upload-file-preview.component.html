@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header">
+        <div class="file">
+            <div class="file-img">
+                <img src="../assets/icons/file-text.svg" alt="file" />
+            </div>
+            <span class="file-title">{{ filename }}</span>
+            <br />
+            <button class="change" click="onFileChange()">Change file</button>
+        </div>
+        <div class="contacts">
+            <div class="contacts-title">Contacts found</div>
+            <div class="contacts-count">{{ contactsCount | number }}</div>
+        </div>
+    </div>
+    <ul class="main contacts-list">
+        <li
+            class="contacts-list__item"
+            *ngFor="let contact of contacts; trackBy: trackByFn"
+        >
+            <div class="name">{{ contact.name }}</div>
+            <div class="mail">{{ contact.mail }}</div>
+        </li>
+        <div class="backdrop"></div>
+    </ul>
+</div>

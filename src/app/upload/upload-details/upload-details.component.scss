@@ -1,0 +1,90 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+.services {
+    margin-top: 80px;
+}
+.title {
+    @include text(12px, 700);
+    color: transparentize($black, 0.5);
+    letter-spacing: 1px;
+}
+
+.cost {
+    margin-top: 80px;
+}
+.cost-value {
+    margin-top: 12px;
+    span {
+        @include text(24px, bold);
+        color: $black;
+    }
+    span:last-child {
+        @include text(14px, 600);
+        color: transparentize($black, 0.2);
+    }
+}
+.link {
+    @include text(14px, 600);
+    color: $white;
+    display: block;
+    width: 250px;
+    margin-top: 50px;
+    padding: 16px 22px;
+    border-radius: 6px;
+    background-color: $blue;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: darken($blue, 20);
+    }
+}
+.option {
+    margin-top: 18px;
+    label {
+        @include text(14px, bold);
+        color: transparentize($black, 0.2);
+        cursor: pointer;
+        position: relative;
+        margin: auto 0;
+        flex-grow: 1;
+
+        input[type='checkbox'] {
+            opacity: 0;
+            margin-right: 15px;
+            width: auto;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            border: 2px solid $borders;
+            border-radius: 5px;
+            position: absolute;
+            top: -4px;
+            left: 0px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                width: 6px;
+                height: 12px;
+                border: solid $blue;
+                border-width: 0px 3px 3px 0px;
+                transform: rotate(45deg);
+                display: none;
+            }
+        }
+
+        input:checked ~ span {
+            background-color: darken($white, 1%);
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+}

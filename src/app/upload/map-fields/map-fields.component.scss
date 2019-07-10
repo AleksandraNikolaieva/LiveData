@@ -1,0 +1,131 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+.container {
+    @include flex(row, flex-start, center);
+    flex-wrap: nowrap;
+}
+.description {
+    max-width: 330px;
+    margin-right: 80px;
+}
+.caption {
+    @include text(14px, 600, 130%);
+    color: transparentize($black, 0.3);
+    margin: 14px 0;
+}
+.link {
+    @include text(14px, 600);
+    color: $white;
+    display: block;
+    width: 250px;
+    margin-top: 50px;
+    padding: 16px 22px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: $blue;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, opacity 0.3s;
+    &:hover {
+        background-color: darken($blue, 20);
+    }
+
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.3;
+        &:hover {
+            background-color: $blue;
+        }
+    }
+}
+
+.form {
+    box-sizing: border-box;
+    padding: 32px 48px;
+    background-color: $white;
+    border: 2px solid $borders;
+    border-radius: 24px;
+}
+.form-title {
+    @include text(12px, 600);
+    color: transparentize($black, 0.6);
+}
+.form-row {
+    @include flex(row, flex-start, center);
+    flex-wrap: nowrap;
+    margin-bottom: 8px;
+    &--titles {
+        margin-bottom: 24px;
+    }
+}
+.form-column-1 {
+    @include flex(row, space-between, center);
+    flex-wrap: nowrap;
+    width: 280px;
+    margin-right: 32px;
+}
+.form-column-2 {
+    position: relative;
+    width: 220px;
+}
+.input-title {
+    @include text(16px, 600);
+    color: $black;
+    opacity: 0.7;
+    span {
+        opacity: 0.3;
+    }
+}
+
+.form-column-2 select {
+    @include text(16px, 600);
+    color: transparentize($black, 0.3);
+    background-color: $background;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    &:hover:focus + .triangle {
+        top: 40%;
+        transform: rotate(0);
+    }
+    & + .triangle {
+        display: block;
+        position: absolute;
+        top: 60%;
+        right: 12px;
+        border: 5px solid transparent;
+        border-bottom: 5px solid $black;
+        pointer-events: none;
+        opacity: 0.5;
+        transition: all 0.3s;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+.disabledrow {
+    opacity: 0.4;
+    pointer-events: none;
+}
+table {
+    margin-top: 100px;
+    border-collapse: collapse;
+}
+td {
+    @include text(14px, 600);
+    color: transparentize($black, 0.6);
+    border: 1px solid darken($background, 5);
+    min-width: 100px;
+    padding: 12px;
+    padding-right: 32px;
+}
+.title-td {
+    color: transparentize($black, 0.2);
+}
+.active-td {
+    @include text(12px, 600);
+    color: $blue;
+    border: none;
+}

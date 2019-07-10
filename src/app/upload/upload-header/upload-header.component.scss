@@ -1,0 +1,6 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+.header {
+    @include flex(row, space-between, flex-start);
+}

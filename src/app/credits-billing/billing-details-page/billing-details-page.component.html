@@ -1,0 +1,69 @@
+<div class="billing-window">
+    <div class="header">
+        <app-back-button></app-back-button>
+        <span>Enter your billing details.</span>
+    </div>
+    <form [formGroup]="billingForm">
+        <div class="form-group">
+            <label for="name">Name on card</label>
+            <input
+                type="text" id="name"
+                formControlName="name"
+                class="form-control"
+                placeholder="Name on card"
+            />
+        </div>
+        <div class="form-group">
+            <label for="ccNumb">Card number</label>
+            <input
+                type="text"
+                formControlName="cardNumber" id="ccNumb"
+                class="form-control"
+                placeholder="Card number"
+            />
+        </div>
+        <div class="card-details">
+            <div class="form-group">
+                <label for="expMonth">Expiration month</label>
+                <input
+                    type="text"
+                    formControlName="expMonth" id="expMonth"
+                    class="form-control"
+                    placeholder="MM"
+                />
+            </div>
+            <div class="form-group">
+                <label for="expYear">Expiration year</label>
+                <input
+                    type="text"
+                    formControlName="expYear" id="expYear"
+                    class="form-control"
+                    placeholder="YYYY"
+                />
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV / CVC</label>
+                <input
+                    type="text"
+                    formControlName="cvv" id="cvv"
+                    class="form-control"
+                    placeholder="MM"
+                />
+            </div>
+        </div>
+    </form>
+    <div class="total">
+        <div class="purchasing">
+            <span>Purchasing</span>
+            <span>{{ selectedPackage.package.value | number }} credits</span>
+        </div>
+        <div class="total-cost">
+            <span>Total cost</span>
+            <span>{{ selectedPackage.package.totalPrice }}</span>
+        </div>
+    </div>
+    <div class="footer">
+        <button>Cancel</button>
+        <button>Buy</button>
+    </div>
+</div>

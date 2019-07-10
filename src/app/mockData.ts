@@ -1,4 +1,4 @@
-import { Job } from './models';
+import { Job, ListItem } from './models';
 
 export const jobs: Job[] = [
     {
@@ -58,4 +58,48 @@ export const jobs: Job[] = [
         type: 'contacts'
     }
 ];
+
+export const contacts: Array<ListItem> = [
+    {
+        name: 'Geoff Seeley',
+        position: 'Global Marketing Director at Airbnb',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Nelly Ortiz',
+        position: 'Marketing Director at Roc Naion',
+        linkedIn: 'wilnellyortiz'
+    },
+    {
+        name: 'Tony Guerrero',
+        position: 'Marketing Director at RTIC Coolers',
+        linkedIn: 'tony-querrero-644585a7'
+    },
+    {
+        name: 'Karla Evans',
+        position: 'Si Director, integrated Marketing & Media at Ultra Beauty',
+        linkedIn: 'karla-evans-davis-46b9494'
+    },
+    {
+        name: 'Rebecca Gautrey',
+        position: 'Marketing Director at Del Monte Fresh Produce N.A., Inc',
+        linkedIn: 'rebeccagautrey'
+    },
+    {
+        name: 'Rebecca Ritterbush',
+        position: 'Marketing Director at Woodhouse Auto Family',
+        linkedIn: 'rebecca-ritterbush-0b147a26'
+    },
+    {
+        name: 'PennyMaria Jackson',
+        position: 'Marketing Director at Appollo Theater',
+        linkedIn: 'geoff-seeley-aa9b319'
+    },
+    {
+        name: 'Erik Archer Smith',
+        position: 'Marketing Director, ABM at Treasure Data',
+        linkedIn: 'geoff-seeley-aa9b319'
+    }
+];
+
 

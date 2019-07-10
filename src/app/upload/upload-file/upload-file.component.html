@@ -1,0 +1,12 @@
+<div class="container">
+    <h3 class="title">{{ title }}</h3>
+    <p class="caption">{{ caption }}</p>
+
+    <div class="form">
+        <div class="form-title">{{ formTitle }}</div>
+        <span>or</span>
+        <app-icon-button [title]="buttonTitle" (click)="onClick()">
+            <span class="icon-upload"></span>
+        </app-icon-button>
+    </div>
+</div>

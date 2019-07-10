@@ -1,0 +1,16 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+button {
+    @include text(16px, bold);
+    color: $blue;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 22px;
+    i {
+        font-weight: bold;
+    }
+    &:hover {
+        color: darken($blue, 20);
+    }
+}

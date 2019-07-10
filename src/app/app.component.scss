@@ -1,51 +1,8 @@
 @import 'abstracts/variables.scss';
-@import 'abstracts/mixins.scss';
 
 main {
     display: block;
     width: calc(100% - 100px);
-    padding: 20px 50px;
-    min-height: calc(100vh - #{$header-h} - 40px);
-}
-.row {
-    width: 100%;
-    @include flex(row, space-between, flex-start);
-}
-
-.row:nth-of-type(1) {
-    align-items: stretch;
-    div {
-        width: 48%;
-        @include flex(column, space-between, flex-start)
-    }
-
-    p {
-        line-height: 23px;
-    }
-}
-
-.row:nth-of-type(2) {
-    margin-top: 50px;
-}
-
-h3 {
-    font-size: 17px;
-    margin: 5px 0;
-}
-
-p {
-    color: transparentize($text-color, 0.2);
-    text-align: justify;
-    font-size: 15px;
-}
-
-app-credits {
-    width: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-left: 30px;
-}
-
-app-jobs-list {
-    flex-grow: 1;
+    padding: 50px 50px 0px 50px;
+    min-height: calc(100vh - #{$header-h} - 50px);
 }

@@ -1,12 +1,13 @@
-$purple: #553c57;
-$blue: #81c2d6;
-$crimson: #e0244a;
-$background: #ededed;
-$borders: darken($background, 2%);
+$purple: #583e65;
+$blue: #4ea8dd;
+$light-blue: darken(#f0f8ff, 0.5%);
+$crimson: #db3962;
+$background: #f5f6fa;
+$borders: darken($background, 4%);
 $text-color: #333333;
 $white: #ffffff;
-$black: #000000;
+$black: #333333;
 
 $header-h: 70px;
 
-$roboto: 'Roboto', sans-serif;
+$font: 'Open Sans', sans-serif;

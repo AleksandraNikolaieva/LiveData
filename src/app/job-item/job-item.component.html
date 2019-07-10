@@ -1,9 +1,9 @@
 <button>
-    <span [class]='iconMap[job.type]'></span>
+    <span [class]="iconMap[job.type]"></span>
 </button>
-<p>{{job.title}}</p>
-<span class='date'>{{job.date | timeGone}}</span>
-<span class='count'>{{job.count | commaNumber}} {{job.type}}</span>
-<button>
-    <span class='icon-download'></span>
+<p>{{ job.title }}</p>
+<span class="date">{{ job.date | timeGone }}</span>
+<span class="count">{{ job.count | number }} {{ job.type }}</span>
+<button (click)="openedPopup()">
+    <span class="icon-download"></span>
 </button>

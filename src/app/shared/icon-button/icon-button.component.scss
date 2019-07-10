@@ -1,0 +1,53 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/extends';
+
+:host {
+    display: inline-block;
+    border-radius: 5px;
+}
+
+button {
+    @extend %common-button;
+    width: 100%;
+    padding: 12px 22px;
+    @include flex(row, center, center);
+
+    span {
+        margin-left: 10px;
+    }
+}
+
+.common {
+    background-color: $blue;
+}
+
+.crimson {
+    background-color: $crimson;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: darken($crimson, 15%);
+    }
+}
+
+.white {
+    background-color: $white;
+    transition: 0.2s;
+    color: $black;
+
+    &:hover {
+        background-color: darken($white, 1%);
+    }
+}
+
+.light-blue{
+    background-color: $white;
+    transition: 0.2s;
+    border: 1px solid $blue;
+    color: $blue;
+ &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}

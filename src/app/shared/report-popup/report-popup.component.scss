@@ -1,0 +1,92 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+:host {
+    position: fixed;
+    @include size(100vw, 100vh);
+    background: rgba(216, 209, 209, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.backdrop {
+    position: fixed;
+    @include size(100vw, 100vh);
+    top: 0;
+}
+
+
+.report-window {
+    background: $white;
+    padding: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    @include size(30vw);
+    position: absolute;
+    border-radius: 5px;
+    top: 20vh;
+    left: 35vw;
+}
+
+.header {
+    @include flex(column, flex-start, flex-start);
+
+    span:nth-child(1) {
+        @include label(13px);
+        margin-bottom: 15px;
+    }
+
+    .title {
+        @include text(25px, bold, normal);
+        margin-bottom: 15px;
+    }
+    button {
+        color: $blue;
+        @include text(15px, normal, normal);
+    }
+
+    margin-bottom: 40px;
+}
+
+.main-content {
+    margin-bottom: 40px;
+    .main-numbers {
+        @include flex(row, flex-start, center);
+        margin-bottom: 40px;
+
+         div:nth-child(1) {
+            margin-right: 60px;
+        }
+
+         div {
+            @include flex(column, flex-start, flex-start);
+
+         span:nth-child(1) {
+                @include text(25px, bold, normal);
+            }
+         span:nth-child(2) {
+                padding-top: 5px;
+                @include label(13px);
+            }
+        }
+    }
+
+    .additional-info {
+        div:nth-child(4) {
+            padding-top: 28px;
+        }
+
+        div {
+            padding-bottom: 12px;
+            span:nth-child(1) {
+                padding-right: 5px;
+                @include text(15px, bold, normal);
+                color: transparentize($black, 0.3);
+            }
+
+            span:nth-child(2) {
+                @include label(12px);
+            }
+        }
+    }
+}
