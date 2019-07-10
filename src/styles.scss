@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 
-button {
+button, input[type=button] {
     cursor: pointer;
     outline: none;
     border: none;

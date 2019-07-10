@@ -28,6 +28,10 @@
             left: 5px;
             line-height: 34.4px;
             color: $text-color;
+
+            span {
+                line-height: 34px;
+            }
         }
     }
 }
