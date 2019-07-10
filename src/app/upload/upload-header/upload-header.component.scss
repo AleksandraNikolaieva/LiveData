@@ -4,19 +4,3 @@
 .header {
     @include flex(row, space-between, flex-start);
 }
-
-.back {
-    @include flex(row, flex-start, center);
-    @include text(16px, 600);
-    color: $blue;
-    cursor: pointer;
-    transition: color 0.3s;
-    text-decoration: none;
-    &:hover {
-        color: darken($blue, 20);
-    }
-    .icon {
-        font-size: 18px;
-        margin-right: 8px;
-    }
-}

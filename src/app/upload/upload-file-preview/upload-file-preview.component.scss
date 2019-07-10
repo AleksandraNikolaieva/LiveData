@@ -32,10 +32,7 @@
 .file .change {
     @include text(12px, normal);
     color: $blue;
-    cursor: pointer;
     padding-left: 8px;
-    border: none;
-    background-color: transparent;
     &:hover {
         text-decoration: underline;
     }
