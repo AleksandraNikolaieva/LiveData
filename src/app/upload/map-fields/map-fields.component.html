@@ -28,7 +28,10 @@
             </div>
             <div class="form-column-2">
                 <select [(ngModel)]="selector[control.field]">
-                    <option value="{{ option }}" *ngFor="let option of columns">
+                    <option
+                        value="{{ option }}"
+                        *ngFor="let option of columns; trackBy: trackByFn"
+                    >
                         {{ option }}
                     </option>
                 </select>
@@ -41,15 +44,25 @@
 <table>
     <tbody>
         <tr *ngIf="selector.fullname">
-            <td class="active-td" *ngFor="let col of activeColumns">
+            <td
+                class="active-td"
+                *ngFor="let col of activeColumns; trackBy: trackByFn"
+            >
                 {{ col }}
             </td>
         </tr>
         <tr>
-            <td class="title-td" *ngFor="let col of columns">{{ col }}</td>
+            <td
+                class="title-td"
+                *ngFor="let col of columns; trackBy: trackByFn"
+            >
+                {{ col }}
+            </td>
         </tr>
         <tr *ngFor="let item of list">
-            <td *ngFor="let col of columns">{{ item[col] }}</td>
+            <td *ngFor="let col of columns; trackBy: trackByFn">
+                {{ item[col] }}
+            </td>
         </tr>
     </tbody>
 </table>
