@@ -17,8 +17,8 @@
         }
 
         .price-per-credit {
-            @include text(12px, normal, normal);
-            color:  transparentize($black, 0.4);
+            @include text(12px, 600, normal);
+            color:  transparentize($black, 0.5);
         }
     }
 }
