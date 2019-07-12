@@ -21,3 +21,27 @@
     font-weight: $font-weight;
     line-height: $line-height;
 }
+
+@mixin loading-bar($bar-color,$thumb-color,$width,$height:auto){
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 9px;
+    @include size($width, $height);
+}
+
+@mixin loading-bar2($border-radius,$thumb-color,$background){
+    progress::-moz-progress-bar {
+        background-color: $thumb-color;
+        border-radius: $border-radius;
+    }
+    progress::-webkit-progress-bar {
+        background-color: $background;
+        border-radius: $border-radius;
+    }
+    progress::-webkit-progress-value {
+        background: $thumb-color;
+        border-radius: $border-radius;
+    }
+    
+}
+
