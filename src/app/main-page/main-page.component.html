@@ -20,14 +20,10 @@
     <div class="side">
         <app-credits></app-credits>
         <app-card>
-            <div class="header" *ngIf="isManageApi; else learn">
-                <a routerLink="/api">Manage API Access</a>
+            <div class="header">
+                <h3>Need API access?</h3>
+                <span (click)="onLearnMoreClick()">{{ buttonText }}</span>
             </div>
         </app-card>
     </div>
 </div>
-
-<ng-template #learn>
-    <h3>Need API access?</h3>
-    <span (click)="onLearnMoreClick()">{{ buttonText }}</span>
-</ng-template>
