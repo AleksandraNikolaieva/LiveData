@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-api-manage',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiManageComponent implements OnInit {
     title = 'Manage API';
+    apiControl: FormControl;
 
     constructor() { }
 
     ngOnInit() {
+        this.apiControl = new FormControl(null);
     }
-
 }

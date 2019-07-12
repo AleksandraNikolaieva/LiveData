@@ -1,6 +1,19 @@
-<div class="container">
+<div class='container'>
+    <div>
+        <app-back-button></app-back-button>
+        <a>API Documentation</a>
+    </div>
     <h1>{{title}}</h1>
-    <div class="usage-graph-container">
+    <label for='key'>API key</label>
+    <div>
+        <input id='key' type='password' [formControl]='apiControl'>
+        <a>Show</a>
+    </div>
+    <div>
+        <input type='button' value='Remove'>
+        <input type='button' value='Copy to clipboard'>
+    </div>
+    <div class='usage-graph-container'>
         <app-api-usage></app-api-usage>
     </div>
 </div>
