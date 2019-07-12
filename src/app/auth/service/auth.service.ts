@@ -9,6 +9,7 @@ export class AuthService {
     constructor() { }
 
     isLogged = false;
+    email = 'damian@opuslogica.com';
     userNameObservable = new BehaviorSubject(null);
 
     logIn() {

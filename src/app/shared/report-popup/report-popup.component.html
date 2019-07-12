@@ -1,5 +1,5 @@
 <div class="backdrop" (click)='closedPopup()'></div>
-<div class="report-window">
+<div class="report-window" [ngStyle]="{'top': downloadPopup ? '32vh' :'20vh' }">
     <div class="header">
         <span>{{report.date | date:'d, LLLL 	yyyy'}}</span>
         <span class="title">{{report.title}}</span>
@@ -50,11 +50,11 @@
                     ready.</span>
             </div>
             <div class="email-input-box">
-                <input type="text" [disabled]='!inputActive' #emailInput (blur)='inputActive=false'>
+                <input type="text" [disabled]='!inputActive' #emailInput (blur)='inputActive=false' [value]='userEmail'>
                 <i class="icon-edit" (click)='editEmail()'></i>
             </div>
             <div class="progress-bar">
-                <progress max="100" value="25">  </progress>
+                <progress max="100" value="25"> </progress>
             </div>
         </div>
 
