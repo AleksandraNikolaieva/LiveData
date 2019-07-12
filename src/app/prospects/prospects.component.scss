@@ -138,15 +138,15 @@
 
         .backdrop {
             position: absolute;
-            width: calc(100% - 20px);
-            height: 100%;
             top: 0;
-            left: 0;
+            left: -2px;
+            height: 100%;
+            width: calc(100% - 16px);
             background: linear-gradient(
                 to bottom,
                 transparent 0%,
                 transparent 50%,
-                rgba(255, 255, 255, 1) 100%
+                #F5F6FA 100%
             );
         }
     }
