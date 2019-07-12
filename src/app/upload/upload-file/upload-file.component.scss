@@ -4,14 +4,16 @@
 .title {
     @include text(18px, bold);
     color: $black;
+    margin: 0;
+    margin-bottom: 12px;
 }
 .caption {
-    @include text(14px, normal, 135%);
-    color: transparentize($black, 0.3);
+    @include text(14px, normal, 130%);
+    color: transparentize($black, 0.2);
     max-width: 400px;
 }
 .form {
-    margin-top: 50px;
+    margin-top: 60px;
     @include flex(column, center, center);
     border-radius: 24px;
     border: 2px dashed lighten($black, 60);

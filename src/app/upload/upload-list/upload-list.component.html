@@ -1,6 +1,7 @@
 <div class="header">
     <app-back-button></app-back-button>
     <app-buy-credits
+        *ngIf="isUploaded"
         [error]="isLowBalance"
         [link]="'/credits'"
         [balance]="balance"

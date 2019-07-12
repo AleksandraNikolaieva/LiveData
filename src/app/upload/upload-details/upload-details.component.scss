@@ -76,7 +76,7 @@
             width: 20px;
             height: 20px;
             background-color: $white;
-            border: 2px solid $borders;
+            border: 2px solid lighten($blue, 5);
             border-radius: 5px;
             position: absolute;
             top: -4px;
@@ -87,9 +87,9 @@
                 position: absolute;
                 top: 2px;
                 left: 6px;
-                width: 6px;
-                height: 12px;
-                border: solid $blue;
+                width: 5px;
+                height: 10px;
+                border: solid $white;
                 border-width: 0px 3px 3px 0px;
                 transform: rotate(45deg);
                 display: none;
@@ -97,7 +97,7 @@
         }
 
         input:checked ~ span {
-            background-color: darken($white, 1%);
+            background-color: lighten($blue, 5);
 
             &:after {
                 display: block;

@@ -3,7 +3,6 @@
 
 :host {
     display: block;
-    padding-top: 24px;
 }
 .container {
     margin-top: 34px;
@@ -16,4 +15,5 @@
 
 .header {
     @include flex(row, space-between, flex-start);
+    margin-bottom: 50px;
 }

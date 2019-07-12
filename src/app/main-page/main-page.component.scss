@@ -24,13 +24,15 @@
 
 h3 {
     font-size: 18px;
-    margin: 5px 0;
+    margin-bottom: 8px;
 }
 
 p {
     color: transparentize($text-color, 0.2);
     font-size: 14px;
     line-height: 130%;
+    margin: 0;
+    margin-bottom: 18px;
 }
 
 app-jobs-list {

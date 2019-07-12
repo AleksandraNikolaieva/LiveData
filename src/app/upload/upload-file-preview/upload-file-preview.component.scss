@@ -31,7 +31,7 @@
 }
 .file .change {
     @include text(12px, normal);
-    color: $blue;
+    color: lighten($blue, 5);
     padding-left: 8px;
     &:hover {
         text-decoration: underline;
@@ -46,7 +46,7 @@
     margin-bottom: 8px;
 }
 .contacts-count {
-    @include text(36px, bold);
+    @include text(40px, bold);
     color: $black;
 }
 

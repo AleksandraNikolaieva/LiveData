@@ -1,16 +1,17 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
 .container {
-    @include flex(row, flex-start, center);
+    @include flex(row, flex-start, flex-start);
     flex-wrap: nowrap;
 }
 .description {
     max-width: 330px;
     margin-right: 80px;
+    margin-top: 55px;
 }
 .caption {
     @include text(14px, 600, 130%);
-    color: transparentize($black, 0.3);
+    color: transparentize($black, 0.2);
     margin: 14px 0;
 }
 .link {
