@@ -1,5 +1,6 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
+
 .services {
     margin-top: 80px;
 }
@@ -10,7 +11,8 @@
 }
 
 .cost {
-    margin-top: 80px;
+    margin-top: 64px;
+    margin-bottom: 32px;
 }
 .cost-value {
     margin-top: 12px;
@@ -23,12 +25,23 @@
         color: transparentize($black, 0.2);
     }
 }
+
+.error {
+    margin-top: -10px;
+    @include flex(row, center, center);
+    @include size(285px, 60px);
+    @include text(12px, 600);
+    color: darken($crimson, 15);
+    border: 1px solid darken($crimson, 15);
+    border-radius: 4px;
+}
+
 .link {
     @include text(14px, 600);
     color: $white;
     display: block;
     width: 250px;
-    margin-top: 50px;
+    margin-top: 22px;
     padding: 16px 22px;
     border-radius: 6px;
     background-color: $blue;
