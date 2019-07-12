@@ -9,15 +9,16 @@ export class AuthService {
     constructor() { }
 
     isLogged = false;
-    userNameObservable = new BehaviorSubject(null);
+    email = 'damian@opuslogica.com';
+    userMailObservable = new BehaviorSubject(null);
 
     logIn() {
         this.isLogged = true;
-        this.userNameObservable.next('Damian');
+        this.userMailObservable.next('damian.rebman@gmail.com');
     }
 
     logOut() {
         this.isLogged = false;
-        this.userNameObservable.next(null);
+        this.userMailObservable.next(null);
     }
 }

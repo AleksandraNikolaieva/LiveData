@@ -8,6 +8,7 @@ import { Job } from '../models';
 })
 export class JobItemComponent implements OnInit {
     @Input() job: Job;
+    @Input() isLoading = false;
     @Output() openPopup: EventEmitter<any> = new EventEmitter();
     iconMap = {
         contacts : 'icon-menu',
@@ -20,8 +21,7 @@ export class JobItemComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
     openedPopup() {
         this.openPopup.emit();

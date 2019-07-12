@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UploadHeaderComponent } from './upload-header.component';
+import { ApiSetupComponent } from './api-setup.component';
 
-describe('UploadHeaderComponent', () => {
-    let component: UploadHeaderComponent;
-    let fixture: ComponentFixture<UploadHeaderComponent>;
+describe('ApiSetupComponent', () => {
+    let component: ApiSetupComponent;
+    let fixture: ComponentFixture<ApiSetupComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [UploadHeaderComponent]
+            declarations: [ApiSetupComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(UploadHeaderComponent);
+        fixture = TestBed.createComponent(ApiSetupComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

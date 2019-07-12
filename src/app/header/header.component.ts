@@ -7,13 +7,13 @@ import { AuthService } from '../auth/service/auth.service';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-    userName: string;
+    email: string;
 
     constructor(private authService: AuthService) { }
 
     ngOnInit() {
-        this.authService.userNameObservable.subscribe(res => {
-            this.userName = res;
+        this.authService.userMailObservable.subscribe(res => {
+            this.email = res;
         });
     }
 }

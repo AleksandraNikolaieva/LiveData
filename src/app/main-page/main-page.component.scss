@@ -1,5 +1,5 @@
-@import "abstracts/variables.scss";
-@import "abstracts/mixins.scss";
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
 
 .row {
     width: 100%;
@@ -14,32 +14,54 @@
     }
 
     p {
-        line-height: 23px;
+        flex-grow: 1;
     }
 }
 
 .row:nth-of-type(2) {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 h3 {
-    font-size: 17px;
-    margin: 5px 0;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 p {
     color: transparentize($text-color, 0.2);
-    text-align: justify;
-    font-size: 15px;
-}
-
-app-credits {
-    width: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-left: 30px;
+    font-size: 14px;
+    line-height: 130%;
+    margin: 0;
+    margin-bottom: 18px;
 }
 
 app-jobs-list {
     flex-grow: 1;
+}
+app-card {
+    margin-top: 24px;
+}
+
+.side {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 290px;
+    margin-left: 30px;
+    h3 {
+        margin: 0;
+    }
+    span {
+        cursor: pointer;
+        text-decoration: none;
+        color: lighten($blue, 5%);
+        font-size: 12px;
+        margin-top: 12px;
+        display: inline-block;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
 }

@@ -1,0 +1,98 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+:host {
+    position: fixed;
+    @include size(100vw, 100vh);
+    background: rgba(216, 209, 209, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.backdrop {
+    position: fixed;
+    @include size(100vw, 100vh);
+    top: 0;
+}
+
+.report-window {
+    background: $white;
+    padding: 40px 40px 50px 40px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    @include size(30vw);
+    position: absolute;
+    border-radius: 5px;
+    left: 32vw;
+    top: 22vh;
+}
+
+.header {
+    @include flex(column, flex-start, flex-start);
+
+    span:nth-child(1) {
+        @include label(13px);
+        margin-bottom: 15px;
+    }
+
+    .title {
+        @include text(25px, bold, normal);
+        margin-bottom: 15px;
+    }
+    button {
+        color: $blue;
+        padding: 0;
+        @include label(15px);
+        color: $blue;
+    }
+
+    margin-bottom: 40px;
+}
+
+.upload-window {
+    .upload-msg {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        span:nth-child(1) {
+            @include text(18px, bold, normal);
+            margin-bottom: 6px;
+        }
+
+        span:nth-child(2) {
+            @include label(12px);
+            line-height: 14px;
+        }
+    }
+}
+
+.email-input-box {
+    position: relative;
+    margin-bottom: 40px;
+
+    input {
+        background: $background;
+        border: none;
+        padding: 10px 40px 10px 20px;
+        @include size(calc(100% - 60px), 20px);
+        color: transparentize($black, 0.15);
+    }
+
+    i {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        color: transparentize($black, 0.35);
+
+        &:hover {
+            color: transparentize($black, 0.15);
+        }
+    }
+}
+
+.progress-bar > progress {
+    @include loading-bar($green, $background, 100%, 17px);
+}
+
+@include loading-bar2(9px, $green, $background);

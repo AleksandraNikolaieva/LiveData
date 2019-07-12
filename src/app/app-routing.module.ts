@@ -19,12 +19,12 @@ const routes: Routes = [
     {
         path: 'login',
         component: LogInSignUpComponent,
-        data: {isLogin: true}
+        data: { isLogin: true }
     },
     {
         path: 'signup',
         component: LogInSignUpComponent,
-        data: {isLogin: false}
+        data: { isLogin: false }
     },
     {
         path: 'find-prospects',
@@ -33,12 +33,18 @@ const routes: Routes = [
     },
     {
         path: 'credits',
-        loadChildren: './credits-billing/credits-billing.module#CreditsBillingModule',
+        loadChildren:
+            './credits-billing/credits-billing.module#CreditsBillingModule',
         canActivate: [AuthGuard]
     },
     {
         path: 'upload',
         loadChildren: './upload/upload.module#UploadModule',
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'api',
+        loadChildren: './api-manage/api-manage.module#ApiManageModule',
         canActivate: [AuthGuard]
     }
 ];

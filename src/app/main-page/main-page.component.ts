@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class MainPageComponent {
     constructor(private router: Router) {}
     popupActive = false;
+    buttonText: string = 'Learn more';
     data: Array<Purpose> = [
         {
             title: 'Clean your CRM.',
@@ -31,6 +32,9 @@ export class MainPageComponent {
             link: '/find-prospects'
         }
     ];
+    onLearnMoreClick() {
+        this.router.navigate(['/api']);
+    }
     onClick(link: string) {
         this.router.navigate([link]);
     }

@@ -1,4 +1,15 @@
-import { Job, ListItem } from './models';
+import { Job, ListItem, Report } from './models';
+
+export const report: Report = {
+    date: new Date(2019, 6, 6, 2, 20).toISOString(),
+    title: 'South West Region',
+    contactsFound: 1492,
+    contactsUpdated: 988,
+    emailsUpdated: 853,
+    companiesUpdated: 664,
+    linkedInInfo: 994,
+    creditsUsed: 1322
+};
 
 export const jobs: Job[] = [
     {
@@ -102,4 +113,37 @@ export const contacts: Array<ListItem> = [
     }
 ];
 
+export const chartData: Array<number> = [
+    60,
+    190,
+    110,
+    60,
+    110,
+    60,
+    60,
+    160,
+    190,
+    110,
+    60,
+    160,
+    60,
+    160,
+    190,
+    235,
+    60,
+    160,
+    60,
+    235,
+    110,
+    160,
+    60,
+    260,
+    160,
+    60,
+    110,
+    190,
+    160
+];
+
+export const token = 'uu3w8ye33kisdeYcs95Gd4i';
 

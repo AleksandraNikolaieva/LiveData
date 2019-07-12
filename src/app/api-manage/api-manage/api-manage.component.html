@@ -1,0 +1,23 @@
+<div class="container">
+    <div>
+        <app-back-button></app-back-button>
+        <a>API Documentation</a>
+    </div>
+    <h1>{{ title }}</h1>
+    <label for="key">API key</label>
+    <div>
+        <input
+            id="key"
+            [attr.type]="showBtn === 'show' ? 'password' : 'text'"
+            [formControl]="apiControl"
+        />
+        <a (click)="onShowClick()">{{ showBtn }}</a>
+    </div>
+    <div>
+        <input type="button" value="Remove" />
+        <input type="button" value="Copy to clipboard" (click)="onCopy()" />
+    </div>
+    <div class="usage-graph-container">
+        <app-api-usage></app-api-usage>
+    </div>
+</div>

@@ -8,6 +8,7 @@ import { BuyCreditsComponent } from './buy-credits/buy-credits.component';
 import { CardComponent } from './card/card.component';
 import { RouterModule } from '@angular/router';
 import { ReportPopupComponent } from './report-popup/report-popup.component';
+import { UploadPopupComponent } from './upload-popup/upload-popup.component';
 
 @NgModule({
     declarations: [
@@ -17,12 +18,14 @@ import { ReportPopupComponent } from './report-popup/report-popup.component';
         ReportPopupComponent,
         CardComponent,
 
-        TimeGonePipe
+        TimeGonePipe,
+
+        UploadPopupComponent
     ],
     imports: [CommonModule, ReactiveFormsModule, RouterModule],
     exports: [
         ReactiveFormsModule,
-
+        UploadPopupComponent,
         IconButtonComponent,
         BackButtonComponent,
         CardComponent,

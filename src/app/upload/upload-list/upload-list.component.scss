@@ -3,7 +3,6 @@
 
 :host {
     display: block;
-    padding-top: 24px;
 }
 .container {
     margin-top: 34px;
@@ -12,4 +11,9 @@
 .preview {
     @include flex(row, flex-start, flex-start);
     flex-wrap: nowrap;
+}
+
+.header {
+    @include flex(row, space-between, flex-start);
+    margin-bottom: 50px;
 }

@@ -3,42 +3,48 @@
 
 .header {
     @include flex(row, space-between, center);
-
+    h3 {
+        font-size: 18px;
+    }
     input {
+        box-sizing: border-box;
         background-color: $background;
         border: none;
         outline: none;
         line-height: 34px;
-        padding-left: 25px;
+        padding-left: 44px;
         border-radius: 3px;
         transition: 0.2s;
-
+        width: 100%;
+        height: 100%;
         &:focus {
-            box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5)
+            box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
         }
     }
 
     div {
         position: relative;
-        
+        width: 230px;
+        height: 42px;
         button {
-            padding: 0;
             position: absolute;
-            top: 0;
-            left: 5px;
-            line-height: 34.4px;
+            left: 16px;
             color: $text-color;
-
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            top: 50%;
+            transform: translateY(-50%);
             span {
                 line-height: 34px;
+            }
+            &:hover {
+                opacity: 1;
             }
         }
     }
 }
 
 .main {
+    margin-top: 24px;
     width: 100%;
-    border-left: 2px solid $borders;
-    border-top: 2px solid $borders;
-    border-right: 2px solid $borders;
 }

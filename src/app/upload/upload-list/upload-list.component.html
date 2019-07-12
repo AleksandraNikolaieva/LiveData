@@ -1,4 +1,12 @@
-<app-upload-header></app-upload-header>
+<div class="header">
+    <app-back-button></app-back-button>
+    <app-buy-credits
+        *ngIf="isUploaded"
+        [error]="isLowBalance"
+        [link]="'/credits'"
+        [balance]="balance"
+    ></app-buy-credits>
+</div>
 <div class="container">
     <ng-container *ngIf="!isUploaded; else preview">
         <app-upload-file (uploadClick)="uploadClick($event)"></app-upload-file>
@@ -8,6 +16,9 @@
 <ng-template #preview>
     <div class="preview">
         <app-upload-file-preview></app-upload-file-preview>
-        <app-upload-details></app-upload-details>
+        <app-upload-details
+            (balanceCheck)="balanceCheck($event)"
+            [balanceStatus]="isLowBalance"
+        ></app-upload-details>
     </div>
 </ng-template>

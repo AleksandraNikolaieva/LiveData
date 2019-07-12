@@ -1,6 +1,7 @@
 @import 'scss/base/normalize/normalize';
 @import 'scss/base/icomoon.scss';
 @import 'scss/abstracts/variables.scss';
+@import 'scss/base/fonts/sanfrancisco.scss';
 @import 'scss/base/typography.scss';
 
 body {
@@ -13,7 +14,8 @@ a {
     text-decoration: none;
 }
 
-button, input[type=button] {
+button,
+input[type='button'] {
     cursor: pointer;
     outline: none;
     border: none;

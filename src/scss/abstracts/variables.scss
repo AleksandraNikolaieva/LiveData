@@ -3,11 +3,13 @@ $blue: #4ea8dd;
 $light-blue: darken(#f0f8ff, 0.5%);
 $crimson: #db3962;
 $background: #f5f6fa;
-$borders: darken($background, 4%);
+$borders: darken($background, 6%);
+$thin-border: rgba(88, 62, 100, 0.3);
 $text-color: #333333;
 $white: #ffffff;
 $black: #333333;
-
+$green: #6ebd7f;
+$brown: #9f3223;
 $header-h: 70px;
 
-$font: 'Open Sans', sans-serif;
+$font: 'SF UI Text', sans-serif;

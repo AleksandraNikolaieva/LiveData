@@ -18,15 +18,15 @@
             <input
                 type="text"
                 formControlName="cardNumber" id="ccNumb"
-                class="form-control"
-                placeholder="Card number"
+                class="form-control" appNumberOnly lengthRequired='19'
+                isCCnumb='"true"'  placeholder="Card number"
             />
         </div>
         <div class="card-details">
             <div class="form-group">
                 <label for="expMonth">Expiration month</label>
                 <input
-                    type="text"
+                    type="text" appNumberOnly lengthRequired='2'
                     formControlName="expMonth" id="expMonth"
                     class="form-control"
                     placeholder="MM"
@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label for="expYear">Expiration year</label>
                 <input
-                    type="text"
+                    type="text" appNumberOnly lengthRequired='4'
                     formControlName="expYear" id="expYear"
                     class="form-control"
                     placeholder="YYYY"
@@ -44,7 +44,7 @@
             <div class="form-group">
                 <label for="cvv">CVV / CVC</label>
                 <input
-                    type="text"
+                    type="text" appNumberOnly lengthRequired='3'
                     formControlName="cvv" id="cvv"
                     class="form-control"
                     placeholder="MM"

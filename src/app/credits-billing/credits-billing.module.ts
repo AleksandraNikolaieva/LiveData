@@ -6,12 +6,14 @@ import { BillingDetailsPageComponent } from './billing-details-page/billing-deta
 import { CreditsBillingRoutingModule } from './credits-billing-routing.module';
 import { CreditsOffersComponent } from './credits-offers/credits-offers.component';
 import { SharedModule } from '../shared/shared.module';
+import { NumberOnlyDirective } from './directives/number-only.directive';
 
 @NgModule({
     declarations: [
         PurchasePageComponent,
         BillingDetailsPageComponent,
-        CreditsOffersComponent
+        CreditsOffersComponent,
+        NumberOnlyDirective
     ],
     imports: [
         CommonModule,
