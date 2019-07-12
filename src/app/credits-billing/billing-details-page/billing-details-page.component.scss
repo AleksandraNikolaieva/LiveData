@@ -15,7 +15,7 @@
 .header {
     @include flex(column, center, flex-start);
     span {
-        @include text(25px, bold, normal);
+        @include text(18px, bold, normal);
         margin-bottom: 31px;
         margin-top: 40px;
     }
@@ -50,7 +50,7 @@ form {
 }
 
 .card-details {
-    @include flex(row, center, flex-start);
+    @include flex(row, flex-end, flex-end);
 
     & > *:nth-child(2) {
         margin: 10px 10px;
@@ -89,7 +89,7 @@ form {
 
     button:nth-child(even) {
         @extend %common-button;
-        @include size(20vw);
+        @include size(206px);
         margin-left: 20px;
     }
 }
