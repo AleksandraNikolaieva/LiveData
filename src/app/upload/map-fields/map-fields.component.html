@@ -1,3 +1,7 @@
+<app-upload-popup
+    *ngIf="popupActive"
+    (closePopup)="togglePopup()"
+></app-upload-popup>
 <div class="container">
     <div class="main">
         <app-back-button></app-back-button>
@@ -6,9 +10,9 @@
             <p class="caption" *ngFor="let p of description">{{ p }}</p>
         </div>
         <a
-            routerLink=""
             class="link"
             [ngClass]="{ disabled: !selector.fullname }"
+            (click)='togglePopup()'
         >
             Clean list
         </a>

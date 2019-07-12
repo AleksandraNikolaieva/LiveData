@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class MainPageComponent {
     constructor(private router: Router) {}
     popupActive = false;
-    isManageApi: boolean = false;
     buttonText: string = 'Learn more';
     data: Array<Purpose> = [
         {
@@ -34,7 +33,7 @@ export class MainPageComponent {
         }
     ];
     onLearnMoreClick() {
-        this.isManageApi = !this.isManageApi;
+        this.router.navigate(['/api']);
     }
     onClick(link: string) {
         this.router.navigate([link]);

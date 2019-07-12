@@ -1,12 +1,12 @@
 <div class="backdrop" (click)='closedPopup()'></div>
-<div class="report-window" [ngStyle]="{'top': downloadPopup ? '32vh' :'20vh' }">
+<div class="report-window" >
     <div class="header">
         <span>{{report.date | date:'d, LLLL 	yyyy'}}</span>
         <span class="title">{{report.title}}</span>
         <button>Edit name</button>
     </div>
     <div class="main-content">
-        <div class="report" *ngIf='!downloadPopup'>
+        <div class="report" >
             <div class="main-numbers">
                 <div>
                     <span>{{report.contactsFound | number:'.0'}}</span>
@@ -36,27 +36,11 @@
                 </div>
             </div>
             <div class="footer">
-                <app-icon-button [ngStyle]="{'width': '100%'}" (click)='showDownload()'
+                <app-icon-button [ngStyle]="{'width': '100%'}" 
                     [title]='"Download cleaned list"' [class]='"light-blue"'>
                     <i class="icon-file-text2"></i>
                 </app-icon-button>
             </div>
         </div>
-
-        <div class="download-window" *ngIf='downloadPopup'>
-            <div class="download-msg">
-                <span>Processing list.</span>
-                <span>This will take approximately 15 minutes. We'll notify you via email when your list is
-                    ready.</span>
-            </div>
-            <div class="email-input-box">
-                <input type="text" [disabled]='!inputActive' #emailInput (blur)='inputActive=false' [value]='userEmail'>
-                <i class="icon-edit" (click)='editEmail()'></i>
-            </div>
-            <div class="progress-bar">
-                <progress max="100" value="25"> </progress>
-            </div>
-        </div>
-
     </div>
 </div>
