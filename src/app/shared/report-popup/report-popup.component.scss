@@ -41,7 +41,8 @@
     button {
         color: $blue;
         padding: 0;
-        @include text(15px, normal, normal);
+        @include label(15px);
+        color: $blue;
     }
 
     margin-bottom: 40px;
@@ -99,6 +100,7 @@
 
         span:nth-child(2) {
             @include label(12px);
+            line-height: 14px;
         }
     }
 }

@@ -10,15 +10,15 @@ export class AuthService {
 
     isLogged = false;
     email = 'damian@opuslogica.com';
-    userNameObservable = new BehaviorSubject(null);
+    userMailObservable = new BehaviorSubject(null);
 
     logIn() {
         this.isLogged = true;
-        this.userNameObservable.next('Damian');
+        this.userMailObservable.next('damian@opuslogica.com');
     }
 
     logOut() {
         this.isLogged = false;
-        this.userNameObservable.next(null);
+        this.userMailObservable.next(null);
     }
 }

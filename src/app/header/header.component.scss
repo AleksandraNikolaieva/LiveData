@@ -5,7 +5,7 @@ header {
     height: $header-h;
     width: calc(100% - 60px);
     @include flex(row, space-between, center);
-    padding: 0 30px;
+    padding: 0 37px;
     background-color: $purple;
     color: $white;
     font-weight: 500;
@@ -14,7 +14,7 @@ header {
     div {
         height: 40px;
         @include flex(row, space-between, center);
-        a{
+        a {
             text-decoration: none;
             color: inherit;
             img {
@@ -24,5 +24,11 @@ header {
             }
         }
             
+    }
+
+    span {
+        @include label(14px);
+        line-height: 17px;
+        color: $white;
     }
 }
