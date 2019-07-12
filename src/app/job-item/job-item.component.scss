@@ -1,11 +1,12 @@
-@import "abstracts/mixins.scss";
-@import "abstracts/variables.scss";
+@import 'abstracts/mixins.scss';
+@import 'abstracts/variables.scss';
 
 :host {
+    margin-top: -1px;
     display: block;
     width: calc(100% - 20px);
     @include flex(row, space-between, center);
-    border-bottom: 2px solid $borders;
+    border: 1px solid $borders;
     padding: 0 10px;
     color: $black;
     position: relative;
@@ -37,17 +38,23 @@
     p {
         width: 200px;
         flex-grow: 1;
+        font-size: 16px;
+        color: $black;
     }
 
     .date {
         min-width: 90px;
         flex-grow: 1;
+        color: darken($black, 5%);
+        font-size: 12px;
     }
 
     .count {
         min-width: 115px;
         flex-grow: 1;
         margin-left: 3px;
+        color: darken($black, 5%);
+        font-size: 12px;
     }
 
     .icon-menu {

@@ -9,27 +9,30 @@ input[type='button'] {
     transition: 0.3s;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    margin: 20px 0;
+    border-radius: 4px;
     padding: 10px 0;
-
+    margin-bottom: 24px;
     &:hover {
         background-color: lighten($blue, 5%);
         color: #ffffff;
     }
 }
-
+.header {
+    font-size: 18px;
+    margin-bottom: 36px;
+}
 p {
     margin: 0;
-    color: #878c9f;
-    font-weight: 600;
-    font-size: 14px;
+    color: transparentize($black, 0.2);
+    font-weight: 400;
+    font-size: 12px;
 }
 
 .balance {
     font-size: 60px;
     font-weight: bold;
     color: $black;
+    margin-bottom: 30px;
 }
 
 a {

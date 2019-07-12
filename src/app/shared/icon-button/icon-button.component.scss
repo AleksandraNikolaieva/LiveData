@@ -10,6 +10,8 @@
 button {
     @extend %common-button;
     width: 100%;
+    min-width: 215px;
+    height: 50px;
     padding: 12px 22px;
     @include flex(row, center, center);
 
@@ -41,12 +43,12 @@ button {
     }
 }
 
-.light-blue{
+.light-blue {
     background-color: $white;
     transition: 0.2s;
     border: 1px solid $blue;
     color: $blue;
- &:hover {
+    &:hover {
         background-color: $blue;
         color: $white;
     }
