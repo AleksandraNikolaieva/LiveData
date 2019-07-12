@@ -1,0 +1,73 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+.graph-container {
+    @include size(100%, 225px);
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: nowrap;
+    position: relative;
+}
+.graph__diagram {
+    @include flex(row, space-between, flex-end);
+    flex-wrap: nowrap;
+    height: 100%;
+    max-width: 600px;
+    flex-grow: 1;
+    background-color: $white;
+    padding: 0 18px;
+}
+.graph__labels {
+    height: 100%;
+    @include flex(column, space-between, flex-end);
+    text-align: right;
+    @include text(10px, 600);
+    color: transparentize($black, 0.4);
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+.graph__column {
+    background-color: transparentize($black, 0.7);
+}
+.graph__header {
+    @include flex(row, flex-start, center);
+    flex-wrap: nowrap;
+    margin-bottom: 14px;
+}
+.selector {
+    position: relative;
+    width: 130px;
+}
+.title {
+    @include text(12px, 600);
+    color: transparentize($black, 0.3);
+    margin-right: 14px;
+}
+.selector select {
+    @include text(12px, 600);
+    color: transparentize($black, 0.3);
+    background-color: $white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: 4px;
+    &:hover:focus + .triangle {
+        top: 40%;
+        transform: rotate(0);
+    }
+    & + .triangle {
+        display: block;
+        position: absolute;
+        top: 60%;
+        right: 12px;
+        border: 5px solid transparent;
+        border-bottom: 5px solid $black;
+        pointer-events: none;
+        opacity: 0.5;
+        transition: all 0.3s;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}

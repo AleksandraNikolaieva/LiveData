@@ -1,3 +1,26 @@
-<p>
-  api-usage works!
-</p>
+<div class="graph__header">
+    <div class="title">{{ title }}</div>
+    <div class="selector">
+        <select [(ngModel)]="selector">
+            <option value="{{ option }}" *ngFor="let option of options">
+                {{ option }}
+            </option>
+        </select>
+        <span class="triangle"></span>
+    </div>
+</div>
+<div class="graph-container">
+    <div class="graph__labels">
+        <div class="graph__label" *ngFor="let label of labels">{{ label }}</div>
+    </div>
+    <div class="graph__diagram">
+        <div
+            class="graph__column"
+            *ngFor="let column of percentageValues"
+            [ngStyle]="{
+                'height.%': column,
+                'width.%': percentageValues.length | percentageWidth
+            }"
+        ></div>
+    </div>
+</div>
