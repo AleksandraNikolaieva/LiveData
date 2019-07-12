@@ -1,5 +1,5 @@
-@import "abstracts/variables.scss";
-@import "abstracts/mixins.scss";
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
 
 .row {
     width: 100%;
@@ -33,13 +33,50 @@ p {
     font-size: 15px;
 }
 
-app-credits {
-    width: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-left: 30px;
-}
-
 app-jobs-list {
     flex-grow: 1;
+}
+app-card {
+    margin-top: 24px;
+}
+
+.side {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 250px;
+    margin-left: 30px;
+
+    span {
+        cursor: pointer;
+        text-decoration: none;
+        color: lighten($blue, 5%);
+        font-size: 12px;
+        margin-top: 12px;
+        display: inline-block;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    a {
+        display: block;
+        text-align: center;
+        background-color: #ffffff;
+        width: 100%;
+        border: 1px solid lighten($blue, 5%);
+        outline: none;
+        color: lighten($blue, 5%);
+        transition: 0.3s;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 10px 0;
+
+        &:hover {
+            background-color: lighten($blue, 5%);
+            color: #ffffff;
+        }
+    }
 }
