@@ -6,6 +6,7 @@ import { ApiManageRoutingModule } from './api-manage-routing.module';
 import { ApiUsageComponent } from './api-usage/api-usage.component';
 import { PercentageWidthPipe } from './api-usage/percentage-width.pipe';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,6 @@ import { FormsModule } from '@angular/forms';
         ApiUsageComponent,
         PercentageWidthPipe
     ],
-    imports: [CommonModule, ApiManageRoutingModule, FormsModule]
+    imports: [CommonModule, ApiManageRoutingModule, SharedModule, FormsModule]
 })
 export class ApiManageModule {}
