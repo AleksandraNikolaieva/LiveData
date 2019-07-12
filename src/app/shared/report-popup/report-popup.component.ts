@@ -7,6 +7,7 @@ import { Report } from 'src/app/models';
     styleUrls: ['./report-popup.component.scss']
 })
 export class ReportPopupComponent implements OnInit {
+    downloadPopup = true;
     @Output() closePopup: EventEmitter<any> = new EventEmitter();
     @Input() report: Report = {
         date: new Date(2019, 6, 6, 2, 20).toISOString(),
@@ -25,5 +26,9 @@ export class ReportPopupComponent implements OnInit {
 
     closedPopup() {
         this.closePopup.emit();
+    }
+
+    showDownload() {
+        this.downloadPopup = true;
     }
 }

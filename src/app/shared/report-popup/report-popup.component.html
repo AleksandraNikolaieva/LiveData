@@ -6,38 +6,57 @@
         <button>Edit name</button>
     </div>
     <div class="main-content">
-        <div class="main-numbers">
-            <div>
-                <span>{{report.contactsFound | number:'.0'}}</span>
-                <span>Contacts found</span>
+        <div class="report" *ngIf='!downloadPopup'>
+            <div class="main-numbers">
+                <div>
+                    <span>{{report.contactsFound | number:'.0'}}</span>
+                    <span>Contacts found</span>
+                </div>
+                <div>
+                    <span>{{report.contactsUpdated | number:'.0'}}</span>
+                    <span>Updated</span>
+                </div>
             </div>
-            <div>
-                <span>{{report.contactsUpdated | number:'.0'}}</span>
-                <span>Updated</span>
+            <div class="additional-info">
+                <div>
+                    <span>{{report.emailsUpdated | number:'.0'}}</span>
+                    <span>emails updated.</span>
+                </div>
+                <div>
+                    <span>{{report.companiesUpdated | number:'.0'}}</span>
+                    <span>companies updated.</span>
+                </div>
+                <div>
+                    <span>{{report.linkedInInfo | number:'.0'}}</span>
+                    <span>LinkedIn Info added.</span>
+                </div>
+                <div>
+                    <span>{{report.creditsUsed | number:'.0'}}</span>
+                    <span>credits used.</span>
+                </div>
+            </div>
+            <div class="footer">
+                <app-icon-button [ngStyle]="{'width': '100%'}" (click)='showDownload()'
+                    [title]='"Download cleaned list"' [class]='"light-blue"'>
+                    <i class="icon-file-text2"></i>
+                </app-icon-button>
             </div>
         </div>
-        <div class="additional-info">
-            <div>
-                <span>{{report.emailsUpdated | number:'.0'}}</span>
-                <span>emails updated.</span>
+
+        <div class="download-window" *ngIf='downloadPopup'>
+            <div class="download-msg">
+                <span>Processing list.</span>
+                <span>This will take approximately 15 minutes. We'll notify you via email when your list is
+                    ready.</span>
             </div>
-            <div>
-                <span>{{report.companiesUpdated | number:'.0'}}</span>
-                <span>companies updated.</span>
+            <div class="email-input">
+                <input type="text">
+                <i class="icon-upload"></i>
             </div>
-            <div>
-                <span>{{report.linkedInInfo | number:'.0'}}</span>
-                <span>LinkedIn Info added.</span>
-            </div>
-            <div>
-                <span>{{report.creditsUsed | number:'.0'}}</span>
-                <span>credits used.</span>
+            <div class="progress-bar">
+                <progress max="100" value="25">  </progress>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <app-icon-button [ngStyle]="{'width': '100%'}" [title]='"Download cleaned list"' [class]='"light-blue"'>
-            <i class="icon-file-text2"></i>
-        </app-icon-button>
+
     </div>
 </div>
