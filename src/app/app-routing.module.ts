@@ -13,33 +13,38 @@ const routes: Routes = [
     },
     {
         path: 'main',
-        component: MainPageComponent,
-        canActivate: [AuthGuard]
+        component: MainPageComponent
+        // canActivate: [AuthGuard]
     },
     {
         path: 'login',
         component: LogInSignUpComponent,
-        data: {isLogin: true}
+        data: { isLogin: true }
     },
     {
         path: 'signup',
         component: LogInSignUpComponent,
-        data: {isLogin: false}
+        data: { isLogin: false }
     },
     {
         path: 'find-prospects',
-        component: ProspectsComponent,
-        canActivate: [AuthGuard]
+        component: ProspectsComponent
+        // canActivate: [AuthGuard]
     },
     {
         path: 'credits',
-        loadChildren: './credits-billing/credits-billing.module#CreditsBillingModule',
-        canActivate: [AuthGuard]
+        loadChildren:
+            './credits-billing/credits-billing.module#CreditsBillingModule'
+        // canActivate: [AuthGuard]
     },
     {
         path: 'upload',
-        loadChildren: './upload/upload.module#UploadModule',
-        canActivate: [AuthGuard]
+        loadChildren: './upload/upload.module#UploadModule'
+        // canActivate: [AuthGuard]
+    },
+    {
+        path: 'api',
+        loadChildren: './api-manage/api-manage.module#ApiManageModule'
     }
 ];
 
