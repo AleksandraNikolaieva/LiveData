@@ -1,0 +1,67 @@
+$sfuitext_path: 'assets/fonts/sanfrancisco/SFUIText-';
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('#{$sfuitext_path}Light.eot');
+    src: local('SF UI Text Light'), local('SFUIText-Light'),
+        url('#{$sfuitext_path}Light.eot?#iefix') format('embedded-opentype'),
+        url('#{$sfuitext_path}Light.woff') format('woff'),
+        url('#{$sfuitext_path}Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('#{$sfuitext_path}Regular.eot');
+    src: local('SF UI Text Regular'), local('SFUIText-Regular'),
+        url('#{$sfuitext_path}Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$sfuitext_path}Regular.woff') format('woff'),
+        url('#{$sfuitext_path}Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('#{$sfuitext_path}Medium.eot');
+    src: local('SF UI Text Medium'), local('SFUIText-Medium'),
+        url('#{$sfuitext_path}Medium.eot?#iefix') format('embedded-opentype'),
+        url('#{$sfuitext_path}Medium.woff') format('woff'),
+        url('#{$sfuitext_path}Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('#{$sfuitext_path}Semibold.eot');
+    src: local('SF UI Text Semibold'), local('SFUIText-Semibold'),
+        url('#{$sfuitext_path}Semibold.eot?#iefix') format('embedded-opentype'),
+        url('#{$sfuitext_path}Semibold.woff') format('woff'),
+        url('#{$sfuitext_path}Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('#{$sfuitext_path}Bold.eot');
+    src: local('SF UI Text Bold'), local('SFUIText-Bold'),
+        url('#{$sfuitext_path}Bold.eot?#iefix') format('embedded-opentype'),
+        url('#{$sfuitext_path}Bold.woff') format('woff'),
+        url('#{$sfuitext_path}Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('#{$sfuitext_path}Heavy.eot');
+    src: local('SF UI Text Heavy'), local('SFUIText-Heavy'),
+        url('#{$sfuitext_path}Heavy.eot?#iefix') format('embedded-opentype'),
+        url('#{$sfuitext_path}Heavy.woff') format('woff'),
+        url('#{$sfuitext_path}Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
