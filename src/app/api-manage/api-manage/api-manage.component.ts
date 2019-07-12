@@ -14,6 +14,6 @@ export class ApiManageComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        this.apiControl = new FormControl(null);
+        this.apiControl = new FormControl(this.token);
     }
 }
