@@ -3,7 +3,10 @@
 </button>
 <p>{{ job.title }}</p>
 <span class="date">{{ job.date | timeGone }}</span>
-<span class="count">{{ job.count | number }} {{ job.type }}</span>
-<button (click)="openedPopup()">
+<span class="count" *ngIf='!isLoading'>{{ job.count | number }} {{ job.type }}</span>
+<button (click)="openedPopup()" *ngIf='!isLoading'>
     <span class="icon-download"></span>
 </button>
+<div class="progress-bar" *ngIf='isLoading'>
+    <progress max="100" value="25"> </progress>
+</div>

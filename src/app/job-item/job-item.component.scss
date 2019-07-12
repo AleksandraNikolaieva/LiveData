@@ -1,5 +1,5 @@
-@import 'abstracts/mixins.scss';
-@import 'abstracts/variables.scss';
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
 
 :host {
     display: block;
@@ -11,8 +11,6 @@
 
     button {
         background-color: transparent;
-        border: none;
-        outline: none;
     }
 
     button:nth-of-type(1) span {
@@ -30,7 +28,7 @@
 
     button:nth-of-type(2) span {
         font-size: 20px;
-        
+
         &:hover {
             font-weight: bold;
         }
@@ -57,6 +55,19 @@
     }
 
     .icon-search {
-        background-color: #e0244a;
+        background-color: $crimson;
     }
 }
+
+.progress-bar {
+    min-width: 148px;
+    flex-grow: 1;
+    margin-left: 3px;
+    display: flex;
+    justify-content: flex-end;
+}
+progress {
+    @include loading-bar($green, $background, 10vw, 10px);
+}
+
+@include loading-bar2(9px, $green, $background);
