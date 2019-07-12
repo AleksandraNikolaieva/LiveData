@@ -13,8 +13,8 @@ const routes: Routes = [
     },
     {
         path: 'main',
-        component: MainPageComponent
-        // canActivate: [AuthGuard]
+        component: MainPageComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'login',
@@ -28,23 +28,24 @@ const routes: Routes = [
     },
     {
         path: 'find-prospects',
-        component: ProspectsComponent
-        // canActivate: [AuthGuard]
+        component: ProspectsComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'credits',
         loadChildren:
-            './credits-billing/credits-billing.module#CreditsBillingModule'
-        // canActivate: [AuthGuard]
+            './credits-billing/credits-billing.module#CreditsBillingModule',
+        canActivate: [AuthGuard]
     },
     {
         path: 'upload',
-        loadChildren: './upload/upload.module#UploadModule'
-        // canActivate: [AuthGuard]
+        loadChildren: './upload/upload.module#UploadModule',
+        canActivate: [AuthGuard]
     },
     {
         path: 'api',
-        loadChildren: './api-manage/api-manage.module#ApiManageModule'
+        loadChildren: './api-manage/api-manage.module#ApiManageModule',
+        canActivate: [AuthGuard]
     }
 ];
 

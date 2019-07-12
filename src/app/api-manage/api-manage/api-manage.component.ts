@@ -9,10 +9,11 @@ import { FormControl } from '@angular/forms';
 export class ApiManageComponent implements OnInit {
     title = 'Manage API';
     apiControl: FormControl;
+    token = 'uu3w8ye33kisdeYcs95Gd4i';
 
     constructor() { }
 
     ngOnInit() {
-        this.apiControl = new FormControl(null);
+        this.apiControl = new FormControl(this.token);
     }
 }
