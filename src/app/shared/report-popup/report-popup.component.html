@@ -49,9 +49,9 @@
                 <span>This will take approximately 15 minutes. We'll notify you via email when your list is
                     ready.</span>
             </div>
-            <div class="email-input">
-                <input type="text">
-                <i class="icon-edit"></i>
+            <div class="email-input-box">
+                <input type="text" [disabled]='!inputActive' #emailInput (blur)='inputActive=false'>
+                <i class="icon-edit" (click)='editEmail()'></i>
             </div>
             <div class="progress-bar">
                 <progress max="100" value="25">  </progress>

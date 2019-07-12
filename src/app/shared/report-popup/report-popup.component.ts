@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { Report } from 'src/app/models';
 
 @Component({
@@ -8,6 +8,8 @@ import { Report } from 'src/app/models';
 })
 export class ReportPopupComponent implements OnInit {
     downloadPopup = true;
+    inputActive = false;
+    @ViewChild('emailInput') emailField: ElementRef;
     @Output() closePopup: EventEmitter<any> = new EventEmitter();
     @Input() report: Report = {
         date: new Date(2019, 6, 6, 2, 20).toISOString(),
@@ -30,5 +32,12 @@ export class ReportPopupComponent implements OnInit {
 
     showDownload() {
         this.downloadPopup = true;
+    }
+
+    editEmail() {
+        this.inputActive = true;
+        setTimeout(() => {
+            this.emailField.nativeElement.focus();
+          }, 0);
     }
 }
