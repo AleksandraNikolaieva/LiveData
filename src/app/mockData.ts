@@ -145,4 +145,5 @@ export const chartData: Array<number> = [
     160
 ];
 
+export const token = 'uu3w8ye33kisdeYcs95Gd4i';
 

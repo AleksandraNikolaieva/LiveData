@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { token } from 'src/app/mockData';
 
 @Component({
     selector: 'app-api-manage',
@@ -9,7 +10,7 @@ import { FormControl } from '@angular/forms';
 export class ApiManageComponent implements OnInit {
     title = 'Manage API';
     apiControl: FormControl;
-    token = 'uu3w8ye33kisdeYcs95Gd4i';
+    token = token;
 
     constructor() {}
     showBtn = 'show';
