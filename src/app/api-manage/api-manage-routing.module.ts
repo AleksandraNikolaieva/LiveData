@@ -6,8 +6,12 @@ import { ApiSetupComponent } from './api-setup/api-setup.component';
 const routes: Routes = [
     {
         path: '',
-        component: ApiSetupComponent,
+        redirectTo: 'setup',
         pathMatch: 'full'
+    },
+    {
+        path: 'setup',
+        component: ApiSetupComponent
     },
     {
         path: 'manage',
