@@ -14,7 +14,7 @@ export class AuthService {
 
     logIn() {
         this.isLogged = true;
-        this.userMailObservable.next('damian@opuslogica.com');
+        this.userMailObservable.next('damian.rebman@gmail.com');
     }
 
     logOut() {

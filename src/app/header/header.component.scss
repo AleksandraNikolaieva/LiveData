@@ -26,9 +26,9 @@ header {
             
     }
 
-    span {
+    .user {
         @include label(14px);
         line-height: 17px;
-        color: $white;
+        color: transparentize($white, 0.3);
     }
 }

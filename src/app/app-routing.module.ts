@@ -44,7 +44,8 @@ const routes: Routes = [
     },
     {
         path: 'api',
-        loadChildren: './api-manage/api-manage.module#ApiManageModule'
+        loadChildren: './api-manage/api-manage.module#ApiManageModule',
+        canActivate: [AuthGuard]
     }
 ];
 
