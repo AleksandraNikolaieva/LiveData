@@ -8,6 +8,7 @@
                     [value]="option.value"
                     type="checkbox"
                     checked
+                    (change)="onChange()"
                 />
                 {{ option.label }}
                 <span></span>
@@ -23,5 +24,8 @@
             <span>credits</span>
         </div>
     </div>
-    <a class="link" routerLink="/upload/clean">Clean List</a>
+    <div class="error" *ngIf="balanceStatus">
+        {{ errorMessage }}
+    </div>
+    <a class="link" [routerLink]="link">{{ linkTitle }}</a>
 </div>

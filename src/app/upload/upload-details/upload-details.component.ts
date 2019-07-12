@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Option } from 'src/app/models';
 
 @Component({
@@ -8,6 +8,8 @@ import { Option } from 'src/app/models';
 })
 export class UploadDetailsComponent implements OnInit {
     constructor() {}
+    @Input() balanceStatus: boolean;
+    @Output() balanceCheck = new EventEmitter<number>();
 
     options: Array<Option> = [
         {
@@ -23,6 +25,17 @@ export class UploadDetailsComponent implements OnInit {
             label: 'Include LinkedIn information'
         }
     ];
-    estimatedCost = 1492;
+    linkTitle: string = 'Continue';
+    link: string = '/upload/clean';
+    estimatedCost: number = 1000;
+    errorMessage: string = "Looks like you don't have enough credits.";
+    onChange() {
+        this.estimatedCost = this.estimatedCost === 1492 ? 1000 : 1492;
+        this.linkTitle =
+            this.linkTitle === 'Continue' ? 'Buy more credits' : 'Continue';
+        this.link =
+            this.link === '/upload/clean' ? '/credits' : '/upload/clean';
+        this.balanceCheck.emit(this.estimatedCost);
+    }
     ngOnInit() {}
 }

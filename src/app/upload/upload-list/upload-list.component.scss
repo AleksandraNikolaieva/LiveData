@@ -13,3 +13,7 @@
     @include flex(row, flex-start, flex-start);
     flex-wrap: nowrap;
 }
+
+.header {
+    @include flex(row, space-between, flex-start);
+}
