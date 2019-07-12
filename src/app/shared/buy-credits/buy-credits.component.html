@@ -1,7 +1,7 @@
 <div class="credits">
     <div class="balance">
         <span class="title">{{ title }}</span>
-        <span class="value">
+        <span class="value" [ngClass]="{ error: error }">
             {{ balance | number }}
             <span class="label"> {{ label }}</span>
         </span>

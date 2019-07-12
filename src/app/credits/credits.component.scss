@@ -1,11 +1,11 @@
 @import 'abstracts/variables.scss';
 
-input[type=button] {
+input[type='button'] {
     background-color: #ffffff;
     width: 100%;
-    border: 1px solid darken($blue, 20%);
+    border: 1px solid lighten($blue, 5%);
     outline: none;
-    color: darken($blue, 20%);
+    color: lighten($blue, 5%);
     transition: 0.3s;
     font-weight: bold;
     cursor: pointer;
@@ -14,7 +14,7 @@ input[type=button] {
     padding: 10px 0;
 
     &:hover {
-        background-color: darken($blue, 20%);
+        background-color: lighten($blue, 5%);
         color: #ffffff;
     }
 }
@@ -34,10 +34,10 @@ p {
 
 a {
     text-decoration: none;
-    color: darken($blue, 20%);
-    font-size: 14px;
+    color: lighten($blue, 5%);
+    font-size: 12px;
 
     &:hover {
-        font-weight: bold;
+        text-decoration: underline;
     }
 }

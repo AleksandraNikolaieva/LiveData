@@ -16,6 +16,9 @@
     .value {
         @include text(24px, bold);
         color: $black;
+        &.error {
+            color: darken($crimson, 15);
+        }
     }
     .label {
         @include text(14px, 600);

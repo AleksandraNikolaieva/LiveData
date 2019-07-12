@@ -1,12 +1,12 @@
 <app-card>
-    <h3 class='header'>{{title}}</h3>
-    <ng-container class='main'>
-        <p>{{label | uppercase }}</p>
-        <p class='balance'>{{balance}}</p>
+    <h3 class="header">{{ title }}</h3>
+    <ng-container class="main">
+        <p>{{ label | uppercase }}</p>
+        <p class="balance">{{ balance }}</p>
     </ng-container>
-    <ng-container class='footer'>
-        <input type='button' (click)='buyCredits()' value='Purchase Credits'>
-        <br>
-        <a routerLink=''>{{buttonText}}</a>
+    <ng-container class="footer">
+        <input type="button" (click)="buyCredits()" value="Purchase Credits" />
+        <br />
+        <a routerLink="">{{ buttonText }}</a>
     </ng-container>
 </app-card>

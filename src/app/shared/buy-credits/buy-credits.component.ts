@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BuyCreditsComponent implements OnInit {
     @Input() balance: number;
     @Input() link: string;
+    @Input() error: boolean = false;
+
     constructor() {}
     title = 'Credits Balance';
     label = 'credits';

@@ -4,6 +4,7 @@
 div:first-child {
     width: 40%;
     min-width: 447px;
+
     margin: auto;
 
     div {
@@ -19,12 +20,12 @@ div:first-child {
         color: transparentize($text-color, 0.2);
         line-height: 128.5%;
         margin: 14px 0 25px 0;
+        font-size: 17px;
     }
 
     a {
         font-size: 14px;
         color: $blue;
-        display: block;
     }
 
     input[type=button] {
@@ -34,4 +35,3 @@ div:first-child {
         font-size: 16px;
     }
 }
-
