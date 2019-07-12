@@ -8,6 +8,7 @@
     border-bottom: 2px solid $borders;
     padding: 0 10px;
     color: $black;
+    position: relative;
 
     button {
         background-color: transparent;
@@ -28,7 +29,6 @@
 
     button:nth-of-type(2) span {
         font-size: 20px;
-
         &:hover {
             font-weight: bold;
         }
@@ -60,11 +60,9 @@
 }
 
 .progress-bar {
-    min-width: 148px;
-    flex-grow: 1;
-    margin-left: 3px;
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    top: 15px;
+    right: 10px;
 }
 progress {
     @include loading-bar($green, $background, 10vw, 10px);

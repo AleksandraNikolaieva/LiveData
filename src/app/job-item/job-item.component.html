@@ -3,8 +3,8 @@
 </button>
 <p>{{ job.title }}</p>
 <span class="date">{{ job.date | timeGone }}</span>
-<span class="count" *ngIf='!isLoading'>{{ job.count | number }} {{ job.type }}</span>
-<button (click)="openedPopup()" *ngIf='!isLoading'>
+<span class="count" [ngStyle]="{'visibility': isLoading ? 'hidden' : 'initial'}">{{ job.count | number }} {{ job.type }}</span>
+<button (click)="openedPopup()" [ngStyle]="{'visibility': isLoading ? 'hidden' : 'initial'}">
     <span class="icon-download"></span>
 </button>
 <div class="progress-bar" *ngIf='isLoading'>
