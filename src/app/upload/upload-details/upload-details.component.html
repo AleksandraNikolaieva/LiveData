@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="error" *ngIf="balanceStatus">
-        {{ errorMessage }}
+        <i class="icon-alert-triangle"></i> {{ errorMessage }}
     </div>
     <a class="link" [routerLink]="link">{{ linkTitle }}</a>
 </div>
