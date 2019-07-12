@@ -47,7 +47,9 @@ app-card {
     flex-shrink: 0;
     width: 290px;
     margin-left: 30px;
-
+    h3 {
+        margin: 0;
+    }
     span {
         cursor: pointer;
         text-decoration: none;
@@ -60,25 +62,6 @@ app-card {
         }
         &:focus {
             outline: none;
-        }
-    }
-    a {
-        display: block;
-        text-align: center;
-        background-color: #ffffff;
-        width: 100%;
-        border: 1px solid lighten($blue, 5%);
-        outline: none;
-        color: lighten($blue, 5%);
-        transition: 0.3s;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 5px;
-        padding: 10px 0;
-
-        &:hover {
-            background-color: lighten($blue, 5%);
-            color: #ffffff;
         }
     }
 }
