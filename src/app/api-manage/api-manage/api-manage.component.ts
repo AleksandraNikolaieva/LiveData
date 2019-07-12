@@ -11,8 +11,24 @@ export class ApiManageComponent implements OnInit {
     apiControl: FormControl;
     token = 'uu3w8ye33kisdeYcs95Gd4i';
 
-    constructor() { }
-
+    constructor() {}
+    showBtn = 'show';
+    onShowClick() {
+        this.showBtn = this.showBtn === 'show' ? 'hide' : 'show';
+    }
+    onCopy() {
+        let selBox = document.createElement('textarea');
+        selBox.style.position = 'fixed';
+        selBox.style.left = '0';
+        selBox.style.top = '0';
+        selBox.style.opacity = '0';
+        selBox.value = this.token;
+        document.body.appendChild(selBox);
+        selBox.focus();
+        selBox.select();
+        document.execCommand('copy');
+        document.body.removeChild(selBox);
+    }
     ngOnInit() {
         this.apiControl = new FormControl(this.token);
     }
