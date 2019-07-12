@@ -42,6 +42,7 @@
     }
     button {
         color: $blue;
+        padding: 0;
         @include text(15px, normal, normal);
     }
 
