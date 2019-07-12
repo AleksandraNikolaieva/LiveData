@@ -10,7 +10,7 @@
     margin-top: 55px;
 }
 .caption {
-    @include text(14px, 600, 130%);
+    @include text(14px, 400, 130%);
     color: transparentize($black, 0.2);
     margin: 14px 0;
 }
