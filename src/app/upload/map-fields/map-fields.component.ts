@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MapFieldsComponent implements OnInit {
     constructor() {}
     title = 'Map your fields';
+    popupActive = false;
     selector = {
         fullname: '',
         lastname: '',
@@ -47,6 +48,9 @@ export class MapFieldsComponent implements OnInit {
     ];
     trackByFn(index) {
         return index;
+    }
+    togglePopup() {
+        this.popupActive = !this.popupActive;
     }
     ngOnInit() {}
 }
