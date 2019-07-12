@@ -53,9 +53,9 @@
 .form-row {
     @include flex(row, flex-start, center);
     flex-wrap: nowrap;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     &--titles {
-        margin-bottom: 24px;
+        margin-bottom: 32px;
     }
 }
 .form-column-1 {
