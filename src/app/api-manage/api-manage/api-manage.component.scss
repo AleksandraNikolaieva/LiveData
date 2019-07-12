@@ -32,13 +32,13 @@
         padding: 20px;
         width: calc(100% - 40px);
         background-color: $white;
-        border: 1px solid $think-border;
+        border: 1px solid $thin-border;
         border-radius: 4px;
         margin: 15px 0 22px 0;
 
         input {
             font-size: 18px;
-            width: calc(100% - 32px);
+            width: calc(100% - 40px);
             border: none;
             color: transparentize($text-color, 0.2);
         }

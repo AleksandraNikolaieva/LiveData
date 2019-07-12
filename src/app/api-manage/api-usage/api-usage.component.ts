@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { chartData } from 'src/app/mockData';
 
 @Component({
     selector: 'app-api-usage',
@@ -7,42 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiUsageComponent implements OnInit {
     constructor() {}
-    data: Array<number> = [
-        60,
-        190,
-        110,
-        60,
-        110,
-        60,
-        60,
-        160,
-        190,
-        110,
-        60,
-        160,
-        60,
-        160,
-        190,
-        235,
-        60,
-        160,
-        60,
-        235,
-        110,
-        160,
-        60,
-        260,
-        160,
-        60,
-        110,
-        190,
-        160
-    ];
+    data: Array<number> = chartData;
     labels: Array<number> = [];
     maxGraphValue: number;
     percentageValues: Array<number>;
-    title: string = 'API usage';
-    selector: string = 'last 30 days';
+    title = 'API usage';
+    selector = 'last 30 days';
     options: Array<string> = ['last 30 days', 'last 7 days'];
 
     ngOnInit() {

@@ -34,8 +34,8 @@ const routes: Routes = [
     {
         path: 'credits',
         loadChildren:
-            './credits-billing/credits-billing.module#CreditsBillingModule',
-        canActivate: [AuthGuard]
+            './credits-billing/credits-billing.module#CreditsBillingModule'
+        // canActivate: [AuthGuard]
     },
     {
         path: 'upload',
