@@ -8,42 +8,35 @@
         <button>
             <span class='icon-search'></span>
         </button>
-        <input 
+        <input
             id='search'
             [formControl]='searchControl'
-            placeholder='e.g demand generation'
+            [placeholder]='placeholder'
             autocomplete='off'
         >
-        <button>
-            <span class='icon-more-horizontal'></span>
-        </button>
         <input type='button' value='Search' [disabled]='isDisabled' (click)='search()'>
     </div>
 </app-card>
-<div class='credits'>
+<label *ngIf='list' for='size'>Desired list size</label>
+<div class='credits' *ngIf='list'>
+    <input type='number' id='size' [(ngModel)]='listSize' />
     <div>
-        <label for='size'>List size</label>
-        <input type='number' id='size' [(ngModel)]='listSize' />
+        <output>{{ listSize }}</output>
+        <span>credits</span>
     </div>
-    <div>
-        <label for='cost'>Cost</label>
-        <div>
-            <output id='cost'>{{ listSize }}</output>
-            <span>credits</span>
-        </div>
-    </div>
-    <input type='button' value='Purchase List' />
+    <input type='button' value='Purchase List'/>
 </div>
-<div class='list' *ngIf='list'>
-    <div>
+<div class='list' *ngIf='list' [@listAnimation]='true'>
+    <div class='listItem'>
         <p>
             Over <b>{{ total | number }}</b> contacts found!
         </p>
         <span>LinkedIn</span>
     </div>
-    <div *ngFor='let item of list; trackBy: trackByFn'>
+    <div class='listItem' *ngFor='let item of list; trackBy: trackByFn'>
         <span>{{item.name}}</span>
         <span>{{item.position}}</span>
         <span>{{item.linkedIn}}</span>
     </div>
+    <div class="backdrop"></div>
 </div>

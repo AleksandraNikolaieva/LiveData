@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { ProspectsComponent } from './prospects/prospects.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         RouterModule,
         AuthModule,
         AppRoutingModule,
