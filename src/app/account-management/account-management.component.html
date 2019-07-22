@@ -2,7 +2,7 @@
 <h3 class="title">{{ title }}</h3>
 <form [formGroup]="form" class="inputs">
     <label for="email">Email</label>
-    <input type="text" id="email" formControlName="email" />
+    <input type="text" id="email" formControlName="email" [placeholder]="placeholder" />
     <div class="passwords" *ngIf="isChangePass">
         <label for="password">Old password</label>
         <input type="password" id="password" formControlName="password" />

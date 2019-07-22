@@ -12,6 +12,8 @@ export class AccountManagementComponent implements OnInit {
     isChangePass = false;
     filledBtnTitle = 'Update';
     title = 'Account details';
+    placeholder = 'frank@awesomecorp.com';
+    currentEmail = 'damian.rebman@gmail.com';
     get borderedBtnTitle(): string {
         return this.isChangePass ? 'Cancel' : 'Change Password';
     }
@@ -34,7 +36,7 @@ export class AccountManagementComponent implements OnInit {
 
     createForm(): void {
         this.form = new FormGroup({
-            email: new FormControl('frank@awesomecorp.com', Validators.required)
+            email: new FormControl(this.currentEmail, Validators.required)
         });
     }
 
