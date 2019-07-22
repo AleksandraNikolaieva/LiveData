@@ -1,0 +1,80 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+:host {
+    display: block;
+    margin: 0 auto;
+    max-width: 440px;
+}
+.title {
+    @include text(18px, bold);
+    color: $black;
+    margin: 40px 0;
+    margin-bottom: 32px;
+}
+
+.inputs,
+.passwords {
+    @include flex(column, flex-start, flex-start);
+    width: 100%;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid $borders;
+    height: 46px;
+    padding: 7px 10px;
+    color: transparentize($black, 0.3);
+    @include text(16px, 400);
+    border-radius: 4px;
+    margin-bottom: 32px;
+    &.ng-invalid.ng-touched {
+        border-color: $crimson;
+    }
+    &.ng-touched.ng-valid {
+        border-color: $green;
+    }
+}
+label {
+    @include text(12px, 400);
+    letter-spacing: 1px;
+    color: transparentize($black, 0.1);
+    margin-bottom: 8px;
+}
+
+.controls {
+    margin-top: 50px;
+    @include flex(row, space-between, center);
+    flex-wrap: nowrap;
+}
+.control {
+    @include text(14px, 600);
+    display: block;
+    padding: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.control--bordered {
+    color: $blue;
+    width: 180px;
+    border: 1px solid $blue;
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+}
+.control--filled {
+    color: $white;
+    width: 230px;
+    background-color: $blue;
+    &:hover {
+        background-color: darken($blue, 20);
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
