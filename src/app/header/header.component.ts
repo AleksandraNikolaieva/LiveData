@@ -8,12 +8,22 @@ import { AuthService } from '../auth/service/auth.service';
 })
 export class HeaderComponent implements OnInit {
     email: string;
-
-    constructor(private authService: AuthService) { }
+    isOpen = false;
+    constructor(private authService: AuthService) {}
 
     ngOnInit() {
         this.authService.userMailObservable.subscribe(res => {
             this.email = res;
         });
+    }
+    logout() {
+        this.closeMenu();
+        this.authService.logOut();
+    }
+    toggleMenu(): void {
+        this.isOpen = !this.isOpen;
+    }
+    closeMenu(): void {
+        this.isOpen = false;
     }
 }

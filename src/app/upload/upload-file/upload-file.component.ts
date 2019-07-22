@@ -9,8 +9,7 @@ export class UploadFileComponent {
     constructor() {}
     @Output() uploadClick = new EventEmitter<boolean>();
     title = 'Upload a file';
-    caption =
-        `Upload a CSV file with email addresses. We'll show you what's incorrect, what's outdated, and what's missing.`;
+    caption = `Upload a CSV file with email addresses. We'll show you what's incorrect, what's outdated, and what's missing.`;
     formTitle = 'Drag and drop CSV here';
     buttonTitle = 'Upload File';
 

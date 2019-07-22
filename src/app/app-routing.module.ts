@@ -32,9 +32,13 @@ const routes: Routes = [
         canActivate: [AuthGuard]
     },
     {
+        path: 'account',
+        component: ProspectsComponent,
+        canActivate: [AuthGuard]
+    },
+    {
         path: 'credits',
-        loadChildren:
-            './credits-billing/credits-billing.module#CreditsBillingModule',
+        loadChildren: './credits-billing/credits-billing.module#CreditsBillingModule',
         canActivate: [AuthGuard]
     },
     {
