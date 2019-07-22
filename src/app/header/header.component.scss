@@ -1,15 +1,23 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/mixins.scss';
 
-header {
-    height: $header-h;
-    width: calc(100% - 60px);
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
     @include flex(row, space-between, center);
     padding: 0 37px;
+}
+
+header {
+    height: $header-h;
+    width: 100%;
     background-color: $purple;
     color: $white;
     font-weight: 500;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
 
     .logo {
         a {
