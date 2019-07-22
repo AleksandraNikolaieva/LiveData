@@ -13,6 +13,7 @@ import { AuthModule } from './auth/auth.module';
 import { ProspectsComponent } from './prospects/prospects.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountManagementComponent } from './account-management/account-management.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
         MainPageComponent,
 
-        ProspectsComponent
+        ProspectsComponent,
+
+        AccountManagementComponent
     ],
     imports: [
         BrowserModule,

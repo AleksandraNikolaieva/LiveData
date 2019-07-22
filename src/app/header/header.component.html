@@ -1,9 +1,21 @@
 <header>
-    <div>
-        <a routerLink='/'>
-            <img src="../../assets/img/Logosvg.svg" alt='logo'>
-            <span>LiveData</span>
-        </a>
+    <div class="container">
+        <div class="logo">
+            <a routerLink="/">
+                <img src="../../assets/img/Logosvg.svg" alt="logo" />
+                <span>LiveData</span>
+            </a>
+        </div>
+        <div class="user-container" *ngIf="email" [ngClass]="{ active: isOpen }">
+            <span class="user" (click)="toggleMenu()">{{ email }}</span>
+            <ul class="user-menu">
+                <li>
+                    <a routerLink="account" (click)="closeMenu()">Edit account</a>
+                </li>
+                <li>
+                    <a routerLink="login" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <span class='user'>{{ email }}</span>
 </header>

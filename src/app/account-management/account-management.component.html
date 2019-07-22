@@ -1,0 +1,18 @@
+<app-back-button></app-back-button>
+<h3 class="title">{{ title }}</h3>
+<form [formGroup]="form" class="inputs">
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email" [placeholder]="placeholder" />
+    <div class="passwords" *ngIf="isChangePass">
+        <label for="password">Old password</label>
+        <input type="password" id="password" formControlName="password" />
+        <label for="newpass">New password</label>
+        <input type="password" id="newpass" formControlName="password-new" />
+    </div>
+</form>
+<div class="controls">
+    <button class="control control--bordered" (click)="toggleForm()">{{ borderedBtnTitle }}</button>
+    <button class="control control--filled" [ngClass]="{ disabled: !form.valid }" (click)="onSubmit()">
+        {{ filledBtnTitle }}
+    </button>
+</div>
