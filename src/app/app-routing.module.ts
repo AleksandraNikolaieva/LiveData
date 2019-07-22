@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { LogInSignUpComponent } from './auth/log-in-sign-up/log-in-sign-up.component';
 import { ProspectsComponent } from './prospects/prospects.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AccountManagementComponent } from './account-management/account-management.component';
 
 const routes: Routes = [
     {
@@ -33,7 +34,7 @@ const routes: Routes = [
     },
     {
         path: 'account',
-        component: ProspectsComponent,
+        component: AccountManagementComponent,
         canActivate: [AuthGuard]
     },
     {
