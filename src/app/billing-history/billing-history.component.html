@@ -1,3 +1,20 @@
-<p>
-  billing-history works!
-</p>
+<app-back-button></app-back-button>
+<h3 class="title">{{ title }}</h3>
+<table>
+    <thead>
+        <tr>
+            <td>date</td>
+            <td>credits</td>
+            <td>cost</td>
+            <td>receipt</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let billing of billingHistory">
+            <td>{{ billing.date }}</td>
+            <td>{{ billing.credits | number }}</td>
+            <td>${{ billing.cost }}.00</td>
+            <td><a [routerLink]="billing.receipt">pdf</a></td>
+        </tr>
+    </tbody>
+</table>

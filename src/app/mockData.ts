@@ -1,4 +1,4 @@
-import { Job, ListItem, Report } from './models';
+import { Job, ListItem, Report, Billing } from './models';
 
 export const report: Report = {
     date: new Date(2019, 6, 6, 2, 20).toISOString(),
@@ -145,5 +145,24 @@ export const chartData: Array<number> = [
     160
 ];
 
+export const billingHistoryData: Array<Billing> = [
+    {
+        date: 'March 20, 2019',
+        credits: 100,
+        cost: 10,
+        receipt: ''
+    },
+    {
+        date: 'May 1, 2019',
+        credits: 1000,
+        cost: 90,
+        receipt: ''
+    },
+    {
+        date: 'July 15, 2019',
+        credits: 10000,
+        cost: 750,
+        receipt: ''
+    }
+];
 export const token = 'uu3w8ye33kisdeYcs95Gd4i';
-

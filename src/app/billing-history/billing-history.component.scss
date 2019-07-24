@@ -1,0 +1,49 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+
+:host {
+    display: block;
+    margin: 0 auto;
+    max-width: 620px;
+}
+.title {
+    @include text(18px, bold);
+    color: $black;
+    margin: 40px 0;
+    margin-bottom: 48px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    td {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: lighten($black, 25);
+        padding-bottom: 18px;
+    }
+}
+
+tbody {
+    tr {
+        border-top: 1px solid lighten($black, 45);
+        height: 50px;
+    }
+    td {
+        @include text(16px, bold);
+        color: $black;
+    }
+
+    a {
+        text-decoration: none;
+        color: $blue;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
