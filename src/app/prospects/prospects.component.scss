@@ -99,13 +99,19 @@
     }
 
     .list {
+        box-sizing: border-box;
         width: 100%;
-        border-left: 2px solid $borders;
-        border-right: 2px solid $borders;
-        border-top: 2px solid $borders;
+        border-left: 1px solid $borders;
+        border-right: 1px solid $borders;
+        border-top: 1px solid $borders;
         margin: 10px 0;
         position: relative;
-
+        div {
+            margin-top: -1px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
         div {
             @include flex(row, space-between, center);
             border-bottom: 2px solid $borders;
@@ -141,16 +147,12 @@
         .backdrop {
             padding: 0;
             position: absolute;
-            top: 0;
-            left: 0;
+            bottom: 0;
+            left: -2px;
             height: 100%;
-            width: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent 0%,
-                transparent 50%,
-                #f5f6fa 100%
-            );
+            width: calc(100% + 4px);
+            border: none;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, $background 100%);
         }
     }
 }
