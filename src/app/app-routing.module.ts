@@ -5,6 +5,7 @@ import { LogInSignUpComponent } from './auth/log-in-sign-up/log-in-sign-up.compo
 import { ProspectsComponent } from './prospects/prospects.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AccountManagementComponent } from './account-management/account-management.component';
+import { BillingHistoryComponent } from './billing-history/billing-history.component';
 
 const routes: Routes = [
     {
@@ -35,6 +36,11 @@ const routes: Routes = [
     {
         path: 'account',
         component: AccountManagementComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'history',
+        component: BillingHistoryComponent,
         canActivate: [AuthGuard]
     },
     {

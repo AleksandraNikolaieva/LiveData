@@ -9,6 +9,7 @@ import { CardComponent } from './card/card.component';
 import { RouterModule } from '@angular/router';
 import { ReportPopupComponent } from './report-popup/report-popup.component';
 import { UploadPopupComponent } from './upload-popup/upload-popup.component';
+import { CostPipe } from './pipes/cost.pipe';
 
 @NgModule({
     declarations: [
@@ -17,10 +18,9 @@ import { UploadPopupComponent } from './upload-popup/upload-popup.component';
         BackButtonComponent,
         ReportPopupComponent,
         CardComponent,
-
         TimeGonePipe,
-
-        UploadPopupComponent
+        UploadPopupComponent,
+        CostPipe
     ],
     imports: [CommonModule, ReactiveFormsModule, RouterModule],
     exports: [
@@ -31,8 +31,8 @@ import { UploadPopupComponent } from './upload-popup/upload-popup.component';
         CardComponent,
         BuyCreditsComponent,
         ReportPopupComponent,
-
-        TimeGonePipe
+        TimeGonePipe,
+        CostPipe
     ]
 })
 export class SharedModule {}

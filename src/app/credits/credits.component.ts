@@ -10,12 +10,11 @@ export class CreditsComponent implements OnInit {
     balance = 150;
     title = 'Credits';
     label = 'Current balance';
-    buttonText = 'Purchase history';
+    buttonText = 'Billing history';
 
-    constructor(private router: Router) { }
+    constructor(private router: Router) {}
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
     buyCredits() {
         this.router.navigateByUrl('credits');

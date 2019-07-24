@@ -11,7 +11,7 @@ export class JobItemComponent implements OnInit {
     @Input() isLoading = false;
     @Output() openPopup: EventEmitter<any> = new EventEmitter();
     iconMap = {
-        contacts : 'icon-menu',
+        contacts: 'icon-menu',
         prospects: 'icon-search'
     };
     colorMap = {
@@ -19,12 +19,11 @@ export class JobItemComponent implements OnInit {
         prospects: '#e0244a'
     };
 
-    constructor() { }
+    constructor() {}
 
-    ngOnInit() { }
+    ngOnInit() {}
 
     openedPopup() {
         this.openPopup.emit();
     }
-
 }

@@ -47,3 +47,10 @@ export interface ListItem {
     position: string;
     linkedIn: string;
 }
+
+export interface Billing {
+    date: string;
+    credits: number;
+    cost: number;
+    receipt: string;
+}
