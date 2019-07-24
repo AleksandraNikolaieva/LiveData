@@ -14,6 +14,7 @@ import { ProspectsComponent } from './prospects/prospects.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountManagementComponent } from './account-management/account-management.component';
+import { BillingHistoryComponent } from './billing-history/billing-history.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,9 @@ import { AccountManagementComponent } from './account-management/account-managem
 
         ProspectsComponent,
 
-        AccountManagementComponent
+        AccountManagementComponent,
+
+        BillingHistoryComponent
     ],
     imports: [
         BrowserModule,
