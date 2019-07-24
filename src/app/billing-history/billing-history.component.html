@@ -13,7 +13,7 @@
         <tr *ngFor="let billing of billingHistory">
             <td>{{ billing.date }}</td>
             <td>{{ billing.credits | number }}</td>
-            <td>${{ billing.cost }}.00</td>
+            <td>{{ billing.cost | cost }}</td>
             <td><a [routerLink]="billing.receipt">pdf</a></td>
         </tr>
     </tbody>

@@ -13,6 +13,7 @@
 
     button {
         background-color: transparent;
+        cursor: pointer;
     }
 
     button:nth-of-type(1) span {
@@ -40,6 +41,7 @@
         flex-grow: 1;
         font-size: 16px;
         color: $black;
+        cursor: pointer;
     }
 
     .date {

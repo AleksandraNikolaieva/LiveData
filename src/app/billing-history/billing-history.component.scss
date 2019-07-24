@@ -34,7 +34,7 @@ tbody {
         height: 50px;
     }
     td {
-        @include text(16px, bold);
+        @include text(16px, 500);
         color: $black;
     }
 
@@ -42,8 +42,5 @@ tbody {
         text-decoration: none;
         color: $blue;
         text-transform: uppercase;
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }

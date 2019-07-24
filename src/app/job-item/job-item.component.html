@@ -1,12 +1,12 @@
-<button>
+<button (click)="openedPopup()">
     <span [class]="iconMap[job.type]"></span>
 </button>
-<p>{{ job.title }}</p>
+<p (click)="openedPopup()">{{ job.title }}</p>
 <span class="date">{{ job.date | timeGone }}</span>
-<span class="count" [ngStyle]="{'visibility': isLoading ? 'hidden' : 'initial'}">{{ job.count | number }} {{ job.type }}</span>
-<button (click)="openedPopup()" [ngStyle]="{'visibility': isLoading ? 'hidden' : 'initial'}">
+<span class="count" [ngStyle]="{ visibility: isLoading ? 'hidden' : 'initial' }">{{ job.count | number }} {{ job.type }}</span>
+<button (click)="openedPopup()" [ngStyle]="{ visibility: isLoading ? 'hidden' : 'initial' }">
     <span class="icon-download"></span>
 </button>
-<div class="progress-bar" *ngIf='isLoading'>
+<div class="progress-bar" *ngIf="isLoading">
     <progress max="100" value="25"> </progress>
 </div>
