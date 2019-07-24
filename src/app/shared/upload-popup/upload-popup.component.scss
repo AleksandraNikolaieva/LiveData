@@ -1,10 +1,10 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 :host {
     position: fixed;
     @include size(100vw, 100vh);
-    background: rgba(216, 209, 209, 0.8);
+    background: rgba(lighten($black, 40), $alpha: 0.7);
     top: 0;
     left: 0;
     z-index: 999;
@@ -17,14 +17,16 @@
 }
 
 .report-window {
+    box-sizing: border-box;
     background: $white;
-    padding: 40px 40px 50px 40px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    @include size(30vw);
+    padding: 40px 35px 28px 35px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.06);
+    @include size(370px);
     position: absolute;
     border-radius: 5px;
-    left: 32vw;
-    top: 22vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header {
